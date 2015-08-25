@@ -1,3 +1,4 @@
+<?php include("nav_left.php"); ?>
 <header class="banner" role="banner">
   <div class="container">
     <div class="row text-center">
