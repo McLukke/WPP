@@ -2361,3 +2361,11 @@ if (typeof jQuery === 'undefined') {
   })
 
 }(jQuery);
+
+
+// Left nav-bar
+$(document).ready(function() {
+  $('[data-toggle=offcanvas]').click(function() {
+    $('.row-offcanvas').toggleClass('active');
+  });
+});
