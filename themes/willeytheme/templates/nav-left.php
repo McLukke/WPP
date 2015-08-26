@@ -1,4 +1,4 @@
-<!-- <div id="wrapper"> -->
+<div id="wrapper">
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
@@ -19,3 +19,4 @@
                 <span class="credits"> &copy; Willey Printing Ltd. 2015</span>
             </ul>
         </div>
+</div>
