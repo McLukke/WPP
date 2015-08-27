@@ -1,5 +1,5 @@
-<?php // include("nav-left.php"); ?>
-<?php // include("nav-right.php"); ?>
+<?php include("nav-left.php"); ?>
+<?php include("nav-right.php"); ?>
 <header class="banner" role="banner">
   <div class="container-fluid">
     <div class="row text-center">

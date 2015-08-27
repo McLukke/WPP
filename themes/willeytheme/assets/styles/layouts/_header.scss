@@ -8,3 +8,9 @@
 	max-width: 170px;
 	margin: 35px 0;
 }
+
+@media(min-width:768px) {
+	header.banner{
+		display: none;
+	}
+}

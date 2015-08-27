@@ -1,5 +1,6 @@
 <div id="wrapper">
         <!-- Sidebar -->
+
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
@@ -29,4 +30,7 @@
             </ul>
 
         </div>
-
+      <div class="menu-close">
+        <a href="#"><img src="<?php echo bloginfo('template_directory')?>/assets/images/icons/close.png" class="exit-button"></a>
+      </div>
+<!-- </div> -->

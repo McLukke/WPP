@@ -6,10 +6,15 @@
     } else if ( $post->ID === "journey" ) {
       // can potentially use 'else'
       // list posts sorted by date from bulletin archives
-      echo "this is for the journey"
+      echo "this is for the journey";
 
     } else {
 
     }
   ?>
+
 </div>
+
+  <div class="menu-close-right">
+        <a href="#"><img src="<?php echo bloginfo('template_directory')?>/assets/images/icons/close.png" class="exit-button"></a>
+  </div>
