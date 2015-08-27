@@ -12,6 +12,7 @@
 
 (function($) {
 
+
   // Use this variable to set up the common and page specific functions. If you
   // rename this variable, you will also need to rename the namespace below.
   var Sage = {
@@ -19,6 +20,33 @@
     'common': {
       init: function() {
         // JavaScript to be fired on all pages
+        
+        // Left menu toggle
+        $('#left_menu').click(function(e){
+          e.preventDefault();
+          $("#wrapper").toggleClass("toggled");
+        });
+
+        $('.menu-close').click(function(e){
+          e.preventDefault();
+          $("#wrapper").toggleClass("toggled");
+        });
+
+
+        // Right menu toggle
+        $('#right_menu').click(function(e){
+          e.preventDefault();
+          $("#right-nav").addClass("enabled");
+          $(".menu-close-right").addClass("enabled");
+        });
+
+        $('.menu-close-right').click(function(e){
+          e.preventDefault();
+          $("#right-nav").removeClass("enabled");
+          $(".menu-close-right").removeClass("enabled");
+        });
+ 
+
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired

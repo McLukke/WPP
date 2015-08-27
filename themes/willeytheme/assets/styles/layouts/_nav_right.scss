@@ -12,10 +12,40 @@
   border-color: #ababab;
   border-width: 2px;
 	&.enabled {
-		width: 250px;
-		-webkit-transition: all 0.5s ease;
+		width: 80vw;
+	-webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
 	}
+
+	-webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.menu-close-right {
+	z-index: 1000;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+	background: transparent;
+	text-align: center;
+	&.enabled {
+		width: 20vw;
+	-webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+	}
+
+	-webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
