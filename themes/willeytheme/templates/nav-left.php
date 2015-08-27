@@ -19,4 +19,3 @@
                 <span class="credits"> &copy; Willey Printing Ltd. 2015</span>
             </ul>
         </div>
-</div>
