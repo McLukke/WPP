@@ -10,7 +10,7 @@
 
       <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
         <a href="<?= esc_url(home_url('/')); ?>"><img id="main_logo" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/<?php 
-          if ( is_home() ) {
+          if ( is_front_page() ) {
             echo "logofull.png";
           } else {
             echo "logo.png";
@@ -21,11 +21,13 @@
       <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
         <a href="<?= esc_url(home_url('/')); ?>"><img id="right_menu" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/<?php
           global $post;
-          if ( is_home() || $post->ID === "work" ) {
+          if ( is_front_page() || $post->ID === "work" ) {
             echo "folder.png";
           } else if ( $post->ID === "journey" ) {
             echo "publish.png";
-          } else {}
+          } else {
+
+          }
 
 // if above doesn't work, try:
 // $page=get_page_by_title($page_name);
