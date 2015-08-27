@@ -46,6 +46,7 @@
 	background-image: url('/wp-content/themes/willeytheme/assets/images/icons/paper.png');
 	}
 
-//TEMP HACK until sidebars are done
-.sidebar-primary main.main{  width: 100%}
-.sidebar{ display:none}
+.full-width {
+	padding-left: 0;
+	padding-right: 0;
+}
