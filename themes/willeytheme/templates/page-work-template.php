@@ -23,7 +23,7 @@
             </div>
             <div class="col-xs-6 work-detail">
                 <p class="bg-icon-publish work-detail-icon"><strong>PUBLISH TIME</strong></p>
-                <p class="work-detail-info">22 / 06 / 20152</p>
+                <p class="work-detail-info">22 / 06 / 2015</p>
                 <br>
                 <p class="bg-icon-printing work-detail-icon"><strong>PRINTING EFFECT</strong></p>
                 <p class="work-detail-info">Spot UV / Pantone</p>
