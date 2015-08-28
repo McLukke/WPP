@@ -2,12 +2,21 @@
 html {
   background-size: cover;
   height: 100vh;
-  overflow: hidden;
 }
 
 body {
 	position: relative;
 	width: 100vw;
 	height: 100vh;
-  overflow: hidden;
+	vertical-align: middle;
+}
+
+h1 {
+	font-family: "Futura-Bold" !important;
+	font-weight: bold !important;
+}
+
+p {
+	font-family: "Futura" !important;
+	font-weight: normal !important;
 }

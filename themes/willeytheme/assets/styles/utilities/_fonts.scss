@@ -1,11 +1,28 @@
 @font-face {
-  font-family: 'gt_sectra_displaylight';
-  src: url('fonts/gt-sectra-display-light-webfont.eot');
-  src: url('fonts/gt-sectra-display-light-webfont.eot?#iefix') format('embedded-opentype'),
-       url('fonts/gt-sectra-display-light-webfont.woff2') format('woff2'),
-       url('fonts/gt-sectra-display-light-webfont.woff') format('woff'),
-       url('fonts/gt-sectra-display-light-webfont.ttf') format('truetype'),
-       url('fonts/gt-sectra-display-light-webfont.svg#gt_sectra_displaylight') format('svg');
+  font-family: 'Futura';
+  src: url('wp-content/themes/willeytheme/assets/fonts/FuturaStd-Book.otf');
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Futura-Medium';
+  src: url('wp-content/themes/willeytheme/assets/fonts/FuturaStd-Medium.otf');
+  font-weight: medium;
+  font-style: medium;
+}
+
+@font-face {
+  font-family: 'Futura-Heavy';
+  src: url('wp-content/themes/willeytheme/assets/fonts/FuturaStd-Heavy.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Futural-Bold';
+  src: url('wp-content/themes/willeytheme/assets/fonts/FuturaStd-Bold.otf');
+  font-weight: bold;
+  font-style: bold;
+}
+
