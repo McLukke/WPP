@@ -45,7 +45,12 @@
           $("#right-nav").removeClass("enabled");
           $(".menu-close-right").removeClass("enabled");
         });
- 
+
+        $('.menu-open-right').click(function(e){
+          e.preventDefault();
+          $("#right-nav").addClass("enabled");
+          $(".menu-close-right").addClass("enabled");
+        });
 
       },
       finalize: function() {
