@@ -10,6 +10,7 @@
  * always reference jQuery with $, even when in .noConflict() mode.
  * ======================================================================== */
 
+
 (function($) {
 
 
@@ -21,7 +22,7 @@
       init: function() {
         // JavaScript to be fired on all pages
         
-        // Left menu toggle
+      // Left menu toggle
         $('#left_menu').click(function(e){
           e.preventDefault();
           $("#wrapper").toggleClass("toggled");
@@ -33,7 +34,7 @@
         });
 
 
-        // Right menu toggle
+      // Right menu toggle
         $('#right_menu').click(function(e){
           e.preventDefault();
           $("#right-nav").addClass("enabled");
@@ -44,6 +45,36 @@
           e.preventDefault();
           $("#right-nav").removeClass("enabled");
           $(".menu-close-right").removeClass("enabled");
+        });
+
+      // About Company Page
+        // About Willey Button
+        $('#about_button').click(function(e){
+          if ( $(this).attr("class") === "ON") {
+return false;
+            // $(this).prop('src', '/wp-content/themes/willeytheme/assets/images/icons/about_bnw.png');
+          } else {
+            $('.about_popup').toggleClass('unselected');
+            $(this).prop('src', '/wp-content/themes/willeytheme/assets/images/icons/about.png');
+          }
+
+          $(this).toggleClass("ON");
+        });
+
+        // Mission Statement Button
+        $('#mission_button').click(function(e){
+          e.preventDefault();
+
+          $('#mission_button').addClass('hidden');
+          $('#mission_button_bnw').removeClass('hidden');
+        });
+
+        // Sustainability Button
+        $('#sustainability_button').click(function(e){
+          e.preventDefault();
+
+          $('#sustainability_button').addClass('hidden');
+          $('#sustainability_button_bnw').removeClass('hidden');
         });
  
 

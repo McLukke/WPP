@@ -1,0 +1,22 @@
+.company_toggle_buttons {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	max-width: 22px;
+	display: block;
+	float: right;
+}
+
+.content.row {
+	background: $dark_grey;
+}
+
+.company_toggle_buttons img {
+	width: 100%;
+}
+
+.about_popup.unselected,
+.mission_popup.unselected,
+.sustainability_popup.unselected {
+	display: none;
+}
