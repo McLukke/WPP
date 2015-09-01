@@ -22,6 +22,7 @@
       init: function() {
         // JavaScript to be fired on all pages
         
+
       // Left menu toggle
         $('#left_menu').click(function(e){
           e.preventDefault();
@@ -41,11 +42,18 @@
           $(".menu-close-right").addClass("enabled");
         });
 
+        $('.menu-open-right').click(function(e){
+          e.preventDefault();
+          $("#right-nav").addClass("enabled");
+          $(".menu-close-right").addClass("enabled");
+        });
+
         $('.menu-close-right').click(function(e){
           e.preventDefault();
           $("#right-nav").removeClass("enabled");
           $(".menu-close-right").removeClass("enabled");
         });
+
 
       // About Company Page
         // About Willey Button
