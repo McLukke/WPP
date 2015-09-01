@@ -29,9 +29,22 @@
 h1 {
   font-family: "Futura-Bold" !important;
   font-weight: bold !important;
+  text-transform: uppercase !important;
+  font-size: 45px !important;
+  line-height: 54px !important;
+}
+
+h2 {
+  font-family: "Futura-Heavy" !important;
+  font-weight: bold !important;
+  text-transform: uppercase !important;
+  font-size: 10px !important;
+  line-height: 12px !important;
 }
 
 p {
   font-family: "Futura" !important;
   font-weight: normal !important;
+  font-size: 10px !important;
+  line-height: 12px !important;
 }

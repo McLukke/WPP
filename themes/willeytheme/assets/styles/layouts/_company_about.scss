@@ -27,47 +27,41 @@
 	width: 60%;
 	padding: 10px;
 	border: 1px solid red;
-	min-height: 150px;
 }
 
 .about_popup {
 	right: 10px;
 	bottom: 10%;
 	height: 35%;
+	min-height: 200px;
 }
 
 .mission_popup {
 	left: 10px;
 	bottom: 5%;
 	height: 35%;
+	min-width: 430px;
+	min-height: 260px;
 }
 
 .sustainability_popup {
 	right: 10px;
 	bottom: 5%;
 	height: 35%;
+	min-width: 400px;
+	min-height: 250px;
 }
 
 .entry-content h1 {
-	font-size: 40px;
-	text-transform: uppercase;
-	margin-bottom: 80px;
+	margin-bottom: 20px;
 }
 
 .entry-content h2 {
-	font-size: 15px;
-	text-transform: uppercase;
 	margin-bottom: 20px;
-	// font-family: "Futura-Bold" !important;
-}
-
-.entry-content p {
-	font-size: 15px;
-	margin-bottom: 10px;
-	position: relative;
 }
 
 .entry-content span {
-	position: absolute;
 	bottom: 0;
+	margin-bottom: 10px;
+	position: relative;
 }

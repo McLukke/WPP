@@ -25,7 +25,7 @@
           <!--About Willey Printing-->
             <div class="about_popup">
               <h1><?php echo $pods->display('about_willey_title'); ?></h1>
-              <span><p><?php echo $pods->display('about_willey_text'); ?></p></span>
+              <span><p><?php echo $pods->display('about_willey_text'); ?></p><span>
             </div>
 
           <!--Mission Statement-->
