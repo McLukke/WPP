@@ -1,3 +1,4 @@
+// Top Right Buttons
 .company_toggle_buttons {
 	position: absolute;
 	top: 20px;
@@ -5,6 +6,7 @@
 	max-width: 22px;
 	display: block;
 	float: right;
+	z-index: 500;
 }
 
 .entry-content {
@@ -19,6 +21,114 @@
 	margin-bottom: 10px;
 }
 
+// Background Images for About Willey Printing
+.about_bg,
+.mission_bg,
+.sustain_bg,
+.image1,
+.image2,
+.image3,
+.image4 {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	top: 0;
+	left: 0;
+	display: block;
+	float: left;
+	overflow: hidden;
+}
+
+.about_bg .image5 {
+	display: hidden;
+}
+
+.about_bg .image1 {
+	width: 70%;
+	height: 85%;
+}
+
+.about_bg .image2 {
+	width: 30%;
+	height: 85%;
+}
+
+.about_bg .image3 {
+	width: 40%;
+	height: 15%;
+}
+
+.about_bg .image4 {
+	width: 60%;
+	height: 15%;
+}
+
+img.attachment-full {
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+
+.about_bg .image1 img.attachment-full,
+.about_bg .image2 img.attachment-full {
+	height: 100%;
+}
+
+// Background Images for Mission Statement
+.mission_bg .image1 {
+	width: 40%;
+	height: 85%;
+}
+
+.mission_bg .image2 {
+	width: 60%;
+	height: 30%;
+}
+
+.mission_bg .image3 {
+	width: 60%;
+	height: 55%;
+}
+
+.mission_bg .image4 {
+	width: 70%;
+	height: 15%;
+}
+
+.mission_bg .image5 {
+	width: 30%;
+	height: 15%;
+}
+
+.mission_bg .image1 img.attachment-full {
+	height: 100%;
+	overflow: hidden;
+}
+
+// Background Images for Sustainability
+.sustain_bg .image1 {
+	width: 75%;
+	height: 100%;
+}
+
+.sustain_bg .image2 {
+	width: 25%;
+	height: 100%;
+}
+
+.sustain_bg .image3,
+.sustain_bg .image4,
+.sustain_bg .image5 {
+	display: none;
+}
+
+.sustain_bg .image1 img.attachment-full,
+.sustain_bg .image2 img.attachment-full {
+	height: 100%;
+}
+
+// Popup windows & text
 .about_popup,
 .mission_popup,
 .sustainability_popup {

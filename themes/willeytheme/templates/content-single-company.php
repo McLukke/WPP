@@ -16,11 +16,36 @@
           while ( $pods->fetch() ) {
           // loop through pictures
             $picturesID = $pods->field('about_willey_images');
+
+            $counter = 1; ?>
+            <div class="about_bg"><?php
             foreach ($picturesID as $pictureID) { ?>
-              <div class="about_willey_images">
-              <?php echo pods_image($pictureID); ?>
+              <div class="image<?php echo $counter; ?>">
+                <?php echo pods_image($pictureID, 'full'); ?>
               </div>
-            <?php } ?>
+            <?php $counter ++;
+            } ?>
+            </div>
+
+            <?php $counter = 1; ?>
+            <div class="mission_bg hidden"><?php
+            foreach ($picturesID as $pictureID) { ?>
+              <div class="image<?php echo $counter; ?>">
+                <?php echo pods_image($pictureID, 'full'); ?>
+              </div>
+            <?php $counter ++;
+            } ?>
+            </div>
+
+            <?php $counter = 1; ?>
+            <div class="sustain_bg hidden"><?php
+            foreach ($picturesID as $pictureID) { ?>
+              <div class="image<?php echo $counter; ?>">
+                <?php echo pods_image($pictureID, 'full'); ?>
+              </div>
+            <?php $counter ++;
+            } ?>
+            </div>
 
           <!--About Willey Printing-->
             <div class="about_popup">
@@ -69,9 +94,6 @@
           <?php }
         }
         ?>
-
-
-
 
     </div>
     <footer>
