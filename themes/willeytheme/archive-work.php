@@ -1,4 +1,4 @@
-<?php get_template_part('templates/page', 'header'); ?>
+<?php // get_template_part('templates/page', 'header'); ?>
 
 <!--Left nav
   <div class="row">
@@ -28,35 +28,33 @@ Left nav ends-->
             $class = "wide";
             break;
         case 4:
-            $class = "tall";
+            $class = "extra_tall extra_wide";
             break;
         case 5:
-            $class = "extraWide";
+            $class = "extra_extra_wide tall";
             break;
+        case 6:
+          $class = "";
+          break;
+        case 7:
+          $class = "last_div";
+          break;
         }
 
-     if (has_post_thumbnail( $post->ID ) ) {
-   $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
-  $image = $image[0]; ?>
+      if (has_post_thumbnail( $post->ID ) ) {
+        $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
+        $image = $image[0]; ?>
 
-<div class="item <?php echo $class?>" style="background-image: url('<?php echo $image; ?>')">
-<div class="thing"  ></div>
-
-<!--        if ( has_post_thumbnail() ) { ?>
-          <div class="item">
-            <div class="thing">
-                <?php the_post_thumbnail(); ?>
-            </div>  
-          </div> -->
-      </div>
+        <div class="item <?php echo $class; ?>" style="background-image: url('<?php echo $image; ?>')">
+          <div class="hover_text"  >
+          <?php the_title( '<h1>', '</h1>' ); ?>
+          </div>
+        </div>
       <?php      
       }
+      
       $count ++;
 
       endwhile; ?>
-      <!-- </div> -->
-      <!-- </div> -->
-
-  <!-- </div> -->
 </div>
 <?php the_posts_navigation(); ?>
