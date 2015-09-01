@@ -30,7 +30,12 @@
       // list posts sorted by date from bulletin archives
       echo "Journey Timeline"; -->
 
+<<<<<<< HEAD
+    } else {} 
+  ?>
+=======
   <?php endif; ?>
+>>>>>>> 1db04bdd331aeb1312201f2817e86e211aeba20e
 
 </div>
 
