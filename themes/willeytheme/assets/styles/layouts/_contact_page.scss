@@ -1,0 +1,176 @@
+// theme from has 15 padding on content div
+#contact_page {
+	margin: 0 -15px;
+}
+
+.desktop_contact_form,
+.mobile_contact_form,
+.contact_details,
+#contact_us_map {
+	margin: 0 -15px;
+}
+
+// show & hide corresponding form
+.desktop_contact_form {
+	display: none;
+}
+
+.mobile_contact_form {
+	display: inline-block;
+	padding: 30px 30px;
+}
+
+// contact details
+.contact_details {
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.contact_details p,
+.contact_details a {
+	margin-top: 10px;
+}
+
+.contact_details a img {
+	margin-top: 5px;
+}
+
+// mobile form
+.mobile_contact_form h1 {
+	font-size: 30px;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+}
+
+.mobile_contact_form p {
+	margin-bottom: 10px;
+}
+
+.wpcf7-form p {
+	margin: 0;
+	display: block;
+	float: left;
+	margin-top: 10px;
+	width: 100%;
+}
+
+.form_fields {
+	width: 100%;
+	border: solid 1px #000000;
+	padding: 5px 10px;
+	margin-top: 3px;
+}
+
+form p {
+	line-height: 22px;
+	vertical-align: middle;
+}
+
+form p img {
+	vertical-align: middle;
+}
+
+input.wpcf7-form-control.wpcf7-submit {
+	cursor: pointer;
+	text-transform: uppercase;
+	border: 1px solid $purple;
+	background: #FFFFFF;
+	color: $purple;
+	width: 100%;
+	padding: 5px 0;
+}
+
+.send_button {
+	padding-top: 20px;
+}
+
+#enquiry_field select {
+	background-color: #FFFFFF;
+	border-radius: 0;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background-image: url(http://willey.homestead.app/wp-content/themes/willeytheme/assets/images/icons/dropdown_arrow.png);
+	background-repeat: no-repeat;
+	background-position: right 13px bottom 0px;
+	cursor: pointer;
+}
+
+
+
+
+
+@media ( min-width: $tablet ) {
+	// hide & show proper content
+	.mobile_contact_form {
+		display: none;
+	}
+
+	.desktop_contact_form {
+		display: inline-block;
+		height: 100vh;
+		padding: 50px 30px;
+		background-color: $light_grey;
+	}
+
+	// contact form & contents
+	.desktop_contact_form h1 {
+		font-size: 40px;
+		margin-bottom: 20px;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-family: "Futura-Bold";
+	}
+
+	.wpcf7-form p {
+		margin: 0;
+		display: block;
+		float: left;
+		margin-top: 30px;
+		width: 100%;
+	}
+
+	.form_fields {
+		width: 100%;
+		border: solid 1px #000000;
+		padding: 5px 10px;
+		margin-top: 3px;
+	}
+
+	p.send_button {
+		width: 50% !important;
+		padding-right: 5px;
+	}
+
+	p.reset_button {
+		width: 50% !important;
+		padding-left: 5px;
+		padding-top: 20px;
+	}
+
+	input.wpcf7-form-control.wpcf7-submit {
+		cursor: pointer;
+		text-transform: uppercase;
+		border: 1px solid $purple;
+		background: #FFFFFF;
+		color: $purple;
+		width: 100%;
+		padding: 5px 0;
+	}
+
+	#enquiry_field select {
+		background-position: right 13px bottom 0px;
+	}
+}
+
+@media ( min-width: $desktop ) {
+	#enquiry_field, #email_field {
+		width: 50% !important;
+		padding-right: 5px;
+	}
+
+	#name_field, #phone_field {
+		width: 50% !important;
+		padding-left: 5px;
+	}
+}

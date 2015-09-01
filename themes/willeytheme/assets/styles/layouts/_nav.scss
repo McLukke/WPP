@@ -9,7 +9,7 @@
 }
 
 #wrapper.toggled {
-    padding-left: 250px;
+    padding-left: 200px;
 }
 
 #sidebar-wrapper {
@@ -22,16 +22,32 @@
     overflow-y: auto;
     background: #fff;
     text-align: center;
-    border-color: #ababab;
-    border-width: 2px;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
 
+.menu-close{
+    width: 0;
+    margin:0;
+    z-index:1000;
+    position: fixed;
+    top:0;
+    right:0;
+    height: 100vh;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled .menu-close {
+    width: 20vw;
+}
+
 #wrapper.toggled #sidebar-wrapper {
-    width: 250px;
+    width: 80vw;
 }
 
 #page-content-wrapper {
@@ -50,7 +66,7 @@
 .sidebar-nav {
     position: absolute;
     top: 0;
-    width: 250px;
+    width: 200px;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -94,8 +110,20 @@
 }
 
 @media(min-width:768px) {
+    .menu-close {
+        display: none;
+    }
+
     #wrapper {
         padding-left: 250px;
+    }
+
+    #wrapper.toggled .menu-close {
+        display:none;
+    }
+
+    #wrapper.toggled .exit-button {
+        display:none;
     }
 
     #wrapper.toggled {
@@ -120,6 +148,8 @@
         margin-right: 0;
     }
 }
+
+
 
 
 .credits {
@@ -157,3 +187,38 @@
 .sidebar-brand {
     margin-left: -15px;
 }
+
+.exit-button{
+    max-width: 35px;
+    position: relative;
+    top: 70px;
+
+}
+
+// share icons
+
+// facebook
+// #share1a {
+//     display: none;
+// }
+
+// #share1:hover + #share1a {
+//   display: inline;
+// }
+
+
+#share1 {
+   background: url("<?php echo bloginfo('template_directory')?>/assets/images/icons/facebook.png");
+   transition: background .25s ease-in-out;
+   -moz-transition: background .25s ease-in-out;
+   -webkit-transition: background .25s ease-in-out;
+}
+
+#share1:hover {
+    opacity: 0.5;   
+}
+
+
+
+
+
