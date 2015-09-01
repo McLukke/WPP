@@ -6,9 +6,9 @@
 <div id="contact_page">
     <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
         <div class="desktop_contact_form">
-            <h1><strong>Get in Touch<br />with Us</strong></h1>
-            <p>Request a quote or to discuss your next design project. We work with clients all over the world.</p>
-            
+            <h1><?php the_title(); ?></h1>
+            <?php echo $post->post_content; ?>
+
             <?php echo do_shortcode ( '[contact-form-7 id="22" title="Enquiry Form"]' ); ?>
         </div>
     </div>

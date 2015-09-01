@@ -4,9 +4,9 @@
       <div class="company_toggle_buttons">
         <img id="about_button" class="ON" src="/wp-content/themes/willeytheme/assets/images/icons/about.png" />
         
-        <img id="mission_button" class="ON" src="/wp-content/themes/willeytheme/assets/images/icons/mission_bnw.png" />
+        <img id="mission_button" src="/wp-content/themes/willeytheme/assets/images/icons/mission_bnw.png" />
         
-        <img id="sustain_button" class="ON" src="/wp-content/themes/willeytheme/assets/images/icons/sustainability_bnw.png" />
+        <img id="sustain_button" src="/wp-content/themes/willeytheme/assets/images/icons/sustainability_bnw.png" />
       </div>
 
       <?php
@@ -25,7 +25,7 @@
           <!--About Willey Printing-->
             <div class="about_popup">
               <h1><?php echo $pods->display('about_willey_title'); ?></h1>
-              <p><?php echo $pods->display('about_willey_text'); ?></p>
+              <span><p><?php echo $pods->display('about_willey_text'); ?></p></span>
             </div>
 
           <!--Mission Statement-->
@@ -33,18 +33,18 @@
               <h1><?php echo $pods->display('mission_statement_title'); ?></h1>
             <div class="row">
             <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-              <h2><?php echo $pods->display('mission_column1_title'); ?></h2>
-              <p><?php echo $pods->display('mission_column1'); ?></p>
+              <span><h2><?php echo $pods->display('mission_column1_title'); ?></h2>
+              <p><?php echo $pods->display('mission_column1'); ?></p></span>
             </div>
 
             <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-              <h2><?php echo $pods->display('mission_column2_title'); ?></h2>
-              <p><?php echo $pods->display('mission_column2'); ?></p>
+              <span><h2><?php echo $pods->display('mission_column2_title'); ?></h2>
+              <p><?php echo $pods->display('mission_column2'); ?></p></span>
             </div>
 
             <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-              <h2><?php echo $pods->display('mission_column3_title'); ?></h2>
-              <p><?php echo $pods->display('mission_column3'); ?></p>
+              <span><h2><?php echo $pods->display('mission_column3_title'); ?></h2>
+              <p><?php echo $pods->display('mission_column3'); ?></p></span>
             </div>
 
             </div>
@@ -55,13 +55,13 @@
               <h1><?php echo $pods->display('sustainability_title'); ?></h1>
             <div class="row">
             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-              <h2><?php echo $pods->display('sustainability_column1_title'); ?></h2>
-              <p><?php echo $pods->display('sustainability_column1'); ?></p>
+              <span><h2><?php echo $pods->display('sustainability_column1_title'); ?></h2>
+              <p><?php echo $pods->display('sustainability_column1'); ?></p></span>
             </div>
 
             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-              <h2><?php echo $pods->display('sustainability_column2_title'); ?></h2>
-              <p><?php echo $pods->display('sustainability_column2'); ?></p>
+              <span><h2><?php echo $pods->display('sustainability_column2_title'); ?></h2>
+              <p><?php echo $pods->display('sustainability_column2'); ?></p></span>
             </div>
 
             </div>
