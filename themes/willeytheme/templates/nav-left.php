@@ -18,10 +18,12 @@
                     );
                 ?>
                 <br>
-                <a class="sidebar-bottom" href="#"><img src="<?php echo bloginfo('template_directory')?>/assets/images/icons/facebook_mono.png" class="sidebar-bottom"></a>
-                <a class="sidebar-bottom" href="#"><img src="<?php echo bloginfo('template_directory')?>/assets/images/icons/linkedin_mono.png" class="sidebar-bottom"></a>
-                <a class="sidebar-bottom" href="#"><img src="<?php echo bloginfo('template_directory')?>/assets/images/icons/email_mono.png" class="sidebar-bottom"></a>
-                <a class="sidebar-bottom" href="#"><img src="<?php echo bloginfo('template_directory')?>/assets/images/icons/upload_mono.png" class="sidebar-bottom"></a>
+                <a class="sidebar-bottom" id="share1" href="#"><img src="<?php echo bloginfo('template_directory')?>/assets/images/icons/facebook_mono.png" class="sidebar-bottom"></a>
+                
+
+                <a class="sidebar-bottom" id="share2" href="#"><img src="<?php echo bloginfo('template_directory')?>/assets/images/icons/linkedin_mono.png" class="sidebar-bottom"></a>
+                <a class="sidebar-bottom" id="share3" href="#"><img src="<?php echo bloginfo('template_directory')?>/assets/images/icons/email_mono.png" class="sidebar-bottom"></a>
+                <a class="sidebar-bottom" id="share4" href="#"><img src="<?php echo bloginfo('template_directory')?>/assets/images/icons/upload_mono.png" class="sidebar-bottom"></a>
                 <br><br><br>
                 <a class="language" href="#"><img src="<?php echo bloginfo('template_directory')?>/assets/images/icons/english.png" class="language"></a>
                 <a class="language" href="#"><img src="<?php echo bloginfo('template_directory')?>/assets/images/icons/chinese.png" class="language"></a>

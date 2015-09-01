@@ -10,6 +10,7 @@
  * always reference jQuery with $, even when in .noConflict() mode.
  * ======================================================================== */
 
+
 (function($) {
 
 
@@ -21,7 +22,7 @@
       init: function() {
         // JavaScript to be fired on all pages
         
-        // Left menu toggle
+      // Left menu toggle
         $('#left_menu').click(function(e){
           e.preventDefault();
           $("#wrapper").toggleClass("toggled");
@@ -33,7 +34,7 @@
         });
 
 
-        // Right menu toggle
+      // Right menu toggle
         $('#right_menu').click(function(e){
           e.preventDefault();
           $("#right-nav").addClass("enabled");
@@ -44,6 +45,61 @@
           e.preventDefault();
           $("#right-nav").removeClass("enabled");
           $(".menu-close-right").removeClass("enabled");
+        });
+
+      // About Company Page
+        // About Willey Button
+        $('#about_button').click(function(e){
+          if ( $(this).attr('class') === 'ON' ) {
+            return false;
+          } else {
+            $('.about_popup').removeClass('hidden');
+            $('.mission_popup').addClass('hidden');
+            $('.sustainability_popup').addClass('hidden');
+
+            $(this).prop('src', '/wp-content/themes/willeytheme/assets/images/icons/about.png');
+            $('#mission_button').prop('src', '/wp-content/themes/willeytheme/assets/images/icons/mission_bnw.png');
+            $('#sustain_button').prop('src', '/wp-content/themes/willeytheme/assets/images/icons/sustainability_bnw.png');
+          }
+          $(this).addClass('ON');
+          $('#mission_button').removeClass('ON');
+          $('#sustain_button').removeClass('ON');
+        });
+
+        // Mission Statement Button
+        $('#mission_button').click(function(e){
+          if ( $(this).attr('class') === 'ON' ) {
+            return false;
+          } else {
+            $('.about_popup').addClass('hidden');
+            $('.mission_popup').removeClass('hidden');
+            $('.sustainability_popup').addClass('hidden');
+
+            $('#about_button').prop('src', '/wp-content/themes/willeytheme/assets/images/icons/about_bnw.png');
+            $(this).prop('src', '/wp-content/themes/willeytheme/assets/images/icons/mission.png');
+            $('#sustain_button').prop('src', '/wp-content/themes/willeytheme/assets/images/icons/sustainability_bnw.png');
+          }
+          $(this).addClass('ON');
+          $('#about_button').removeClass('ON');
+          $('#sustain_button').removeClass('ON');
+        });
+
+        // Sustainability Button
+        $('#sustain_button').click(function(e){
+          if ( $(this).attr('class') === 'ON' ) {
+            return false;
+          } else {
+            $('.about_popup').addClass('hidden');
+            $('.mission_popup').addClass('hidden');
+            $('.sustainability_popup').removeClass('hidden');
+
+            $('#about_button').prop('src', '/wp-content/themes/willeytheme/assets/images/icons/about_bnw.png');
+            $('#mission_button').prop('src', '/wp-content/themes/willeytheme/assets/images/icons/mission_bnw.png');
+            $(this).prop('src', '/wp-content/themes/willeytheme/assets/images/icons/sustainability.png');
+          }
+          $(this).addClass('ON');
+          $('#about_button').removeClass('ON');
+          $('#mission_button').removeClass('ON');
         });
  
 

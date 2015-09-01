@@ -9,7 +9,7 @@
 }
 
 #wrapper.toggled {
-    padding-left: 250px;
+    padding-left: 200px;
 }
 
 #sidebar-wrapper {
@@ -22,8 +22,6 @@
     overflow-y: auto;
     background: #fff;
     text-align: center;
-    border-color: #ababab;
-    border-width: 2px;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -68,7 +66,7 @@
 .sidebar-nav {
     position: absolute;
     top: 0;
-    width: 250px;
+    width: 200px;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -152,6 +150,8 @@
 }
 
 
+
+
 .credits {
     font-size: 10px;
     text-align: center;
@@ -194,3 +194,31 @@
     top: 70px;
 
 }
+
+// share icons
+
+// facebook
+// #share1a {
+//     display: none;
+// }
+
+// #share1:hover + #share1a {
+//   display: inline;
+// }
+
+
+#share1 {
+   background: url("<?php echo bloginfo('template_directory')?>/assets/images/icons/facebook.png");
+   transition: background .25s ease-in-out;
+   -moz-transition: background .25s ease-in-out;
+   -webkit-transition: background .25s ease-in-out;
+}
+
+#share1:hover {
+    opacity: 0.5;   
+}
+
+
+
+
+

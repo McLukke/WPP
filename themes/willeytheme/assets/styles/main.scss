@@ -11,6 +11,17 @@
 @import "components/_forms";
 @import "components/_grid";
 @import "components/_wp-classes";
+
+@import "utilities/_breakpoints.scss";
+@import "utilities/_clearfix.scss";
+@import "utilities/_colours.scss";
+@import "utilities/_easing.scss";
+@import "utilities/_fonts.scss";
+@import "utilities/_mixins.scss";
+@import "utilities/_normalize.scss";
+@import "utilities/_programDefaults.scss";
+@import "utilities/_reset.scss"; 
+
 @import "layouts/_header";
 @import "layouts/_sidebar";
 @import "layouts/_footer";
@@ -18,14 +29,7 @@
 @import "layouts/_posts";
 @import "layouts/_nav.scss";
 @import "layouts/_nav_right.scss";
+@import "layouts/_contact_page.scss";
+@import "layouts/_company_about.scss";
 
-@import "utilities/_breakpoints.scss";
-@import "utilities/_clearfix.scss";
-@import "utilities/_colours.scss";
-@import "utilities/_easing.scss";
-// @import "utilities/_fonts.scss";
-@import "utilities/_mixins.scss";
-@import "utilities/_normalize.scss";
-// @import "utilities/_programDefaults.scss";
-@import "utilities/_reset.scss"; 
 
