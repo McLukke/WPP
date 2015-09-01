@@ -37,11 +37,20 @@ add_action( 'after_setup_theme', 'wpt_setup' );
         } endif;
 
 // Register bootstrap files and jQuery:
+//Register Packery file
 function wpt_register_js() {
     wp_register_script('jquery.bootstrap.min', get_template_directory_uri() . '/assets/scripts/js/bootstrap.js', 'jquery');
     wp_enqueue_script('jquery.bootstrap.min');
+
+    wp_register_script('packery.pkgd.js', get_template_directory_uri() . '/assets/scripts/js/packery.pkgd.js', 'jquery',false,true);
+    wp_enqueue_script('packery.pkgd.js');
+
+    // wp_register_script('packery.pkgd.min.js', get_template_directory_uri() . '/assets/scripts/js/packery.pkgd.min.js', 'jquery');
+    // wp_enqueue_script('packery.pkgd.min.js');
 }
-add_action( 'init', 'wpt_register_js' );
+add_action( 'init', 'wpt_register_js', 200 );
+
+
 function wpt_register_css() {
     wp_register_style( 'bootstrap.min', get_template_directory_uri() . '/assets/styles/css/bootstrap.css' );
     wp_enqueue_style( 'bootstrap.min' );
@@ -54,3 +63,28 @@ require_once('wp_bootstrap_navwalker.php');
 register_nav_menus( array(
     'primary' => __( 'Primary Menu', 'willeytheme' ),
 ) );
+
+// After you have set a static page as your home page you add this to your functions.php. This calls archive-POSTTYPE.php template.
+add_action("pre_get_posts", "custom_front_page");
+function custom_front_page($wp_query){
+    //Ensure this filter isn't applied to the admin area
+    if(is_admin()) {
+        return;
+    }
+
+    if($wp_query->get('page_id') == get_option('page_on_front')):
+
+        $wp_query->set('post_type', 'work');
+        $wp_query->set('page_id', ''); //Empty
+
+        //Set properties that describe the page to reflect that
+        //we aren't really displaying a static page
+        $wp_query->is_page = 0;
+        $wp_query->is_singular = 0;
+        $wp_query->is_post_type_archive = 1;
+        $wp_query->is_archive = 1;
+
+    endif;
+
+}
+
