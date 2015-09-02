@@ -20,7 +20,7 @@
 }
 
 @font-face {
-  font-family: 'Futural-Bold';
+  font-family: 'Futura-Bold';
   src: url('/wp-content/themes/willeytheme/assets/fonts/FuturaStd-Bold.otf');
   font-weight: bold;
   font-style: bold;
@@ -42,9 +42,19 @@ h2 {
   line-height: 12px !important;
 }
 
+
+body {
+  font-family: "Futura" !important;
+  font-weight: normal !important;
+  font-size: 14px !important;
+  line-height: 12px !important;
+}
+
 p {
   font-family: "Futura" !important;
   font-weight: normal !important;
   font-size: 10px !important;
   line-height: 12px !important;
 }
+
+

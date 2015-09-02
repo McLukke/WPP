@@ -1,8 +1,11 @@
 .hover_text {
   height: 100%;
   width: 100%;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0,0,0,0.6);
   opacity: 0;
+  color: #ffffff;
+  padding-left: 25px;
+  padding-top: 15px;
 }
 
 .hover_text:hover {
@@ -24,6 +27,12 @@
   margin: 0;
   background: #000000;
   //calc(1.0/29*100%) calc(1.0/29*100%) calc(1.0/29*100%) calc(1.0/29*100%);
+}
+
+.work-details-info {
+  position: absolute;
+  bottom: 15px;
+  left: 25px;
 }
 
 // @media screen and (max-width: 400px) {

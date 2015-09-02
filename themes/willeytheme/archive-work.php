@@ -48,6 +48,14 @@ Left nav ends-->
         <div class="item <?php echo $class; ?>" style="background-image: url('<?php echo $image; ?>')">
           <div class="hover_text"  >
           <?php the_title( '<h1>', '</h1>' ); ?>
+            <div class="work-details-info">
+              <h2><strong>PUBLISH TIME</strong></h2>     
+              <p><?php echo esc_html(get_the_date()); ?></p>      
+              <h2><strong>PRINTING EFFECT</strong></h2><br>
+              <p class="link-not-active"><?php the_terms( $post->ID, 'printingeffect'); ?></p>
+              <h2><strong>PAPER</strong></h2>
+              <p class="link-not-active"><?php the_terms( $post->ID, 'paper'); ?></p>
+            </div>
           </div>
         </div>
       <?php      
