@@ -20,6 +20,16 @@
       init: function() {
         // JavaScript to be fired on all pages
         
+        $(document).on("scroll", function () {
+          if ( $(document).scrollTop() > 0 ) {
+            $('header').addClass('tiny_header');
+            $('#main_logo').addClass('hidden');
+          } else {
+            $('header').removeClass('tiny_header');
+            $('#main_logo').removeClass('hidden');
+          }
+        });
+
       // Left menu toggle
         $('#left_menu').click(function(e){
           e.preventDefault();
