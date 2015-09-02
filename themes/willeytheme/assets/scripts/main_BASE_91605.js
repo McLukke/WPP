@@ -13,6 +13,7 @@
 
 (function($) {
 
+
   // Use this variable to set up the common and page specific functions. If you
   // rename this variable, you will also need to rename the namespace below.
   var Sage = {
@@ -64,14 +65,7 @@
             $(this).prop('src', '/wp-content/themes/willeytheme/assets/images/icons/about.png');
             $('#mission_button').prop('src', '/wp-content/themes/willeytheme/assets/images/icons/mission_bnw.png');
             $('#sustain_button').prop('src', '/wp-content/themes/willeytheme/assets/images/icons/sustainability_bnw.png');
-
-            // change bg
-            $('.about_bg').removeClass('hidden');
-            $('.mission_bg').addClass('hidden');
-            $('.sustain_bg').addClass('hidden');
           }
-
-          // turn this class "ON" for next click enquiry
           $(this).addClass('ON');
           $('#mission_button').removeClass('ON');
           $('#sustain_button').removeClass('ON');
@@ -82,23 +76,14 @@
           if ( $(this).attr('class') === 'ON' ) {
             return false;
           } else {
-            // hide inactive icons
             $('.about_popup').addClass('hidden');
             $('.mission_popup').removeClass('hidden');
             $('.sustainability_popup').addClass('hidden');
 
-            // show appropriate icons
             $('#about_button').prop('src', '/wp-content/themes/willeytheme/assets/images/icons/about_bnw.png');
             $(this).prop('src', '/wp-content/themes/willeytheme/assets/images/icons/mission.png');
             $('#sustain_button').prop('src', '/wp-content/themes/willeytheme/assets/images/icons/sustainability_bnw.png');
-
-            // change bg
-            $('.about_bg').addClass('hidden');
-            $('.mission_bg').removeClass('hidden');
-            $('.sustain_bg').addClass('hidden');
           }
-
-          // turn this class "ON" for next click enquiry
           $(this).addClass('ON');
           $('#about_button').removeClass('ON');
           $('#sustain_button').removeClass('ON');
@@ -109,36 +94,27 @@
           if ( $(this).attr('class') === 'ON' ) {
             return false;
           } else {
-            // hide inactive icons
             $('.about_popup').addClass('hidden');
             $('.mission_popup').addClass('hidden');
             $('.sustainability_popup').removeClass('hidden');
 
-            // show appropriate icons
             $('#about_button').prop('src', '/wp-content/themes/willeytheme/assets/images/icons/about_bnw.png');
             $('#mission_button').prop('src', '/wp-content/themes/willeytheme/assets/images/icons/mission_bnw.png');
             $(this).prop('src', '/wp-content/themes/willeytheme/assets/images/icons/sustainability.png');
-
-            // change bg
-            $('.about_bg').addClass('hidden');
-            $('.mission_bg').addClass('hidden');
-            $('.sustain_bg').removeClass('hidden');
           }
-
-          // turn this class "ON" for next click enquiry
           $(this).addClass('ON');
           $('#about_button').removeClass('ON');
           $('#mission_button').removeClass('ON');
         });
 
-        var $container = $('#packery');
-        // init
-        $container.packery({
-          itemSelector: '.item',
-          gutter: 10
-        });
-
-
+var $container = $('#packery');
+       // init
+       $container.packery({
+         itemSelector: '.item',
+         gutter: 10
+       });
+     },
+ 
 
       },
       finalize: function() {

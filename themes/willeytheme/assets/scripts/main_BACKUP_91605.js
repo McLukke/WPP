@@ -131,6 +131,16 @@
           $('#mission_button').removeClass('ON');
         });
 
+<<<<<<< HEAD
+var $container = $('#packery');
+       // init
+       $container.packery({
+         itemSelector: '.item',
+         gutter: 10
+       });
+     },
+ 
+=======
         var $container = $('#packery');
         // init
         $container.packery({
@@ -141,6 +151,7 @@
 
 
       },
+>>>>>>> features/static-pgs
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
       }
