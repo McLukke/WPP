@@ -9,7 +9,7 @@
 }
 
 #wrapper.toggled {
-    padding-left: 200px;
+    padding-left: 250px;
 }
 
 #sidebar-wrapper {
@@ -47,7 +47,7 @@
 }
 
 #wrapper.toggled #sidebar-wrapper {
-    width: 80vw;
+    width: 200px;
 }
 
 #page-content-wrapper {
@@ -67,10 +67,10 @@
     position: absolute;
     top: 0;
 <<<<<<< HEAD
-    width: 100%;
+    width: 250px;
 =======
     width: 200px;
->>>>>>> 1db04bdd331aeb1312201f2817e86e211aeba20e
+>>>>>>> b65c88a642276a79d460ae16be7ada6e54dc6162
     margin: 0;
     padding: 0;
     list-style: none;
@@ -119,7 +119,7 @@
     }
 
     #wrapper {
-        padding-left: 200px;
+        padding-left: 250px;
     }
 
     #wrapper.toggled .menu-close {
@@ -135,7 +135,7 @@
     }
 
     #sidebar-wrapper {
-        width: 200px;
+        width: 250px;
     }
 
     #wrapper.toggled #sidebar-wrapper {
@@ -193,29 +193,14 @@
 }
 
 .exit-button{
-    max-width: 35px;
-    position: relative;
+    max-width: 30px;
+    position: fixed;
     top: 70px;
-
 }
-
-// share icons
-
-// facebook
-// #share1a {
-//     display: none;
-// }
-
-// #share1:hover + #share1a {
-//   display: inline;
-// }
 
 
 #share1 {
    background: url("<?php echo bloginfo('template_directory')?>/assets/images/icons/facebook.png");
-   transition: background .25s ease-in-out;
-   -moz-transition: background .25s ease-in-out;
-   -webkit-transition: background .25s ease-in-out;
 }
 
 #share1:hover {

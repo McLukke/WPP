@@ -23,9 +23,7 @@
         <li><span class="timeline-year">2015</span></li>
         <li><span class="timeline-year">2014</span></li>
       </ul>
-
-    
-      
+  
       <!-- // can potentially use 'else'
       // list posts sorted by date from bulletin archives
       echo "Journey Timeline"; -->

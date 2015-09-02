@@ -6,7 +6,7 @@
                 <li class="sidebar-brand">
                     <a class="sidebar-nav" href="#"><img src="<?php echo bloginfo('template_directory')?>/assets/images/icons/logofull.png" class="logo"></a> 
                 </li>
-                <br><br>
+                <br><br><br>
                 <?php /* Primary navigation */
                     wp_nav_menu( array(
                       'menu' => 'top_menu',
