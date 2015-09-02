@@ -21,7 +21,6 @@
       init: function() {
         // JavaScript to be fired on all pages
         
-
       // Left menu toggle
         $('#left_menu').click(function(e){
           e.preventDefault();
@@ -36,12 +35,6 @@
 
       // Right menu toggle
         $('#right_menu').click(function(e){
-          e.preventDefault();
-          $("#right-nav").addClass("enabled");
-          $(".menu-close-right").addClass("enabled");
-        });
-
-        $('.menu-open-right').click(function(e){
           e.preventDefault();
           $("#right-nav").addClass("enabled");
           $(".menu-close-right").addClass("enabled");

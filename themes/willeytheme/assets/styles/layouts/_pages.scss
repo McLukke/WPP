@@ -1,3 +1,4 @@
+
 .work-detail {
 	border-left: 1px solid black;
 		p img {
@@ -50,3 +51,12 @@
 	padding-left: 0;
 	padding-right: 0;
 }
+
+.link-not-active {
+	pointer-events: none;
+	cursor: default;
+	color: #ffffff;
+}
+
+
+
