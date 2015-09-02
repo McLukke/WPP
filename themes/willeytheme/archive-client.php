@@ -1,31 +1,50 @@
-<?php get_template_part('templates/page', 'header'); ?>
-
-<!--Left nav
-  <div class="row">
-      <div class="col-md-4 col-sm-4">
-      <?php // get_template_part('templates/page', 'header'); ?>
-    </div>
-  </div>
-Left nav ends-->
-
 <?php if (!have_posts()) : ?>
+      <div class="alert alert-warning">
+        <?php _e('Sorry, no results were found.', 'sage'); ?>
+      </div>
+      <?php get_search_form(); ?>
+    <?php endif; ?>
 
-  <div class="alert alert-warning">
-    <?php _e('Sorry, no results were found.', 'sage'); ?>
-  </div>
-  <?php get_search_form(); ?>
 
-<?php endif; ?>
+  <div class="packery js-packery client_page" data-packery-options='{ "gutter": 0, "itemSelector": ".item", "columnWidth": ".grid-sizer", "percentPosition": true }'>
+    <div class="gutter-sizer"></div>
+    <div class="grid-sizer"></div>
+      <?php 
+      $count = 1;
 
-<?php while (have_posts()) : the_post(); ?>
+      while (have_posts()) : the_post(); 
+      
+        switch ($count) {
+        case 4:
+        case 3:
+        case 9:
+        case 13:
+            $class = "two";
+            break;
+        case 6:
+            $class = "six";
+            break;
+        case 11:
+            $class = "four";
+            break;
+        default:
+            $class = "";
+        }
 
-  <br/>
-  <?php the_title(); ?>
-  <?php if ( has_post_thumbnail() ) {
-      the_post_thumbnail();
-    } ?>
-    <br/>
+      if (has_post_thumbnail( $post->ID ) ) {
+        $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
+        $image = $image[0]; ?>
 
-<?php endwhile; ?>
+        <div class="item <?php echo $class; ?>" style="background-image: url('<?php echo $image; ?>')">
+          <div class="hover_text"  >
+          <?php the_title( '<h1>', '</h1>' ); ?>
+          <?php the_title( $count ); ?>
+          </div>
+        </div>
+      <?php      
+      }
+      
+      $count ++;
 
-<?php the_posts_navigation(); ?>
+      endwhile; ?>
+</div>
