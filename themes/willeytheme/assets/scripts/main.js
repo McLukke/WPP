@@ -22,11 +22,13 @@
         
         $(document).on("scroll", function () {
           if ( $(document).scrollTop() > 0 ) {
-            $('header').addClass('tiny_header');
-            $('#main_logo').addClass('hidden');
-          } else {
-            $('header').removeClass('tiny_header');
+            $('header, #left_menu_button, #right_menu_button').addClass('tiny_header');
+            $('#main_logo_full').addClass('hidden');
             $('#main_logo').removeClass('hidden');
+          } else {
+            $('header, #left_menu_button, #right_menu_button').removeClass('tiny_header');
+            $('#main_logo_full').removeClass('hidden');
+            $('#main_logo').addClass('hidden');
           }
         });
 

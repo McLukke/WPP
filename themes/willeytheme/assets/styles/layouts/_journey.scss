@@ -1,9 +1,16 @@
 .social_share img,
-.publish_time h2,
-.publish_time p {
+.mobile_publish_time h2,
+.mobile_publish_time p,
+.desktop_publish_time h2,
+.desktop_publish_time p {
 	float: left;
 }
 
-.publish_time .icon {
+.mobile_publish_time .icon,
+.desktop_publish_time .icon {
 	margin-right: 5px;
+}
+
+.desktop_publish_time {
+	display: none;
 }

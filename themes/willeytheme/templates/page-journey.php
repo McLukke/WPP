@@ -15,6 +15,7 @@ $params = array ('limit' => -1);
 <div class="feature_image">
 </div>
 
+
 <div class="journey_text">
   <h1><?php single_post_title()+get_the_ID(); ?></h1>
   <div class="col-xs-12 col-sm-7">
@@ -25,7 +26,7 @@ $params = array ('limit' => -1);
         if ( $all_posts ) {
           foreach ( $all_posts as $post ) {
             setup_postdata($post);
-            
+
             ?><h1><?php the_title(); ?></h1><?php
             the_excerpt();
           }
@@ -35,14 +36,13 @@ $params = array ('limit' => -1);
   </div>
 
   <div class="col-xs-12 col-sm-5">
-    <div class="publish_time">
+    <div class="desktop_publish_time">
       <img class="icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/printing_effect.png" />
       <h2>PUBLISH TIME</h2><br />
       <p><?php echo esc_html(get_the_date()); ?></p>
     </div>
   </div>
 </div>
-
 
 
 </div>
@@ -70,7 +70,7 @@ $params = array ('limit' => -1);
   </div>
 
   <div class="col-xs-6 col-sm-5">
-    <div class="publish_time">
+    <div class="mobile_publish_time">
       <img class="icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/printing_effect.png" />
       <h2>PUBLISH TIME</h2><br />
       <p><?php echo esc_html(get_the_date()); ?></p>

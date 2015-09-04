@@ -9,13 +9,12 @@
       </div>
 
       <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-        <a href="<?= esc_url(home_url('/')); ?>"><img id="main_logo" src="<?php echo bloginfo('template_directory'); ?>/assets/images/icons/<?php
-            if ( is_front_page() ) {
-              echo "logofull.png";
-            } else {
-              echo "logo.png";
-            }
-          ?>" alt="Main Menu" /></a>
+        <a href="<?= esc_url(home_url('/')); ?>">
+          <img id="main_logo_full" src="<?php echo bloginfo('template_directory'); ?>/assets/images/icons/logofull.png" alt="Main Menu" />
+        </a>
+        <a href="<?= esc_url(home_url('/')); ?>">
+          <img id="main_logo" class="hidden" src="<?php echo bloginfo('template_directory'); ?>/assets/images/icons/logo.png" alt="Main Menu" />
+        </a>
       </div>
 
       <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
