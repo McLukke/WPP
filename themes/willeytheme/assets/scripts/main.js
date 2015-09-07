@@ -33,7 +33,7 @@
         });
 
       // Left menu toggle
-        $('#left_menu').click(function(e){
+        $('#left_menu_button').click(function(e){
           e.preventDefault();
           $("#wrapper").toggleClass("toggled");
         });
@@ -45,7 +45,7 @@
 
 
       // Right menu toggle
-        $('#right_menu').click(function(e){
+        $('#right_menu_button').click(function(e){
           e.preventDefault();
           $("#right-nav").addClass("enabled");
           $(".menu-close-right").addClass("enabled");

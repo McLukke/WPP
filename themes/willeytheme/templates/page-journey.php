@@ -4,34 +4,26 @@
  */
 ?>
 <div id="journey_page" class="container-fluid">
-<?php if( have_posts() ) :
-while ( have_posts() ) : the_post();
-
-$params = array ('limit' => -1);
-
-
-?><div class="row">
+<div class="row">
 
 <div class="feature_image">
 </div>
 
-
 <div class="journey_text">
-  <h1><?php single_post_title()+get_the_ID(); ?></h1>
   <div class="col-xs-12 col-sm-7">
     <div class="journey_content">
-      <p><?php
+      <?php
         $args = array ( 'numberposts' => -1 );
         $all_posts = get_posts ( $args );
         if ( $all_posts ) {
           foreach ( $all_posts as $post ) {
             setup_postdata($post);
 
-            ?><h1><?php the_title(); ?></h1><?php
-            the_excerpt();
+            the_title('<h1>', '</h1>');
+            the_excerpt('<p>', '</p>');
           }
         }
-      ?></p>
+      ?>
     </div>
   </div>
 
@@ -77,6 +69,4 @@ $params = array ('limit' => -1);
     </div>
   </div>
 </div>
-<?php endwhile;
-endif; ?>
 </div>

@@ -1,7 +1,9 @@
-<?php include("nav-left.php"); ?>
-<?php include("nav-right.php"); ?>
 <header id="header" class="banner" role="banner">
-  <div class="container-fluid">
+  <div id="customHeader" class="container-fluid <?php 
+    if ( is_front_page() ) {
+      echo "abc";
+    }
+  ?>">
     <div class="row text-center">
 
       <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
@@ -11,7 +13,7 @@
       <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
         <a href="<?= esc_url(home_url('/')); ?>">
           <img id="main_logo_full" src="<?php echo bloginfo('template_directory'); ?>/assets/images/icons/logofull.png" alt="Main Menu" />
-        </a>
+        </a>  
         <a href="<?= esc_url(home_url('/')); ?>">
           <img id="main_logo" class="hidden" src="<?php echo bloginfo('template_directory'); ?>/assets/images/icons/logo.png" alt="Main Menu" />
         </a>
@@ -19,16 +21,17 @@
 
       <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
         <a href="<?= esc_url(home_url('/')); ?>"><?php 
-          if ( is_front_page() || is_page('work') ) { ?>
+          if ( is_front_page() || is_page_template('content-single-work.php') ) { ?>
             <img id="right_menu_button" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/folder.png" alt="Side Menu" />
-          <?php } else if ( is_page('journey') ) { ?>
+          <?php } else if ( is_page_template('page-journey.php') ) { ?>
             <img id="right_menu" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/publish.png" alt="Side Menu" />
-          <?php } else {
-
-          } ?>
+          <?php } else {} ?>
         </a>
       </div>
     </div>
     
   </div>
 </header>
+
+<?php include("nav-left.php"); ?>
+<?php include("nav-right.php"); ?>
