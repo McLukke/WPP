@@ -1,0 +1,68 @@
+.client_page .item {
+  float: left;
+  background-repeat: no-repeat;
+  max-width: auto; 
+  height: 25vh;
+  background-size: cover;
+  background-position:center center;
+  z-index: 500;
+}
+
+@media screen and (max-width: $tablet ) {
+  .client_page{
+    .grid-sizer {
+      width: calc(1/2*100%);
+    }
+  
+    .item {
+      width: 50%;
+      height: 200px;
+  
+      &.two{
+        width: 50vw;
+      }
+      &.six{
+        width: 50vw;
+      }
+      &.four {
+        width: 50vw;
+      }
+    }
+  }
+}
+
+
+@media screen and (min-width: $tablet) {
+
+  .client_page{
+    .grid-sizer {
+      width: calc(1/7*100%);
+    }
+  
+    .item {
+      width: calc(1/7*100%);
+      height: 25vh;
+      overflow: hidden;
+      display: block;
+      float: left;
+  
+      &.two{
+        width: calc(2/7*100%);
+      }
+      &.six{
+        height: 50vh;
+        width: calc(3/7*100%);
+      }
+      &.four {
+        height: 50vh;
+        width: calc(2/7*100%);
+      }
+    }
+   
+    .gutter-sizer {
+      width: 0;//calc(1/29*100%);
+    }
+  }
+}
+
+

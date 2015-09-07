@@ -1,5 +1,9 @@
 <header id="header" class="banner" role="banner">
-  <div class="container-fluid">
+  <div id="customHeader" class="container-fluid <?php 
+    if ( is_front_page() ) {
+      echo "abc";
+    }
+  ?>">
     <div class="row text-center">
 
       <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
@@ -9,7 +13,7 @@
       <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
         <a href="<?= esc_url(home_url('/')); ?>">
           <img id="main_logo_full" src="<?php echo bloginfo('template_directory'); ?>/assets/images/icons/logofull.png" alt="Main Menu" />
-        </a>
+        </a>  
         <a href="<?= esc_url(home_url('/')); ?>">
           <img id="main_logo" class="hidden" src="<?php echo bloginfo('template_directory'); ?>/assets/images/icons/logo.png" alt="Main Menu" />
         </a>
@@ -28,6 +32,9 @@
     
   </div>
 </header>
+<<<<<<< HEAD
 
+=======
+>>>>>>> adfdffea701b2360d6e3adc1194ee554f04a2fcb
 <?php include("nav-left.php"); ?>
 <?php include("nav-right.php"); ?>

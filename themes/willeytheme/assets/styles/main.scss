@@ -21,7 +21,10 @@
 @import "utilities/_colours.scss";
 @import "utilities/_easing.scss";
 @import "utilities/_fonts.scss";
+@import "utilities/_mixins.scss";
+@import "utilities/_normalize.scss";
 @import "utilities/_programDefaults.scss";
+@import "utilities/_reset.scss"; 
 
 @import "layouts/_header";
 @import "layouts/_sidebar";
@@ -33,4 +36,6 @@
 @import "layouts/_contact_page.scss";
 @import "layouts/_company.scss";
 @import "layouts/_packery.scss";
+@import "layouts/_packery_client.scss";
 @import "layouts/_journey.scss";
+@import "layouts/_gray.scss";

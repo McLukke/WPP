@@ -37,9 +37,7 @@
 
 
 <!-- invisible div -->
-  <div class="menu-close-right">
-        <a href="#"><img src="<?php echo bloginfo('template_directory')?>/assets/images/icons/close.png" class="exit-button"></a>
-  </div>
+  
 
   <div class="menu-open-right">
         <a href="#"><img src="<?php echo bloginfo('template_directory')?>/assets/images/icons/folder.png" class="exit-button"></a>
