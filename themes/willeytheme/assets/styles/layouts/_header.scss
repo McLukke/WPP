@@ -1,3 +1,14 @@
+// make sure we dont change admin panel styles
+body.admin-bar #wpadminbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+body.admin-bar header.banner, #wrapper.tiny_header {
+	top: 46px;
+}
+
 header.banner {
 	position: fixed;
 	z-index: 1000;
@@ -41,8 +52,12 @@ header.tiny_header {
 	margin: 35px 0 35px 6px;
 }
 
-@media(min-width:768px) {
+@media(min-width:$tablet) {
 	header.banner {
 		display: none;
+	}
+	
+	body.admin-bar header.banner, #wrapper.tiny_header {
+		top: 32px;
 	}
 }

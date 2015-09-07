@@ -6,6 +6,11 @@
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
+
+    margin-top: 170px;
+    &.tiny_space {
+        margin-top: 125px;
+    }
 }
 
 #wrapper.toggled {
@@ -109,12 +114,13 @@
     background: none;
 }
 
-@media(min-width:768px) {
+@media(min-width:$tablet) {
     .menu-close {
         display: none;
     }
 
     #wrapper {
+        margin-top: 0;
         padding-left: 250px;
     }
 

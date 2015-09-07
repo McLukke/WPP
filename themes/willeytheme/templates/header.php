@@ -1,5 +1,3 @@
-<?php include("nav-left.php"); ?>
-<?php include("nav-right.php"); ?>
 <header id="header" class="banner" role="banner">
   <div class="container-fluid">
     <div class="row text-center">
@@ -32,3 +30,5 @@
     
   </div>
 </header>
+<?php include("nav-left.php"); ?>
+<?php include("nav-right.php"); ?>

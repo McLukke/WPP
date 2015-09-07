@@ -5,7 +5,7 @@
       <?php get_search_form(); ?>
     <?php endif; ?>
 
-<div class="space">
+<div class="">
 
   <div class="packery js-packery client_page" data-packery-options='{ "gutter": 0, "itemSelector": ".item", "columnWidth": ".grid-sizer", "percentPosition": true }'>
     <div class="gutter-sizer"></div>
