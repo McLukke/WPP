@@ -155,6 +155,8 @@
 .credits {
     font-size: 10px;
     text-align: center;
+    margin-left: 60px;
+    margin-top: 10px;
 }
 
 .credit-text{
@@ -195,15 +197,22 @@
 }
 
 
-#share1 {
-   background: url("<?php echo bloginfo('template_directory')?>/assets/images/icons/facebook.png");
-}
-
-#share1:hover {
-    opacity: 0.5;   
+#share3 {
+    opacity: 0.80;   
 }
 
 
+#share4 {
+    opacity: 0.80;   
+}
+
+// #share3 {
+//    background: url("<?php echo bloginfo('template_directory')?>/assets/images/icons/facebook.png");
+// }
+
+// #share1:hover {
+//     opacity: 0.5;   
+// }
 
 
 

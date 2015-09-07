@@ -63,6 +63,30 @@
           $(".menu-close-right").addClass("enabled");
         });
 
+        //Gray share buttons
+
+        $("#share1").hover(function () {
+        $(this).toggleClass("grayscale-off");
+      });
+
+        $("#share2").hover(function () {
+        $(this).toggleClass("grayscale-off");
+      });
+
+        $("#share3").hover(function () {
+        $(this).toggleClass("grayscale-off");
+      });
+
+        $("#share4").hover(function () {
+        $(this).toggleClass("grayscale-off");
+      });
+
+    //   var hoverExpand = function() {
+    //   $('#share1', this).toggleClass('grayscale-off');
+    //   $('#share1', this).fadeToggle(200);      
+    // };
+    //   $('#share1').hover(hoverExpand);
+
       // About Company Page
         // About Willey Button
         $('#about_button').click(function(e){

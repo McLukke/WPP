@@ -8,6 +8,15 @@
   z-index: 500;
 }
 
+.space {
+  margin-top: 150px;
+}
+
+@media screen and (min-width: $tablet) {
+.space{
+    margin-top: 0px;
+  }
+}
 
 @media screen and (max-width: $tablet ) {
   .client_page{
@@ -34,6 +43,7 @@
 
 
 @media screen and (min-width: $tablet) {
+
   .client_page{
     .grid-sizer {
       width: calc(1/7*100%);
