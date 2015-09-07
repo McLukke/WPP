@@ -10,6 +10,7 @@
  * always reference jQuery with $, even when in .noConflict() mode.
  * ======================================================================== */
 
+
 (function($) {
 
   // Use this variable to set up the common and page specific functions. If you
@@ -20,18 +21,6 @@
       init: function() {
         // JavaScript to be fired on all pages
         
-        $(document).on("scroll", function () {
-          if ( $(document).scrollTop() > 0 ) {
-            $('header, #left_menu_button, #right_menu_button').addClass('tiny_header');
-            $('#main_logo_full').addClass('hidden');
-            $('#main_logo').removeClass('hidden');
-          } else {
-            $('header, #left_menu_button, #right_menu_button').removeClass('tiny_header');
-            $('#main_logo_full').removeClass('hidden');
-            $('#main_logo').addClass('hidden');
-          }
-        });
-
       // Left menu toggle
         $('#left_menu').click(function(e){
           e.preventDefault();
@@ -62,7 +51,6 @@
           $("#right-nav").addClass("enabled");
           $(".menu-close-right").addClass("enabled");
         });
-
       // About Company Page
         // About Willey Button
         $('#about_button').click(function(e){
@@ -149,6 +137,8 @@
           itemSelector: '.item',
           gutter: 10
         });
+
+
 
       },
       finalize: function() {

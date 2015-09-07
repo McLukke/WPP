@@ -1,6 +1,6 @@
 <div id="right-nav">
          
-  <?php if(is_front_page()) : ?>
+  <?php if ( is_front_page() || is_page('work') ) { ?>
       <br>
       <br>
       <h1><span class="nav-title">SORTING</span></h1>
@@ -15,7 +15,7 @@
       </ul>
 
 
-  <?php elseif(is_page("journey")) : ?>
+  <?php } else if ( is_page('journey') ) { ?>
     <br><br>
       <h1><span class="nav-title">DATE</span></h1>
       <br><br>
@@ -23,14 +23,14 @@
         <li><span class="timeline-year">2015</span></li>
         <li><span class="timeline-year">2014</span></li>
       </ul>
-
-    
-      
+  
       <!-- // can potentially use 'else'
       // list posts sorted by date from bulletin archives
       echo "Journey Timeline"; -->
 
-  <?php endif; ?>
+  <?php } else {
+
+          } ?>
 
 </div>
 

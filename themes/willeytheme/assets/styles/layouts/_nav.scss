@@ -9,7 +9,7 @@
 }
 
 #wrapper.toggled {
-    padding-left: 200px;
+    padding-left: 250px;
 }
 
 #sidebar-wrapper {
@@ -47,7 +47,7 @@
 }
 
 #wrapper.toggled #sidebar-wrapper {
-    width: 80vw;
+    width: 200px;
 }
 
 #page-content-wrapper {
@@ -66,7 +66,7 @@
 .sidebar-nav {
     position: absolute;
     top: 0;
-    width: 200px;
+    width: 250px;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -189,29 +189,14 @@
 }
 
 .exit-button{
-    max-width: 35px;
-    position: relative;
+    max-width: 30px;
+    position: fixed;
     top: 70px;
-
 }
-
-// share icons
-
-// facebook
-// #share1a {
-//     display: none;
-// }
-
-// #share1:hover + #share1a {
-//   display: inline;
-// }
 
 
 #share1 {
    background: url("<?php echo bloginfo('template_directory')?>/assets/images/icons/facebook.png");
-   transition: background .25s ease-in-out;
-   -moz-transition: background .25s ease-in-out;
-   -webkit-transition: background .25s ease-in-out;
 }
 
 #share1:hover {

@@ -1,5 +1,5 @@
 header.banner {
-	position: relative;
+	position: fixed;
 	z-index: 1000;
 	top: 0;
 	left: 0;
@@ -7,21 +7,34 @@ header.banner {
 	padding: 0;
 	width: 100%;
 	background-color: #FFFFFF;
+	height: 170px;
 }
 
-#left_menu, #right_menu {
+header.tiny_header {
+	height: 125px;
+}
+
+#left_menu_button, #right_menu_button {
 	max-width: 35px;
 	position: relative;
 	margin-top: 105px;
+	&.tiny_header {
+		margin-top: 50px;
+	}
 }
 
-#main_logo {
+#main_logo_full {
 	max-width: 170px;
 	margin: 35px 0;
 }
 
+#main_logo {
+	max-width: 59px;
+	margin: 35px 0 35px 6px;
+}
+
 @media(min-width:768px) {
-	header.banner{
+	header.banner {
 		display: none;
 	}
 }
