@@ -10,7 +10,6 @@
  * always reference jQuery with $, even when in .noConflict() mode.
  * ======================================================================== */
 
-
 (function($) {
 
   // Use this variable to set up the common and page specific functions. If you
@@ -21,8 +20,22 @@
       init: function() {
         // JavaScript to be fired on all pages
         
+        $(document).on("scroll", function () {
+          if ( $(document).scrollTop() > 0 ) {
+            $('header, #left_menu_button, #right_menu_button').addClass('tiny_header');
+            $('#main_logo_full').addClass('hidden');
+            $('#main_logo').removeClass('hidden');
+            $('#wrapper').addClass('tiny_header');
+          } else {
+            $('header, #left_menu_button, #right_menu_button').removeClass('tiny_header');
+            $('#main_logo_full').removeClass('hidden');
+            $('#main_logo').addClass('hidden');
+            $('#wrapper').removeClass('tiny_header');
+          }
+        });
+
       // Left menu toggle
-        $('#left_menu').click(function(e){
+        $('#left_menu_button').click(function(e){
           e.preventDefault();
           $("#wrapper").toggleClass("toggled");
         });
@@ -34,7 +47,7 @@
 
 
       // Right menu toggle
-        $('#right_menu').click(function(e){
+        $('#right_menu_button').click(function(e){
           e.preventDefault();
           $("#right-nav").addClass("enabled");
           $(".menu-close-right").addClass("enabled");
@@ -51,6 +64,25 @@
           $("#right-nav").addClass("enabled");
           $(".menu-close-right").addClass("enabled");
         });
+
+        //Gray share buttons
+
+        $("#share1").hover(function () {
+        $(this).toggleClass("grayscale-off");
+      });
+
+        $("#share2").hover(function () {
+        $(this).toggleClass("grayscale-off");
+      });
+
+        $("#share3").hover(function () {
+        $(this).toggleClass("grayscale-off");
+      });
+
+        $("#share4").hover(function () {
+        $(this).toggleClass("grayscale-off");
+      });
+
       // About Company Page
         // About Willey Button
         $('#about_button').click(function(e){
@@ -137,8 +169,6 @@
           itemSelector: '.item',
           gutter: 10
         });
-
-
 
       },
       finalize: function() {

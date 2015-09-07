@@ -23,9 +23,7 @@
         <li><span class="timeline-year">2015</span></li>
         <li><span class="timeline-year">2014</span></li>
       </ul>
-
-    
-      
+  
       <!-- // can potentially use 'else'
       // list posts sorted by date from bulletin archives
       echo "Journey Timeline"; -->
@@ -39,9 +37,7 @@
 
 
 <!-- invisible div -->
-  <div class="menu-close-right">
-        <a href="#"><img src="<?php echo bloginfo('template_directory')?>/assets/images/icons/close.png" class="exit-button"></a>
-  </div>
+  
 
   <div class="menu-open-right">
         <a href="#"><img src="<?php echo bloginfo('template_directory')?>/assets/images/icons/folder.png" class="exit-button"></a>

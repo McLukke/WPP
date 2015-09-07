@@ -10,7 +10,6 @@
  * always reference jQuery with $, even when in .noConflict() mode.
  * ======================================================================== */
 
-
 (function($) {
 
 
@@ -54,11 +53,8 @@
           $(".menu-close-right").removeClass("enabled");
         });
 
-        $('.menu-open-right').click(function(e){
-          e.preventDefault();
-          $("#right-nav").addClass("enabled");
-          $(".menu-close-right").addClass("enabled");
-        });
+<<<<<<< HEAD
+
       // About Company Page
         // About Willey Button
         $('#about_button').click(function(e){
@@ -113,15 +109,14 @@
           $('#about_button').removeClass('ON');
           $('#mission_button').removeClass('ON');
         });
-
-var $container = $('#packery');
-       // init
-       $container.packery({
-         itemSelector: '.item',
-         gutter: 10
-       });
-     },
  
+=======
+        $('.menu-open-right').click(function(e){
+          e.preventDefault();
+          $("#right-nav").addClass("enabled");
+          $(".menu-close-right").addClass("enabled");
+        });
+>>>>>>> b65c88a642276a79d460ae16be7ada6e54dc6162
 
       },
       finalize: function() {

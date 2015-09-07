@@ -6,14 +6,19 @@
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
+
+    margin-top: 170px;
+    &.tiny_space {
+        margin-top: 125px;
+    }
 }
 
 #wrapper.toggled {
-    padding-left: 200px;
+    padding-left: 250px;
 }
 
 #sidebar-wrapper {
-    z-index: 1000;
+    z-index: 2000;
     position: fixed;
     left: 250px;
     width: 0;
@@ -47,7 +52,7 @@
 }
 
 #wrapper.toggled #sidebar-wrapper {
-    width: 80vw;
+    width: 200px;
 }
 
 #page-content-wrapper {
@@ -66,7 +71,7 @@
 .sidebar-nav {
     position: absolute;
     top: 0;
-    width: 200px;
+    width: 250px;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -109,12 +114,13 @@
     background: none;
 }
 
-@media(min-width:768px) {
+@media(min-width:$tablet) {
     .menu-close {
         display: none;
     }
 
     #wrapper {
+        margin-top: 0;
         padding-left: 250px;
     }
 
@@ -155,6 +161,8 @@
 .credits {
     font-size: 10px;
     text-align: center;
+    margin-left: 60px;
+    margin-top: 10px;
 }
 
 .credit-text{
@@ -189,36 +197,41 @@
 }
 
 .exit-button{
-    max-width: 35px;
-    position: relative;
+    max-width: 30px;
+    position: fixed;
     top: 70px;
-
+    z-index: 2000;
 }
 
-// share icons
 
-// facebook
-// #share1a {
-//     display: none;
+#share3 {
+    opacity: 0.80;   
+}
+
+
+#share4 {
+    opacity: 0.80;   
+}
+
+// .nav-space {
+//     margin-top: 10vh;
 // }
 
-// #share1:hover + #share1a {
-//   display: inline;
+
+// @media screen and (max-width: $tablet) {
+// .nav-space{
+//     margin-top: 0px;
+//   }
 // }
 
 
-#share1 {
-   background: url("<?php echo bloginfo('template_directory')?>/assets/images/icons/facebook.png");
-   transition: background .25s ease-in-out;
-   -moz-transition: background .25s ease-in-out;
-   -webkit-transition: background .25s ease-in-out;
-}
+// #share3 {
+//    background: url("<?php echo bloginfo('template_directory')?>/assets/images/icons/facebook.png");
+// }
 
-#share1:hover {
-    opacity: 0.5;   
-}
-
-
+// #share1:hover {
+//     opacity: 0.5;   
+// }
 
 
 

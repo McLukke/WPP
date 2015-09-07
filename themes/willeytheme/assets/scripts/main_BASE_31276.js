@@ -22,7 +22,6 @@
       init: function() {
         // JavaScript to be fired on all pages
         
-
       // Left menu toggle
         $('#left_menu').click(function(e){
           e.preventDefault();
@@ -42,23 +41,19 @@
           $(".menu-close-right").addClass("enabled");
         });
 
-        $('.menu-open-right').click(function(e){
-          e.preventDefault();
-          $("#right-nav").addClass("enabled");
-          $(".menu-close-right").addClass("enabled");
-        });
-
         $('.menu-close-right').click(function(e){
           e.preventDefault();
           $("#right-nav").removeClass("enabled");
           $(".menu-close-right").removeClass("enabled");
         });
 
+<<<<<<< Temporary merge branch 1
         $('.menu-open-right').click(function(e){
           e.preventDefault();
           $("#right-nav").addClass("enabled");
           $(".menu-close-right").addClass("enabled");
         });
+=======
       // About Company Page
         // About Willey Button
         $('#about_button').click(function(e){
@@ -113,15 +108,8 @@
           $('#about_button').removeClass('ON');
           $('#mission_button').removeClass('ON');
         });
-
-var $container = $('#packery');
-       // init
-       $container.packery({
-         itemSelector: '.item',
-         gutter: 10
-       });
-     },
  
+>>>>>>> Temporary merge branch 2
 
       },
       finalize: function() {

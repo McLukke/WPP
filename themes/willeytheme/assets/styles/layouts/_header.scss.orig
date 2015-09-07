@@ -1,25 +1,27 @@
+<<<<<<< HEAD
+// make sure we dont change the admin panel css
+=======
 // make sure we dont change admin panel styles
+>>>>>>> adfdffea701b2360d6e3adc1194ee554f04a2fcb
 body.admin-bar #wpadminbar {
 	position: fixed;
 	top: 0;
 	left: 0;
 }
 
-body.admin-bar #header.banner, #wrapper.tiny_header {
-	top: 46px;
-}
-
-#header.banner {
-	position: fixed;
-	top: 0;
-	left: 0;
-}
-
+<<<<<<< HEAD
 body.admin-bar #header.banner {
 	top: 46px;
 }
 
 #header.banner {
+=======
+body.admin-bar header.banner, #wrapper.tiny_header {
+	top: 46px;
+}
+
+header.banner {
+>>>>>>> adfdffea701b2360d6e3adc1194ee554f04a2fcb
 	position: fixed;
 	z-index: 1000;
 	top: 0;
@@ -63,11 +65,19 @@ body.admin-bar #header.banner {
 }
 
 @media(min-width:$tablet) {
+<<<<<<< HEAD
+	body.admin-bar #header.banner {
+		top: 32px;
+	}
+
 	#header.banner {
+=======
+	header.banner {
+>>>>>>> adfdffea701b2360d6e3adc1194ee554f04a2fcb
 		display: none;
 	}
 	
-	body.admin-bar #header.banner, #wrapper.tiny_header {
+	body.admin-bar header.banner, #wrapper.tiny_header {
 		top: 32px;
 	}
 }
