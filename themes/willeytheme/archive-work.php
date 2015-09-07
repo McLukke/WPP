@@ -7,34 +7,40 @@
     </div>
   </div>
 Left nav ends-->
-    <?php if (!have_posts()) : ?>
-      <div class="alert alert-warning">
-        <?php _e('Sorry, no results were found.', 'sage'); ?>
-      </div>
-      <?php get_search_form(); ?>
-    <?php endif; ?>
+  <?php if (!have_posts()) : ?>
+    <div class="alert alert-warning">
+      <?php _e('Sorry, no results were found.', 'sage'); ?>
+    </div>
+    <?php get_search_form(); ?>
+  <?php endif; ?>
 
 
   <div class="packery js-packery" data-packery-options='{ "gutter": 0, "itemSelector": ".item", "columnWidth": ".grid-sizer", "percentPosition": true }'>
     <div class="gutter-sizer"></div>
     <div class="grid-sizer"></div>
       <?php 
-      $count = 1;
+      $count=1; 
 
       while (have_posts()) : the_post(); 
       
         switch ($count) {
+        case 1:
+            $class = "";
+          break;
+        case 2:
+            $class = "sm_half";
+          break;
         case 3:
-            $class = "wide";
-            break;
+            $class = "wide sm_half";
+          break;
         case 4:
             $class = "extra_tall extra_wide";
-            break;
+          break;
         case 5:
-            $class = "extra_extra_wide tall";
-            break;
+            $class = "extra_extra_wide tall sm_half";
+          break;
         case 6:
-          $class = "";
+          $class = "sm_half";
           break;
         case 7:
           $class = "last_div";
@@ -46,22 +52,31 @@ Left nav ends-->
         $image = $image[0]; ?>
 
         <div class="item <?php echo $class; ?>" style="background-image: url('<?php echo $image; ?>')">
-          <div class="hover_text"  >
-          <?php the_title( '<h1>', '</h1>' ); ?>
+
+          <div class="hover_text" onclick="location.href='<?php the_permalink(); ?>';">
+            <?php the_title('<h3>','</h3>'); ?>
             <div class="work-details-info">
-              <h2><strong>PUBLISH TIME</strong></h2>     
-              <p><?php echo esc_html(get_the_date()); ?></p>      
-              <h2><strong>PRINTING EFFECT</strong></h2><br>
-              <p class="link-not-active"><?php the_terms( $post->ID, 'printingeffect'); ?></p>
-              <h2><strong>PAPER</strong></h2>
-              <p class="link-not-active"><?php the_terms( $post->ID, 'paper'); ?></p>
+              <img class="work-details-info-icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/publish_bnw.png" />
+              <p>PUBLISH TIME<br /><?php echo esc_html(get_the_date()); ?></p>
+              <img class="work-details-info-icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/printing_effect_bnw.png" />
+              <p>PRINTING EFFECT<br /><div class="link-not-active"><?php the_terms( $post->ID, 'printingeffect'); ?></div></p>
+              <img class="work-details-info-icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/paper_bnw.png" />
+              <p>PAPER<br /><div class="link-not-active"><?php 
+                  the_terms( $post->ID, 'paper'); 
+              ?></div></p>
             </div>
           </div>
         </div>
       <?php      
       }
       
-      $count ++;
+      if($count%7==0) {
+        $count = 0;
+      }
+      if($count < 7){
+        $count ++;
+      }
+    
 
       endwhile; ?>
 </div>
