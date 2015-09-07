@@ -9,14 +9,14 @@
 }
 
 
-@media screen and (max-width: $tablet -1 ) {
+@media screen and (max-width: $tablet ) {
   .client_page{
     .grid-sizer {
       width: calc(1/2*100%);
     }
   
     .item {
-      width: 100%;
+      width: 50%;
       height: 200px;
   
       &.two{
@@ -31,7 +31,6 @@
     }
   }
 }
-
 
 
 @media screen and (min-width: $tablet) {
