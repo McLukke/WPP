@@ -33,7 +33,7 @@
         });
 
       // Left menu toggle
-        $('#left_menu').click(function(e){
+        $('#left_menu_button').click(function(e){
           e.preventDefault();
           $("#wrapper").toggleClass("toggled");
         });
@@ -80,12 +80,6 @@
         $("#share4").hover(function () {
         $(this).toggleClass("grayscale-off");
       });
-
-    //   var hoverExpand = function() {
-    //   $('#share1', this).toggleClass('grayscale-off');
-    //   $('#share1', this).fadeToggle(200);      
-    // };
-    //   $('#share1').hover(hoverExpand);
 
       // About Company Page
         // About Willey Button

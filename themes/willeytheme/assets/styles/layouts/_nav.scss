@@ -13,7 +13,7 @@
 }
 
 #sidebar-wrapper {
-    z-index: 1000;
+    z-index: 2000;
     position: fixed;
     left: 250px;
     width: 0;
@@ -194,6 +194,7 @@
     max-width: 30px;
     position: fixed;
     top: 70px;
+    z-index: 2000;
 }
 
 
@@ -205,6 +206,18 @@
 #share4 {
     opacity: 0.80;   
 }
+
+// .nav-space {
+//     margin-top: 10vh;
+// }
+
+
+// @media screen and (max-width: $tablet) {
+// .nav-space{
+//     margin-top: 0px;
+//   }
+// }
+
 
 // #share3 {
 //    background: url("<?php echo bloginfo('template_directory')?>/assets/images/icons/facebook.png");

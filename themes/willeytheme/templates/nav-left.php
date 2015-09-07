@@ -1,7 +1,9 @@
 <div id="wrapper">
         <!-- Sidebar -->
 
+        <div class="nav-space"></div>
         <div id="sidebar-wrapper">
+        
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
                     <a class="sidebar-nav" href="#"><img src="<?php echo bloginfo('template_directory')?>/assets/images/icons/logofull.png" class="logo"></a> 

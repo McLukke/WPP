@@ -8,10 +8,18 @@ header.banner {
 	width: 100%;
 	background-color: #FFFFFF;
 	height: 170px;
+	-webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
 
 header.tiny_header {
 	height: 125px;
+	-webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
 
 #left_menu_button, #right_menu_button {
