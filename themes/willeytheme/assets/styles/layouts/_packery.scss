@@ -19,7 +19,7 @@
   }
 
 .item {
-	float: left;
+  float: left;
   background-repeat: no-repeat;
   max-width: auto; 
   height: 300px;
@@ -31,7 +31,7 @@
 
 .packery {
   margin: 0;
-  background: #000000;
+  background: #3B3B3B;
   //calc(1.0/29*100%) calc(1.0/29*100%) calc(1.0/29*100%) calc(1.0/29*100%);
 }
 
@@ -76,6 +76,7 @@
   .item .hover_text h3 {
     font-size: 1.8em;
   }
+}
 
 @media screen and (max-width: $tablet) {
   .grid-sizer {

@@ -4,13 +4,7 @@
  */
 ?>
 <div id="journey_page" class="container-fluid">
-<?php if( have_posts() ) :
-while ( have_posts() ) : the_post();
-
-$params = array ('limit' => -1);
-
-
-?><div class="row">
+<div class="row">
 
 <div class="feature_image">
 </div>
