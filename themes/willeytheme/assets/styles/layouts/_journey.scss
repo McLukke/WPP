@@ -1,5 +1,6 @@
-.journey_content {
+.journey_page {
 	width: 100%;
+	height: 100%;
 }
 
 .social_share img,
@@ -17,4 +18,18 @@
 
 .desktop_publish_time {
 	display: none;
+}
+
+.mobile_publish_time {
+	display: inline-block;
+}
+
+@media (min-width: $tablet) {
+	.desktop_publish_time {
+		display: inline-block;
+	}
+
+	.mobile_publish_time {
+		display: none;
+	}
 }
