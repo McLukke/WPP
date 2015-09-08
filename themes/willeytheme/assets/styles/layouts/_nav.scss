@@ -124,6 +124,10 @@
         padding-left: 250px;
     }
 
+    body.admin-bar #wrapper {
+        margin-top: 32px;
+    }
+
     #wrapper.toggled .menu-close {
         display:none;
     }
