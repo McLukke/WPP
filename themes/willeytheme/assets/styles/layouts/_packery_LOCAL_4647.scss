@@ -19,7 +19,7 @@
   }
 
 .item {
-  float: left;
+	float: left;
   background-repeat: no-repeat;
   max-width: auto; 
   height: 300px;
@@ -97,32 +97,6 @@
   .item .hover_text h3 {
     font-size: 1.8em;
   }
-<<<<<<< HEAD
-=======
-}
-
-@media screen and (max-width: $tablet) {
-  .grid-sizer {
-    width: calc(6/12*100%);
-  }
-  .item {
-    width: 100%;
-  }
-  .sm_half {
-    width: 50%;
-    height: 200px;
-  }
-
-  .item .hover_text h2 {
-    font-size: 2em !important;
-    line-height: 1em !important;
-    position: absolute;
-    top: 15px;
-    left: 25px;
-    width: 60%;
-    height: 30%;
-  }
->>>>>>> 473379ecaafeac13f420c9c21cd2c20b19cd745f
 }
 
 @media screen and (min-width: $tablet) {

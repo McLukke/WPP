@@ -57,7 +57,7 @@ Left nav ends-->
             <?php the_title('<h3>','</h3>'); ?>
             <div class="work-details-info">
               <img class="work-details-info-icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/publish_bnw.png" />
-              <p>PUBLISH TIME<br /><?php echo esc_html(get_the_date()); ?></p>
+              <p>PUBLISH TIME<br /><div class="link-not-active"><?php echo esc_html(get_the_date()); ?></div></p>
               <img class="work-details-info-icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/printing_effect_bnw.png" />
               <p>PRINTING EFFECT<br /><div class="link-not-active"><?php the_terms( $post->ID, 'printingeffect'); ?></div></p>
               <img class="work-details-info-icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/paper_bnw.png" />
