@@ -18,14 +18,27 @@
     <br />
     <div class="contact_details">
         <p>Contact:</p>
-        <p class="bg-icon-contact work-detail-icon">2/F, Silver Tech Tower, 26 Cheung Lee Street, Chai Wan. Hong Kong</p>
-        <p class="bg-icon-phone work-detail-icon">(852) 2552 7113</p>
-        <p class="bg-icon-printer work-detail-icon">(852) 2555 1179</p>
-        <p class="bg-icon-email work-detail-icon">info@willey.com.hk</p>
+        <span>
+            <img class="contact_icons" src="<?php echo bloginfo('template_directory'); ?>/assets/images/icons/contact.png" alt="Contact Address" />
+            <p>2/F, Silver Tech Tower, 26 Cheung Lee Street, Chai Wan. Hong Kong</p>
+        </span>
+        <span>
+            <img class="contact_icons" src="<?php echo bloginfo('template_directory'); ?>/assets/images/icons/phone.png" alt="Phone Number" />
+            <p>(852) 2552 7113</p>
+        </span>
+        <span>
+            <img class="contact_icons" src="<?php echo bloginfo('template_directory'); ?>/assets/images/icons/printer.png" alt="Fax Number" />
+            <p>(852) 2555 1179</p>
+        </span>
+        <span>
+            <img class="contact_icons" src="<?php echo bloginfo('template_directory'); ?>/assets/images/icons/email.png" alt="Email Address" />
+            <p>info@willey.com.hk</p>
+        </span>
         <br />
-        <p>Follow us on:<br />
-        <a href=""><img class="icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/facebook.png"></img></a>
-        <a href=""><img class="icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/linkedin.png"></img></a></p>
+            <p>Follow us on:<br />
+            <a href=""><img class="icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/facebook.png"></img></a>
+            <a href=""><img class="icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/linkedin.png"></img></a>
+            </p>
     </div>
     <br />
     <div class="mobile_contact_form">

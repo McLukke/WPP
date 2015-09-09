@@ -22,15 +22,13 @@
         
         $(document).on("scroll", function () {
           if ( $(document).scrollTop() > 0 ) {
-            $('header, #left_menu_button, #right_menu_button').addClass('tiny_header');
+            $('header, #left_menu_button, #right_menu_button, main.main').addClass('tiny_header');
             $('#main_logo_full').addClass('hidden');
             $('#main_logo').removeClass('hidden');
-            $('#wrapper').addClass('tiny_header');
           } else {
-            $('header, #left_menu_button, #right_menu_button').removeClass('tiny_header');
+            $('header, #left_menu_button, #right_menu_button, main.main').removeClass('tiny_header');
             $('#main_logo_full').removeClass('hidden');
             $('#main_logo').addClass('hidden');
-            $('#wrapper').removeClass('tiny_header');
           }
         });
 

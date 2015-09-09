@@ -1,6 +1,6 @@
 <?php while (have_posts()) : the_post(); ?>
   <article <?php post_class(); ?>>
-    <div class="entry-content">
+    <div class="entry-content2">
 
     <div class="about_mobile">
       <?php

@@ -1,6 +1,7 @@
-<div id="right-nav">
+
          
   <?php if ( is_front_page() || is_page('work') ) { ?>
+    <div id="right-nav">
       <br>
       <br>
       <h1><span class="nav-title">SORTING</span></h1>
@@ -14,37 +15,24 @@
         <li><a href="#"><span class="list1">BROCHURE</span></a></li>
       </ul>
 
-
+      <div class="menu-open-right">
+            <a href="#"><img src="<?php echo bloginfo('template_directory')?>/assets/images/icons/folder.png" class="exit-button"></a>
+      </div>
+    </div>
   <?php } else if ( is_page('journey') ) { ?>
-    <br><br>
+    <div id="right-nav">
+      <br>
+      <br>
       <h1><span class="nav-title">DATE</span></h1>
       <br><br>
       <ul class="timeline-year">
         <li><span class="timeline-year">2015</span></li>
         <li><span class="timeline-year">2014</span></li>
       </ul>
-  
-      <!-- // can potentially use 'else'
-      // list posts sorted by date from bulletin archives
-      echo "Journey Timeline"; -->
 
-  <?php } else {
-
-          } ?>
-
-</div>
-
-
-
-<!-- invisible div -->
-  
-
-  <div class="menu-open-right">
-        <a href="#"><img src="<?php echo bloginfo('template_directory')?>/assets/images/icons/folder.png" class="exit-button"></a>
-  </div>
-
-
-
-
-
+      <div class="menu-open-right">
+            <a href="#"><img src="<?php echo bloginfo('template_directory')?>/assets/images/icons/folder.png" class="exit-button"></a>
+      </div>
+    </div>
+  <?php } else {} ?>
 
