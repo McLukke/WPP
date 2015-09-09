@@ -49,7 +49,11 @@ Left nav ends-->
 
       if (has_post_thumbnail( $post->ID ) ) {
         $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
-        $image = $image[0]; ?>
+        $image = $image[0];
+      }else{
+        $image = bloginfo('template_directory')."/wp-content/themes/willeytheme/assets/images/icons/black.png";
+      }
+      ?>
 
         <div class="item <?php echo $class; ?>" style="background-image: url('<?php echo $image; ?>')">
 
@@ -57,7 +61,7 @@ Left nav ends-->
             <?php the_title('<h3>','</h3>'); ?>
             <div class="work-details-info">
               <img class="work-details-info-icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/publish_bnw.png" />
-              <p>PUBLISH TIME<br /><?php echo esc_html(get_the_date()); ?></p>
+              <p>PUBLISH TIME<br /><div class="link-not-active"><?php echo esc_html(get_the_date()); ?></div></p>
               <img class="work-details-info-icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/printing_effect_bnw.png" />
               <p>PRINTING EFFECT<br /><div class="link-not-active"><?php the_terms( $post->ID, 'printingeffect'); ?></div></p>
               <img class="work-details-info-icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/paper_bnw.png" />
@@ -67,9 +71,8 @@ Left nav ends-->
             </div>
           </div>
         </div>
-      <?php      
-      }
-      
+
+      <?php 
       if($count%7==0) {
         $count = 0;
       }

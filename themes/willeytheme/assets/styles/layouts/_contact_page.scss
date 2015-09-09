@@ -26,9 +26,20 @@
 	padding-right: 30px;
 }
 
-.contact_details p,
-.contact_details a {
-	margin-top: 10px;
+.contact_details span {
+	clear: both;
+	margin-bottom: 10px;
+	width: 100%;
+}
+
+.contact_details span p {
+	padding-top: 5px;
+	padding-left: 24px;
+}
+
+.contact_icons {
+	max-width: 20px;
+	float: left;
 }
 
 .contact_details a img {
@@ -36,6 +47,15 @@
 }
 
 // mobile form
+span.EnquiryType,
+span.Name,
+span.Company,
+span.Email,
+span.PhoneNo,
+span.Message {
+	width: 100%;
+}
+
 .mobile_contact_form h1 {
 	font-size: 30px;
 	margin-bottom: 20px;
@@ -95,10 +115,6 @@ input.wpcf7-form-control.wpcf7-submit {
 	background-position: right 13px bottom 0px;
 	cursor: pointer;
 }
-
-
-
-
 
 @media ( min-width: $tablet ) {
 	// hide & show proper content
