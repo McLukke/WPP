@@ -49,7 +49,11 @@ Left nav ends-->
 
       if (has_post_thumbnail( $post->ID ) ) {
         $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
-        $image = $image[0]; ?>
+        $image = $image[0];
+      }else{
+        $image = bloginfo('template_directory')."/wp-content/themes/willeytheme/assets/images/icons/black.png";
+      }
+      ?>
 
         <div class="item <?php echo $class; ?>" style="background-image: url('<?php echo $image; ?>')">
 
@@ -67,9 +71,8 @@ Left nav ends-->
             </div>
           </div>
         </div>
-      <?php      
-      }
-      
+
+      <?php 
       if($count%7==0) {
         $count = 0;
       }
