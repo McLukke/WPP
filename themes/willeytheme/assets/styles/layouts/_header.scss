@@ -38,19 +38,24 @@ main.main {
 	position: absolute;
 	left: 0;
 	width: 100vw;
-	margin-top: 119px;
+	padding-top: 119px;
 	&.tiny_header {
-		margin-top: 88px;
+		padding-top: 88px;
 	}
 }
 
-#left_menu_button, #right_menu_button {
+#left_menu_button, .right_menu_button {
 	max-width: 25px;
 	position: relative;
 	margin-top: 75px;
 	&.tiny_header {
 		margin-top: 35px;
 	}
+}
+
+.right_menu_button {
+	z-index: 1500;
+	display: inline-block;
 }
 
 #main_logo_full {
@@ -81,9 +86,13 @@ main.main {
 		position: relative;
 		float: left;
 		width: 80vw;
-		margin-top: 0;
+		padding-top: 0;
 		&.tiny_header {
-			margin-top: 0;
+			padding-top: 0;
 		}
+	}
+
+	.right_menu_button {
+		display: none;
 	}
 }

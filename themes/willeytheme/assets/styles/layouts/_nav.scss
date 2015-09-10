@@ -11,6 +11,7 @@ body.admin-bar .exit-button {
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
+    width: 100%;
 }
 
 #wrapper.toggled {
@@ -48,7 +49,7 @@ body.admin-bar .exit-button {
 }
 
 #wrapper.toggled .menu-close {
-    width: 20vw;
+    width: 25vw;
 }
 
 #wrapper.toggled #sidebar-wrapper {
@@ -140,7 +141,7 @@ body.admin-bar .exit-button {
     }
 
     #wrapper.toggled {
-        padding-left: 25vw;
+        padding-left: 20vw;
         width: 20vw;
         display: block;
     }
@@ -207,7 +208,7 @@ body.admin-bar .exit-button {
 
 .exit-button{
     max-width: 25px;
-    position: fixed;
+    position: absolute;
     margin-top: 75px;
     margin-left: 2vw;
     z-index: 2000;

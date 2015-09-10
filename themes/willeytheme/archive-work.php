@@ -1,12 +1,17 @@
 <?php // get_template_part('templates/page', 'header'); ?>
 
-<!--Left nav
-  <div class="row">
-      <div class="col-md-4 col-sm-4">
-      <?php // get_template_part('templates/page', 'header'); ?>
-    </div>
-  </div>
-Left nav ends-->
+<!-- right menu -->
+<div class="container-fluid">
+<div class="row text-center">
+<div class="right_work_menu">
+<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10"></div>
+<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+  <a href="#">
+    <img class="right_menu_button" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/folder.png" alt="Side Menu" />
+  </a>
+</div>
+</div></div></div>
+
   <?php if (!have_posts()) : ?>
     <div class="alert alert-warning">
       <?php _e('Sorry, no results were found.', 'sage'); ?>
