@@ -68,6 +68,16 @@
   margin-left: 30px;
 }
 
+.link-not-active-journey,
+.link-not-active-journey:hover {
+  a{
+    pointer-events: none;
+    cursor: cursor;
+    color: #000;
+    text-decoration: none;
+  }
+}
+
 .work-details-link {
   display: inline-block;
 }
