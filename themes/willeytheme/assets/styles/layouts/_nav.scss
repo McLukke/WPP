@@ -5,6 +5,7 @@ body.admin-bar .exit-button {
 }
 
 #wrapper {
+    position: absolute;
     padding-left: 0;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
@@ -13,16 +14,16 @@ body.admin-bar .exit-button {
 }
 
 #wrapper.toggled {
-    padding-left: 250px;
+    padding-left: 75vw;
 }
 
 #sidebar-wrapper {
     z-index: 2000;
     position: fixed;
-    left: 250px;
+    left: 75vw;
     width: 0;
     height: 100%;
-    margin-left: -250px;
+    margin-left: -75vw;
     overflow-y: auto;
     background: #fff;
     text-align: center;
@@ -51,7 +52,7 @@ body.admin-bar .exit-button {
 }
 
 #wrapper.toggled #sidebar-wrapper {
-    width: 200px;
+    width: 75vw;
 }
 
 #page-content-wrapper {
@@ -62,7 +63,7 @@ body.admin-bar .exit-button {
 
 #wrapper.toggled #page-content-wrapper {
     position: absolute;
-    margin-right: -250px;
+    margin-right: -75vw;
 }
 
 /* Sidebar Styles */
@@ -70,7 +71,7 @@ body.admin-bar .exit-button {
 .sidebar-nav {
     position: absolute;
     top: 0;
-    width: 250px;
+    width: 100%;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -114,8 +115,9 @@ body.admin-bar .exit-button {
 }
 
 @media(min-width:$tablet) {
-    body.admin-bar #sidebar-wrapper,
-    body.admin-bar .exit-button {
+    body.admin-bar #sidebar-wrapper, 
+    body.admin-bar .exit-button, 
+    body.admin-bar #wrapper {
         top: 32px;
     }
 
@@ -124,11 +126,9 @@ body.admin-bar .exit-button {
     }
 
     #wrapper {
-        padding-left: 250px;
-    }
-
-    body.admin-bar #wrapper {
-        margin-top: 32px;
+        padding-left: 20vw;
+        width: 20vw;
+        display: block;
     }
 
     #wrapper.toggled .menu-close {
@@ -140,15 +140,17 @@ body.admin-bar .exit-button {
     }
 
     #wrapper.toggled {
-        padding-left: 0;
+        padding-left: 25vw;
+        width: 20vw;
+        display: block;
     }
 
     #sidebar-wrapper {
-        width: 250px;
+        width: 20%;
     }
 
     #wrapper.toggled #sidebar-wrapper {
-        width: 0;
+        width: 20%;
     }
 
     #page-content-wrapper {
@@ -168,7 +170,7 @@ body.admin-bar .exit-button {
 .credits {
     font-size: 10px;
     text-align: center;
-    margin-left: 60px;
+    width: 100%;
     margin-top: 10px;
 }
 
@@ -206,8 +208,12 @@ body.admin-bar .exit-button {
 .exit-button{
     max-width: 25px;
     position: fixed;
-    margin-top: 35px;
+    margin-top: 75px;
+    margin-left: 2vw;
     z-index: 2000;
+    &.tiny_header {
+        margin-top: 35px;
+    }
 }
 
 

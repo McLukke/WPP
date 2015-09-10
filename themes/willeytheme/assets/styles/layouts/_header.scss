@@ -35,6 +35,9 @@ body.admin-bar main.main.tiny_header {
 }
 
 main.main {
+	position: absolute;
+	left: 0;
+	width: 100vw;
 	margin-top: 119px;
 	&.tiny_header {
 		margin-top: 88px;
@@ -69,12 +72,15 @@ main.main {
 		top: 32px;
 	}
 
-	body.admin-bar main.main,
+	body.admin-bar main.main, 
 	body.admin-bar main.main.tiny_header {
-		top: 0px;
+		top: 0;
 	}
 
 	main.main {
+		position: relative;
+		float: left;
+		width: 80vw;
 		margin-top: 0;
 		&.tiny_header {
 			margin-top: 0;

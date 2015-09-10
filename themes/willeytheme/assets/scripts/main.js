@@ -22,11 +22,19 @@
         
         $(document).on("scroll", function () {
           if ( $(document).scrollTop() > 0 ) {
-            $('header, #left_menu_button, #right_menu_button, main.main').addClass('tiny_header');
+            $('header,
+              #left_menu_button,
+              #right_menu_button,
+              main.main,
+              .exit-button').addClass('tiny_header');
             $('#main_logo_full').addClass('hidden');
             $('#main_logo').removeClass('hidden');
           } else {
-            $('header, #left_menu_button, #right_menu_button, main.main').removeClass('tiny_header');
+            $('header, 
+              #left_menu_button, 
+              #right_menu_button, 
+              main.main, 
+              .exit-button').removeClass('tiny_header');
             $('#main_logo_full').removeClass('hidden');
             $('#main_logo').addClass('hidden');
           }
@@ -35,12 +43,12 @@
       // Left menu toggle
         $('#left_menu_button').click(function(e){
           e.preventDefault();
-          $("#wrapper").toggleClass("toggled");
+          $("#wrapper").addClass("toggled");
         });
 
-        $('.menu-close').click(function(e){
+        $('.exit-button').click(function(e){
           e.preventDefault();
-          $("#wrapper").toggleClass("toggled");
+          $("#wrapper").removeClass("toggled");
         });
 
 

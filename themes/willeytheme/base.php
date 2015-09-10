@@ -36,7 +36,8 @@ use Roots\Sage\Wrapper;
             </aside><!-- /.sidebar -->
           <?php endif; ?>
 
-        </div><!-- /#wrapper -->
+        <!-- /#wrapper -->
+        </div>
       </div><!-- /.content row -->
     </div><!-- /.wrap -->
     <?php
