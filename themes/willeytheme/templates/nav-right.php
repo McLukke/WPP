@@ -1,26 +1,5 @@
-
-         
-  <?php if ( is_front_page() || is_page('work') ) { ?>
-    <div id="right-nav">
-      <br>
-      <br>
-      <h1><span class="nav-title">SORTING</span></h1>
-      <br><br><br><br><br>
-      <ul class="nav-sorting">
-        <li><a href="#"><span class="list1">SEASONAL</span></a></li>
-        <li><a href="#"><span class="list1">PREMIUM</span></a></li>
-        <li><a href="#"><span class="list1">STATIONARY</span></a></li>
-        <li><a href="#"><span class="list1">PROMOTIONAL</span></a></li>
-        <li><a href="#"><span class="list1">PACKAGING</span></a></li>
-        <li><a href="#"><span class="list1">BROCHURE</span></a></li>
-      </ul>
-
-      <div class="menu-open-right">
-            <a href="#"><img src="<?php echo bloginfo('template_directory')?>/assets/images/icons/folder.png" class="exit-button"></a>
-      </div>
-    </div>
-  <?php } else if ( is_page('journey') ) { ?>
-    <div id="right-nav">
+<div id="right-nav">
+  <?php if ( is_page('journey') ) { ?>
       <br>
       <br>
       <h1><span class="nav-title">DATE</span></h1>
@@ -30,9 +9,26 @@
         <li><span class="timeline-year">2014</span></li>
       </ul>
 
-      <div class="menu-open-right">
-            <a href="#"><img src="<?php echo bloginfo('template_directory')?>/assets/images/icons/folder.png" class="exit-button"></a>
-      </div>
-    </div>
-  <?php } else {} ?>
-
+  <?php } else { ?>
+      <br>
+      <br>
+      <h1 class="nav-title">SORTING</h1>
+      <br><br><br><br><br>
+      <ul class="nav-sorting">
+        <li><a href="#"><span class="list1">SEASONAL</span></a></li>
+        <li><a href="#"><span class="list1">PREMIUM</span></a></li>
+        <li><a href="#"><span class="list1">STATIONARY</span></a></li>
+        <li><a href="#"><span class="list1">PROMOTIONAL</span></a></li>
+        <li><a href="#"><span class="list1">PACKAGING</span></a></li>
+        <li><a href="#"><span class="list1">BROCHURE</span></a></li>
+      </ul>
+      <a href="#">
+        <img src="<?php echo bloginfo('template_directory')?>/assets/images/icons/close.png" class="exit_button desktop_right_nav">
+      </a>
+    <?php } ?>
+</div>
+<div class="right-exit-menu">
+  <a href="#">
+    <img src="<?php echo bloginfo('template_directory')?>/assets/images/icons/close.png" class="exit-button">
+  </a>
+</div>

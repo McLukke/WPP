@@ -20,19 +20,31 @@ use Roots\Sage\Wrapper;
     ?>
     <div class="wrap container-fluid" role="document">
       <div class="content row">
-        <main class="main full-width" role="main">
-          <?php include Wrapper\template_path(); ?>
-        </main><!-- /.main -->
+        <div id="wrapper">
 
+          <!-- <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2"> -->
+          <?php include('templates/nav-left.php'); ?>
+          <!-- </div> -->
 
-        <?php if (Config\display_sidebar()) : ?>
-          <aside class="sidebar" role="complementary">
-            <?php include Wrapper\sidebar_path(); ?>
-          </aside><!-- /.sidebar -->
-        <?php endif; ?>
+          <!-- <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8"> -->
+            <main class="main full-width" role="main">
+              <?php include Wrapper\template_path(); ?>
+            </main><!-- /.main -->
+          <!-- </div> -->
 
-        
-      </div><!-- /.content -->
+          <!-- <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2"> -->
+          <?php // include('templates/nav-right.php'); ?>
+          <!-- </div> -->
+
+          <?php if (Config\display_sidebar()) : ?>
+            <aside class="sidebar" role="complementary">
+              <?php include Wrapper\sidebar_path(); ?>
+            </aside><!-- /.sidebar -->
+          <?php endif; ?>
+
+        <!-- /#wrapper -->
+        </div>
+      </div><!-- /.content row -->
     </div><!-- /.wrap -->
     <?php
       do_action('get_footer');
