@@ -1,4 +1,17 @@
-header.banner {
+// make sure we dont change admin panel styles
+body.admin-bar #wpadminbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+body.admin-bar #header.banner,
+body.admin-bar main.main,
+body.admin-bar main.main.tiny_header {
+	top: 46px;
+}
+
+#header.banner {
 	position: fixed;
 	z-index: 1000;
 	top: 0;
@@ -7,34 +20,79 @@ header.banner {
 	padding: 0;
 	width: 100%;
 	background-color: #FFFFFF;
-	height: 170px;
+	height: 120px;
+	-webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  &.tiny_header {
+		height: 88px;
+		-webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
 }
 
-header.tiny_header {
-	height: 125px;
-}
-
-#left_menu_button, #right_menu_button {
-	max-width: 35px;
-	position: relative;
-	margin-top: 105px;
+main.main {
+	position: absolute;
+	left: 0;
+	width: 100vw;
+	padding-top: 119px;
 	&.tiny_header {
-		margin-top: 50px;
+		padding-top: 88px;
 	}
 }
 
+#left_menu_button, .right_menu_button {
+	max-width: 25px;
+	position: relative;
+	margin-top: 75px;
+	&.tiny_header {
+		margin-top: 35px;
+	}
+}
+
+.right_menu_button {
+	z-index: 1500;
+	display: inline-block;
+}
+
 #main_logo_full {
-	max-width: 170px;
-	margin: 35px 0;
+	max-width: 119px;
+	margin: 25px 0;
 }
 
 #main_logo {
-	max-width: 59px;
-	margin: 35px 0 35px 6px;
+	max-width: 41px;
+	margin: 25px 0 25px 2px;
 }
 
-@media(min-width:768px) {
-	header.banner {
+@media(min-width: $tablet) {
+	#header.banner {
+		display: none;
+	}
+
+	body.admin-bar #header.banner {
+		top: 32px;
+	}
+
+	body.admin-bar main.main, 
+	body.admin-bar main.main.tiny_header {
+		top: 0;
+	}
+
+	main.main {
+		position: relative;
+		float: left;
+		width: 80vw;
+		padding-top: 0;
+		&.tiny_header {
+			padding-top: 0;
+		}
+	}
+
+	.right_menu_button {
 		display: none;
 	}
 }

@@ -4,77 +4,13 @@
  */
 ?>
 <div id="journey_page" class="container-fluid">
-<div class="row">
+  <?php
+  $args = array ( 'numberposts' => -1 );
+  $all_posts = get_posts ( $args );
+  if ( $all_posts ) {
+    foreach ( $all_posts as $post ) {
+      setup_postdata($post); ?>
 
-<<<<<<< Updated upstream
-<div class="feature_image">
-</div>
-
-
-<div class="journey_text">
-  <h1><?php single_post_title()+get_the_ID(); ?></h1>
-  <div class="col-xs-12 col-sm-7">
-    <div class="journey_content">
-      <p><?php
-        $args = array ( 'numberposts' => -1 );
-        $all_posts = get_posts ( $args );
-        if ( $all_posts ) {
-          foreach ( $all_posts as $post ) {
-            setup_postdata($post);
-
-            ?><h1><?php the_title(); ?></h1><?php
-            the_excerpt();
-          }
-        }
-      ?></p>
-    </div>
-  </div>
-
-  <div class="col-xs-12 col-sm-5">
-    <div class="desktop_publish_time">
-      <img class="icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/printing_effect.png" />
-      <h2>PUBLISH TIME</h2><br />
-      <p><?php echo esc_html(get_the_date()); ?></p>
-    </div>
-  </div>
-</div>
-
-
-</div>
-
-<div class="row">
-  <div class="col-xs-6 col-sm-7">
-    <div class="social_share">
-      <p>Share by:</p>
-      <a href="">
-        <img class="icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/email.png" />
-      </a>
-      <a href="">
-        <img class="icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/google.png" />
-      </a>
-      <a href="">
-        <img class="icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/twitter.png" />
-      </a>
-      <a href="">
-        <img class="icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/google.png" />
-      </a>
-      <a href="">
-        <img class="icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/weibo.png" />
-      </a>
-    </div>
-  </div>
-
-  <div class="col-xs-6 col-sm-5">
-    <div class="mobile_publish_time">
-      <img class="icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/printing_effect.png" />
-      <h2>PUBLISH TIME</h2><br />
-      <p><?php echo esc_html(get_the_date()); ?></p>
-    </div>
-  </div>
-</div>
-<?php endwhile;
-endif; ?>
-=======
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding">
           <?php the_post_thumbnail( 'full', array( 'alt' => 'Responsive image', 'class' => 'image-full-width' ) ); ?><!--load image-->
@@ -95,27 +31,14 @@ endif; ?>
           </div>
           <!--end row-->
 
-          <div class="row social_share_wrapper">
-            <div class="col-xs-6 col-sm-6 divider">
-              <div class="social_share_journey">
-                <p>Share by:</p><br />
-                <a href="">
-                  <img class="icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/email.png" />
-                </a>
-                <a href="http://www.facebook.com/sharer.php?u=<?php the_permalink();?>&amp;t=<?php the_title(); ?>" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
-                  <img class="icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/facebook.png" />
-                </a>
-                <a href="http://twitter.com/home/?status=<?php the_title(); ?> - <?php the_permalink(); ?>" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
-                  <img class="icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/twitter.png" />
-                </a>
-                <a href="https://plus.google.com/share?url=<?php the_permalink(); ?>" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
-                  <img class="icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/google.png" />
-                </a>
-                <a href="">
-                  <img class="icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/weibo.png" />
-                </a>
-              </div>
-            </div>
+        <div class="col-xs-12 col-sm-5">
+          <div class="desktop_publish_time">
+            <img class="icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/printing_effect.png" />
+            <h2>PUBLISH TIME</h2><br />
+            <p><?php echo esc_html(get_the_date()); ?></p>
+          </div>
+        </div>
+      </div>
 
             <div class="col-xs-6 col-sm-6 hidden-md hidden-lg">
 <!--               <div class="mobile_publish_time"> -->
@@ -132,5 +55,4 @@ endif; ?>
       </div>
     <?php }
   } ?>
->>>>>>> Stashed changes
 </div>
