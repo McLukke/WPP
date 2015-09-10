@@ -1,7 +1,5 @@
-
-         
+<div id="right-nav">
   <?php if ( is_front_page() || is_page('work') ) { ?>
-    <div id="right-nav">
       <br>
       <br>
       <h1><span class="nav-title">SORTING</span></h1>
@@ -33,6 +31,6 @@
       <div class="menu-open-right">
             <a href="#"><img src="<?php echo bloginfo('template_directory')?>/assets/images/icons/folder.png" class="exit-button"></a>
       </div>
-    </div>
-  <?php } else {} ?>
 
+  <?php } else {} ?>
+</div>

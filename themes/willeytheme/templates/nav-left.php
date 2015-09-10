@@ -1,4 +1,4 @@
-<div id="wrapper">
+<!-- <div id="wrapper"> -->
         <!-- Sidebar -->
 
       <div class="nav-space"></div>
@@ -35,4 +35,4 @@
       <div class="menu-close">
         <a href="#"><img src="<?php echo bloginfo('template_directory')?>/assets/images/icons/close.png" class="exit-button"></a>
       </div>
-</div>
+<!-- </div> -->

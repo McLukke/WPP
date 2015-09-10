@@ -29,5 +29,5 @@
   </div>
 </header>
 
-<?php include("nav-left.php"); ?>
-<?php include("nav-right.php"); ?>
+<?php //include("nav-left.php"); ?>
+<?php //include("nav-right.php"); ?>

@@ -20,19 +20,24 @@ use Roots\Sage\Wrapper;
     ?>
     <div class="wrap container-fluid" role="document">
       <div class="content row">
-        <main class="main full-width" role="main">
-          <?php include Wrapper\template_path(); ?>
-        </main><!-- /.main -->
+        <div id="wrapper">
 
+          <?php include('templates/nav-left.php'); ?>
 
-        <?php if (Config\display_sidebar()) : ?>
-          <aside class="sidebar" role="complementary">
-            <?php include Wrapper\sidebar_path(); ?>
-          </aside><!-- /.sidebar -->
-        <?php endif; ?>
+          <main class="main full-width" role="main">
+            <?php include Wrapper\template_path(); ?>
+          </main><!-- /.main -->
 
-        
-      </div><!-- /.content -->
+          <?php include('templates/nav-right.php'); ?>
+
+          <?php if (Config\display_sidebar()) : ?>
+            <aside class="sidebar" role="complementary">
+              <?php include Wrapper\sidebar_path(); ?>
+            </aside><!-- /.sidebar -->
+          <?php endif; ?>
+
+        </div><!-- /#wrapper -->
+      </div><!-- /.content row -->
     </div><!-- /.wrap -->
     <?php
       do_action('get_footer');
