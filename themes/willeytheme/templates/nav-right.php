@@ -1,5 +1,15 @@
 <div id="right-nav">
-  <?php if ( is_front_page() || is_page('work') || is_home() ) { ?>
+  <?php if ( is_page('journey') ) { ?>
+      <br>
+      <br>
+      <h1><span class="nav-title">DATE</span></h1>
+      <br><br>
+      <ul class="timeline-year">
+        <li><span class="timeline-year">2015</span></li>
+        <li><span class="timeline-year">2014</span></li>
+      </ul>
+
+  <?php } else { ?>
       <br>
       <br>
       <h1 class="nav-title">SORTING</h1>
@@ -12,18 +22,10 @@
         <li><a href="#"><span class="list1">PACKAGING</span></a></li>
         <li><a href="#"><span class="list1">BROCHURE</span></a></li>
       </ul>
-
-  <?php } else if ( is_page('journey') ) { ?>
-      <br>
-      <br>
-      <h1><span class="nav-title">DATE</span></h1>
-      <br><br>
-      <ul class="timeline-year">
-        <li><span class="timeline-year">2015</span></li>
-        <li><span class="timeline-year">2014</span></li>
-      </ul>
-
-  <?php } else {} ?>
+      <a href="#">
+        <img src="<?php echo bloginfo('template_directory')?>/assets/images/icons/close.png" class="exit_button desktop_right_nav">
+      </a>
+    <?php } ?>
 </div>
 <div class="right-exit-menu">
   <a href="#">

@@ -22,13 +22,19 @@ use Roots\Sage\Wrapper;
       <div class="content row">
         <div id="wrapper">
 
+          <!-- <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2"> -->
           <?php include('templates/nav-left.php'); ?>
+          <!-- </div> -->
 
-          <main class="main full-width" role="main">
-            <?php include Wrapper\template_path(); ?>
-          </main><!-- /.main -->
+          <!-- <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8"> -->
+            <main class="main full-width" role="main">
+              <?php include Wrapper\template_path(); ?>
+            </main><!-- /.main -->
+          <!-- </div> -->
 
-          <?php include('templates/nav-right.php'); ?>
+          <!-- <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2"> -->
+          <?php // include('templates/nav-right.php'); ?>
+          <!-- </div> -->
 
           <?php if (Config\display_sidebar()) : ?>
             <aside class="sidebar" role="complementary">
