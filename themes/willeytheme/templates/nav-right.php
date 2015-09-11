@@ -5,7 +5,7 @@
       <h1><span class="nav-title">DATE</span></h1>
       <br><br>
       <ul class="timeline-year">
-        <li><span class="timeline-year">2015</span></li>
+        <li><span class="timeline-year">2015 </span></li>
         <p class="journey-date"><?php the_time('M Y ') ?></p>
         <p><?php the_title('<h1>', '</h1>'); ?></p><!--load title-->
         <li><span class="timeline-year">2014</span></li>
