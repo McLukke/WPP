@@ -67,6 +67,7 @@
 }
 
 .desktop_right_nav {
+	max-width: 0;
 	display: none;
 }
 
@@ -110,7 +111,14 @@
 		position: fixed;
 		bottom: 5vh;
 		right: 8vw;
-		max-width: 25px;
+		max-width: 0;
+		&.enabled {
+			max-width: 25px;
+			-webkit-transition: all 0.5s ease;
+	    -moz-transition: all 0.5s ease;
+	    -o-transition: all 0.5s ease;
+	    transition: all 0.5s ease;
+		}
 	}
 
 	.right-exit-menu, 
@@ -145,6 +153,7 @@
 
 .list1 {
 	color: #3B3B3B;
+	width: 100%;
 	font-family: sans-serif;
 	text-decoration: none;
 	display: inline-block;

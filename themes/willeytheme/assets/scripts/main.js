@@ -57,6 +57,7 @@
           $("#right-nav").addClass("enabled");
           $(".right-exit-menu").addClass("enabled");
           $('.exit-button').addClass('enabled');
+          $('.desktop_right_nav').addClass('enabled');
           $('#left_menu_button').addClass('hidden');
         });
 
@@ -64,6 +65,7 @@
         $('.right_menu_button_white').click(function(e){
           e.preventDefault();
           $('#right-nav').addClass('enabled');
+          $('.desktop_right_nav').addClass('enabled');
         });
 
       // Journey Page Right Nav
@@ -90,6 +92,7 @@
         $('.desktop_right_nav').click(function(e){
           e.preventDefault();
           $('#right-nav').removeClass('enabled');
+          $('.desktop_right_nav').removeClass('enabled');
         });
 
 
