@@ -30,7 +30,7 @@
 
         <div class="hidden-xs hidden-sm col-md-5 col-lg-5">
           <img class="icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/publish.png" />
-          <p class="journey-date"><?php the_time('M Y ') ?></p> <!--<?php  esc_html(get_the_date()); ?> echo-->
+          <p class="journey-date"><?php the_time('M Y ') ?></p>
         </div>
       </div>
 
