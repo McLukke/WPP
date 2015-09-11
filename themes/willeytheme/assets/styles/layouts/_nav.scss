@@ -121,22 +121,22 @@ body.admin-bar #sidebar-wrapper {
         top: 32px;
     }
 
-    .menu-close {
-        display: none;
-    }
-
     #wrapper {
         padding-left: 20vw;
         width: 20vw;
         display: block;
     }
 
-    #wrapper.toggled .menu-close {
+    #wrapper.toggled .menu-close, 
+    #wrapper.toggled .exit-button, 
+    .exit-button, 
+    .right-exit-menu, 
+    .menu-close {
         display:none;
-    }
-
-    #wrapper.toggled .exit-button {
-        display:none;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
     }
 
     #wrapper.toggled {
@@ -206,7 +206,7 @@ body.admin-bar #sidebar-wrapper {
 }
 
 .exit-button{
-    max-width: 25px;
+    max-width: 0;
     position: fixed;
     margin-top: 75px;
     margin-left: 2vw;
@@ -214,8 +214,10 @@ body.admin-bar #sidebar-wrapper {
     &.tiny_header {
         margin-top: 35px;
     }
+    &.enabled {
+        max-width: 25px;
+    }
 }
-
 
 #share3 {
     opacity: 0.80;   

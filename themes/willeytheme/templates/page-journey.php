@@ -63,5 +63,6 @@
       </div>
     <?php }
   } ?>
-</div>
 <?php include('nav-right.php'); ?>
+</div>
+

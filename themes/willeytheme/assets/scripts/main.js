@@ -46,6 +46,7 @@
         $('#left_menu_button').click(function(e){
           e.preventDefault();
           $("#wrapper").addClass("toggled");
+          $('.exit-button').addClass('enabled');
           $('.right_menu_button').addClass('hidden');
           $('#right_menu').addClass('hidden');
         });
@@ -55,6 +56,7 @@
           e.preventDefault();
           $("#right-nav").addClass("enabled");
           $(".right-exit-menu").addClass("enabled");
+          $('.exit-button').addClass('enabled');
           $('#left_menu_button').addClass('hidden');
         });
 
@@ -69,12 +71,14 @@
           e.preventDefault();
           $('#right-nav').addClass('enabled');
           $('.right-exit-menu').addClass('enabled');
+          $('.exit-button').addClass('enabled');
           $('#left_menu_button').addClass('hidden');
         });
 
       // exit button for both left and right menus
         $('.exit-button').click(function(e){
           e.preventDefault();
+          $('.exit-button').removeClass('enabled');
           $("#wrapper").removeClass("toggled");
           $('#right-nav').removeClass('enabled');
           $('.right-exit-menu').removeClass('enabled');

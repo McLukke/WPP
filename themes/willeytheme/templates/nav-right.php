@@ -19,7 +19,7 @@
         <li><a href="#"><span class="list1">BROCHURE</span></a></li>
       </ul>
       <a href="#">
-        <img src="<?php echo bloginfo('template_directory')?>/assets/images/icons/close.png" class="desktop_right_nav exit_button">
+        <img src="<?php echo bloginfo('template_directory')?>/assets/images/icons/close.png" class="desktop_right_nav">
       </a>
     <?php } ?>
 </div>
