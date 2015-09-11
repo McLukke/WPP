@@ -41,7 +41,7 @@
                 <a href="http://www.facebook.com/sharer.php?u=<?php the_permalink();?>&amp;t=<?php the_title(); ?>" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
                   <img class="icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/facebook.png" />
                 </a>
-                <a href="http://twitter.com/home/?status=<?php the_title(); ?> - <?php the_permalink(); ?>" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
+                <a href="http://twitter.com/home/?status=<?php the_title(); ?> - <?php the_permalink(); ?>" />
                   <img class="icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/twitter.png" />
                 </a>
                 <a href="https://plus.google.com/share?url=<?php the_permalink(); ?>" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
