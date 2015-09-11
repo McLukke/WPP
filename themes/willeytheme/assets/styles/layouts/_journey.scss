@@ -44,6 +44,10 @@
 	padding: 5px;
 }
 
+.journey_feat_image {
+
+}
+
 .journey_blurb {
 	border-right: 1px solid black;
 	padding-right: 20px;
@@ -62,6 +66,8 @@
 }
 
 @media (min-width: $tablet) {
+	
+	
 	.desktop_publish_time {
 		display: inline-block;
 	}
