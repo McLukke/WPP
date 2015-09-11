@@ -7,7 +7,8 @@ body.admin-bar #wpadminbar {
 
 body.admin-bar #header.banner,
 body.admin-bar main.main,
-body.admin-bar main.main.tiny_header {
+body.admin-bar main.main.tiny_header,
+body.admin-bar .menu-close {
 	top: 46px;
 }
 
@@ -44,7 +45,9 @@ main.main {
 	}
 }
 
-#left_menu_button, .right_menu_button {
+#left_menu_button, 
+.right_menu_button, /*work page*/
+#right_menu /*journey page*/ {
 	max-width: 25px;
 	position: relative;
 	margin-top: 75px;
@@ -67,6 +70,9 @@ main.main {
 	max-width: 41px;
 	margin: 25px 0 25px 2px;
 }
+
+// journey page
+
 
 @media(min-width: $tablet) {
 	#header.banner {
@@ -94,5 +100,11 @@ main.main {
 
 	.right_menu_button {
 		display: none;
+	}
+
+	// Journey Page
+	main.main #right-nav,
+	main.main #right-nav.enabled {
+		width: 20vw;
 	}
 }

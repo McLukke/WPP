@@ -27,6 +27,7 @@
             $('.right_menu_button').addClass('tiny_header');
             $('main.main').addClass('tiny_header');
             $('.exit-button').addClass('tiny_header');
+            $('#right_menu').addClass('tiny_header');
             $('#main_logo_full').addClass('hidden');
             $('#main_logo').removeClass('hidden');
           } else {
@@ -35,6 +36,7 @@
             $('.right_menu_button').removeClass('tiny_header');
             $('main.main').removeClass('tiny_header');
             $('.exit-button').removeClass('tiny_header');
+            $('#right_menu').removeClass('tiny_header');
             $('#main_logo_full').removeClass('hidden');
             $('#main_logo').addClass('hidden');
           }
@@ -45,6 +47,7 @@
           e.preventDefault();
           $("#wrapper").addClass("toggled");
           $('.right_menu_button').addClass('hidden');
+          $('#right_menu').addClass('hidden');
         });
 
       // Right menu toggle
@@ -55,9 +58,18 @@
           $('#left_menu_button').addClass('hidden');
         });
 
+      // Work Page Desktop
         $('.right_menu_button_white').click(function(e){
           e.preventDefault();
           $('#right-nav').addClass('enabled');
+        });
+
+      // Journey Page Right Nav
+        $('#right_menu').click(function(e){
+          e.preventDefault();
+          $('#right-nav').addClass('enabled');
+          $('.right-exit-menu').addClass('enabled');
+          $('#left_menu_button').addClass('hidden');
         });
 
       // exit button for both left and right menus
@@ -68,6 +80,7 @@
           $('.right-exit-menu').removeClass('enabled');
           $('#left_menu_button').removeClass('hidden');
           $('.right_menu_button').removeClass('hidden');
+          $('#right_menu').removeClass('hidden');
         });
 
         $('.desktop_right_nav').click(function(e){

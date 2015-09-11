@@ -4,18 +4,23 @@
  */
 ?>
 <div id="journey_page" class="container-fluid">
-  <?php
-  $args = array ( 'numberposts' => -1 );
+  <?php $args = array ( 'numberposts' => -1 );
   $all_posts = get_posts ( $args );
   if ( $all_posts ) {
     foreach ( $all_posts as $post ) {
       setup_postdata($post); ?>
 
       <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><?php
-          the_post_thumbnail('full');
-          the_title('<h1>', '</h1>');
-        ?></div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <?php if ( has_post_thumbnail() ) {
+            $image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+          } else {
+            $image = bloginfo('template_directory')."/wp-content/themes/willeytheme/assets/images/icons/black.png";
+          } ?>
+          <div class="journey_feat_image" style="background-image: url('<?php echo $image; ?>');"></div>
+
+          <?php the_title('<h1>', '</h1>'); ?>
+        </div>
       </div>
 
       <div class="row">
@@ -65,3 +70,4 @@
     <?php }
   } ?>
 </div>
+<?php include('nav-right.php'); ?>

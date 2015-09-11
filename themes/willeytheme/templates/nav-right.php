@@ -1,14 +1,10 @@
 <div id="right-nav">
   <?php if ( is_page('journey') ) { ?>
-      <br>
-      <br>
-      <h1><span class="nav-title">DATE</span></h1>
-      <br><br>
-      <ul class="timeline-year">
-        <li><span class="timeline-year">2015</span></li>
-        <li><span class="timeline-year">2014</span></li>
-      </ul>
-
+    <h1><span class="nav-title">DATE</span></h1>
+    <ul class="timeline-year">
+      <li><span class="timeline-year">2015</span></li>
+      <li><span class="timeline-year">2014</span></li>
+    </ul>
   <?php } else { ?>
       <br>
       <br>

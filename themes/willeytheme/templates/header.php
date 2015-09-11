@@ -28,7 +28,7 @@
             is_page_template('page-journey.php') ||
             is_page('journey')
           ) { ?>
-            <img id="right_menu" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/publish.png" alt="Side Menu" />
+            <img id="right_menu" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/publish_mono.png" alt="Side Menu" />
           <?php } else {} ?>
         </a>
       </div>
