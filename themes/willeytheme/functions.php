@@ -123,7 +123,7 @@ function display_post_details ($post_id, $class) {
   } ?>
 
   <div class="item <?php echo $class; ?>" style="background-image: url('<?php echo $image; ?>')">
-    <div class="hover_text" >
+    <div class="hover_text" onclick="location.href='<?php the_permalink(); ?>'">
       <?php the_title('<h3>','</h3>'); ?>
       <div class="work-details-info">
         <img class="work-details-info-icon" src="<?php echo get_bloginfo('template_directory')?>/assets/images/icons/publish_bnw.png" />
