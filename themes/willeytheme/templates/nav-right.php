@@ -1,10 +1,27 @@
 <div id="right-nav">
   <?php if ( is_page('journey') ) { ?>
-    <h1><span class="nav-title">DATE</span></h1>
-    <ul class="timeline-year">
-      <li><span class="timeline-year">2015</span></li>
-      <li><span class="timeline-year">2014</span></li>
-    </ul>
+
+  <div class="timeline-wrapper">
+    <img class="work-details-info-icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/publish.png" />
+    <h1 class="nav-title">DATE</h1>
+
+    <?php foreach(posts_by_year() as $year => $posts) : ?>
+      <h5 class="timeline-year"><span><?php echo $year; ?></span><h5>
+
+      <ul>
+        <?php foreach($posts as $post) : setup_postdata($post); ?>
+          <li>
+            <a href="#<?php echo $post->post_name;?>">
+              <h5 class="timeline-date"><?php echo get_the_date(); ?></h5>
+              <h5 class="timeline-event"><?php the_title(); ?></h5>
+            </a>
+            <br />
+          </li> 
+        <?php endforeach; ?>
+      </ul>
+    <?php endforeach; ?>
+  </div> <!-- end timeline-wrapper-->
+
   <?php } else { ?>
       <br>
       <br>
