@@ -5,6 +5,19 @@
 
 <div class="entry-content">
     <div class="work_container">
+
+<div class="container-fluid">
+<div class="row text-center">
+<div class="right_work_menu">
+<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10"></div>
+<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+  <a href="#">
+      <img class="single-work-exit-button" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/close.png" onclick="location.href='<?php echo get_home_url(); ?>';" />
+      <img class="right_menu_button" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/return.png" onclick="location.href='<?php echo get_home_url(); ?>';" />
+  </a>
+</div>
+</div></div></div>
+      
       <div class="content-single-work container-fluid">
         <div class="row">
           <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
