@@ -13,7 +13,7 @@
 <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10"></div>
 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
   <a href="#">
-    <img class="right_menu_button" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/folder.png" alt="Side Menu" />
+    <img class="right_menu_button" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/folder_bnw.png" alt="Side Menu" />
     <img class="right_menu_button_white" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/folder_white.png" alt="Side Menu" />
   </a>
 </div>

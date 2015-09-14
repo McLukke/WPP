@@ -23,47 +23,51 @@
   </div> <!-- end timeline-wrapper-->
 
   <?php } else { ?>
+    <img class="sorting_icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/folder.png" />
     <h1 class="nav-title">SORTING</h1>
     <ul class="brands">
+      <h5 class="timeline-year"><span>BRAND</span><h5>
       <li>
-        <a href="<?php echo get_home_url() . "/?sorting=seasonal"; ?>" class="list1">ART BASEL</a>
+        <a href="<?php echo get_home_url() . "/?sorting=seasonal"; ?>" class="list1"><p>ART BASEL</p></a>
       </li>
       <li>
-        <a href="<?php echo get_home_url() . "/?sorting=seasonal"; ?>" class="list1">ART SCHOOL MUSICAL</a>
+        <a href="<?php echo get_home_url() . "/?sorting=seasonal"; ?>" class="list1"><p>ART SCHOOL MUSICAL</p></a>
       </li>
       <li>
-        <a href="<?php echo get_home_url() . "/?sorting=seasonal"; ?>" class="list1">WAI YIN ASSOCIATION</a>
+        <a href="<?php echo get_home_url() . "/?sorting=seasonal"; ?>" class="list1"><p>WAI YIN ASSOCIATION</p></a>
       </li>
       <li>
-        <a href="<?php echo get_home_url() . "/?sorting=seasonal"; ?>" class="list1">SIMON BIRCH</a>
+        <a href="<?php echo get_home_url() . "/?sorting=seasonal"; ?>" class="list1"><p>SIMON BIRCH</p></a>
       </li>
       <li>
-        <a href="<?php echo get_home_url() . "/?sorting=other"; ?>" class="list1">OTHER</a>
+        <a href="<?php echo get_home_url() . "/?sorting=other"; ?>" class="list1"><p>OTHER</p></a>
       </li>
     </ul>
+
     <ul class="nav-sorting">
+      <h5 class="custom_menu_title"><span>CATEGORY</span><h5>
       <li>
-        <a href="<?php echo get_home_url() . "/?sorting=seasonal"; ?>" class="list1">SEASONAL</a>
+        <a href="<?php echo get_home_url() . "/?sorting=seasonal"; ?>" class="list1"><p>SEASONAL</p></a>
       </li>
 
       <li>
-        <a href="<?php echo get_home_url() . "/?sorting=premium"; ?>" class="list1">PREMIUM</a>
+        <a href="<?php echo get_home_url() . "/?sorting=premium"; ?>" class="list1"><p>PREMIUM</p></a>
       </li>
 
       <li>
-        <a href="<?php echo get_home_url() . "/?sorting=stationary"; ?>" class="list1">STATIONARY</a>
+        <a href="<?php echo get_home_url() . "/?sorting=stationary"; ?>" class="list1"><p>STATIONARY</p></a>
       </li>
 
       <li>
-        <a href="<?php echo get_home_url() . "/?sorting=promotional"; ?>" class="list1">PROMOTIONAL</a>
+        <a href="<?php echo get_home_url() . "/?sorting=promotional"; ?>" class="list1"><p>PROMOTIONAL</p></a>
       </li>
 
       <li>
-        <a href="<?php echo get_home_url() . "/?sorting=packaging"; ?>" class="list1">PACKAGING</a>
+        <a href="<?php echo get_home_url() . "/?sorting=packaging"; ?>" class="list1"><p>PACKAGING</p></a>
       </li>
 
       <li>
-        <a href="<?php echo get_home_url() . "/?sorting=brochure"; ?>" class="list1">BROCHURE</a>
+        <a href="<?php echo get_home_url() . "/?sorting=brochure"; ?>" class="list1"><p>BROCHURE</p></a>
       </li>
     </ul>
     <a href="#">
