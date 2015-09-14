@@ -23,7 +23,7 @@
             is_page_template('content-single-work.php') || 
             is_page('work')
           ) { ?>
-            <img id="right_menu_button" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/folder.png" alt="Side Menu" />
+            <img id="right_menu_button" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/folder_bnw.png" alt="Side Menu" />
           <?php } else if ( 
             is_page_template('page-journey.php') ||
             is_page('journey')

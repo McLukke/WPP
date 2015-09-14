@@ -1,42 +1,75 @@
 <div id="right-nav">
   <?php if ( is_page('journey') ) { ?>
-    <h1><span class="nav-title">DATE</span></h1>
-    <ul class="timeline-year">
-      <li><span class="timeline-year">2015</span></li>
-      <li><span class="timeline-year">2014</span></li>
-    </ul>
+
+  <div class="timeline-wrapper">
+    <img class="work-details-info-icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/publish.png" />
+    <h1 class="nav-title">DATE</h1>
+
+    <?php foreach(posts_by_year() as $year => $posts) : ?>
+      <h5 class="timeline-year"><span><?php echo $year; ?></span><h5>
+
+      <ul>
+        <?php foreach($posts as $post) : setup_postdata($post); ?>
+          <li>
+            <a href="#<?php echo $post->post_name;?>">
+              <h5 class="timeline-date"><?php echo get_the_date(); ?></h5>
+              <h5 class="timeline-event"><?php the_title(); ?></h5>
+            </a>
+            <br />
+          </li> 
+        <?php endforeach; ?>
+      </ul>
+    <?php endforeach; ?>
+  </div> <!-- end timeline-wrapper-->
+
   <?php } else { ?>
-    <br>
-    <br>
+    <img class="sorting_icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/folder.png" />
     <h1 class="nav-title">SORTING</h1>
-    <br><br><br><br><br>
-    <ul class="nav-sorting">
+    <ul class="brands">
+      <h5 class="timeline-year"><span>BRAND</span><h5>
       <li>
-        <a href="<?php echo get_home_url() . "/?sorting=seasonal"; ?>" class="list1">SEASONAL</a>
+        <a href="<?php echo get_home_url() . "/?sorting=seasonal"; ?>" class="list1"><p>ART BASEL</p></a>
       </li>
-
       <li>
-        <a href="<?php echo get_home_url() . "/?sorting=premium"; ?>" class="list1">PREMIUM</a>
+        <a href="<?php echo get_home_url() . "/?sorting=seasonal"; ?>" class="list1"><p>ART SCHOOL MUSICAL</p></a>
       </li>
-
       <li>
-        <a href="<?php echo get_home_url() . "/?sorting=stationary"; ?>" class="list1">STATIONARY</a>
+        <a href="<?php echo get_home_url() . "/?sorting=seasonal"; ?>" class="list1"><p>WAI YIN ASSOCIATION</p></a>
       </li>
-
       <li>
-        <a href="<?php echo get_home_url() . "/?sorting=promotional"; ?>" class="list1">PROMOTIONAL</a>
+        <a href="<?php echo get_home_url() . "/?sorting=seasonal"; ?>" class="list1"><p>SIMON BIRCH</p></a>
       </li>
-
       <li>
-        <a href="<?php echo get_home_url() . "/?sorting=packaging"; ?>" class="list1">PACKAGING</a>
+        <a href="<?php echo get_home_url() . "/?sorting=other"; ?>" class="list1"><p>OTHER</p></a>
       </li>
-
-      <li>
-        <a href="<?php echo get_home_url() . "/?sorting=brochure"; ?>" class="list1">BROCHURE</a>
-      </li>
-
     </ul>
 
+    <ul class="nav-sorting">
+      <h5 class="custom_menu_title"><span>CATEGORY</span><h5>
+      <li>
+        <a href="<?php echo get_home_url() . "/?sorting=seasonal"; ?>" class="list1"><p>SEASONAL</p></a>
+      </li>
+
+      <li>
+        <a href="<?php echo get_home_url() . "/?sorting=premium"; ?>" class="list1"><p>PREMIUM</p></a>
+      </li>
+
+      <li>
+        <a href="<?php echo get_home_url() . "/?sorting=stationary"; ?>" class="list1"><p>STATIONARY</p></a>
+      </li>
+
+      <li>
+        <a href="<?php echo get_home_url() . "/?sorting=promotional"; ?>" class="list1"><p>PROMOTIONAL</p></a>
+      </li>
+
+      <li>
+        <a href="<?php echo get_home_url() . "/?sorting=packaging"; ?>" class="list1"><p>PACKAGING</p></a>
+      </li>
+
+      <li>
+        <a href="<?php echo get_home_url() . "/?sorting=brochure"; ?>" class="list1"><p>BROCHURE</p></a>
+      </li>
+    </ul>
     <a href="#">
       <img src="<?php echo bloginfo('template_directory')?>/assets/images/icons/close.png" class="desktop_right_nav" />
     </a>

@@ -13,7 +13,7 @@
 <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10"></div>
 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
   <a href="#">
-    <img class="right_menu_button" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/folder.png" alt="Side Menu" />
+    <img class="right_menu_button" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/folder_bnw.png" alt="Side Menu" />
     <img class="right_menu_button_white" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/folder_white.png" alt="Side Menu" />
   </a>
 </div>
@@ -60,30 +60,8 @@
     }
 
     if ( $sorting === null ) {
-      if (has_post_thumbnail( $post->ID ) ) {
-        $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
-        $image = $image[0];
-      }else{
-        $image = bloginfo('template_directory')."/wp-content/themes/willeytheme/assets/images/icons/black.png";
-      } ?>
-
-      <div class="item <?php echo $class; ?>" style="background-image: url('<?php echo $image; ?>')">
-        <div class="hover_text" >
-          <?php the_title('<h3>','</h3>'); ?>
-          <div class="work-details-info">
-            <img class="work-details-info-icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/publish_bnw.png" />
-            <p>PUBLISH TIME<br /><div class="link-not-active"><?php echo esc_html(get_the_date()); ?></div></p>
-            <img class="work-details-info-icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/printing_effect_bnw.png" />
-            <p>PRINTING EFFECT<br /><div class="link-not-active"><?php the_terms( $post->ID, 'printingeffect'); ?></div></p>
-            <img class="work-details-info-icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/paper_bnw.png" />
-            <p>PAPER<br /><div class="link-not-active"><?php 
-                the_terms( $post->ID, 'paper'); 
-            ?></div></p>
-          </div>
-        </div>
-      </div>
-
-      <?php 
+      display_post_details($post->ID, $class);
+      
       if($count%7==0) {
         $count = 0;
       }
@@ -93,35 +71,10 @@
       $how_many_posts ++;
     } else {
       $post_terms = wp_get_post_terms ($post->ID, 'workcategory');
-      // echo var_dump($post_terms);
       $current_post_custom_category = $post_terms[0]->slug;
-      // echo $current_post_custom_category;
       if ( $current_post_custom_category === $sorting ) {
-        if (has_post_thumbnail( $post->ID ) ) {
-          $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
-          $image = $image[0];
-        }else{
-          $image = bloginfo('template_directory')."/wp-content/themes/willeytheme/assets/images/icons/black.png";
-        } ?>
+        display_post_details($post->ID, $class);
 
-        <div class="item <?php echo $class; ?>" style="background-image: url('<?php echo $image; ?>')">
-
-          <div class="hover_text" onclick="location.href='<?php the_permalink(); ?>';">
-            <?php the_title('<h3>','</h3>'); ?>
-            <div class="work-details-info">
-              <img class="work-details-info-icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/publish_bnw.png" />
-              <p>PUBLISH TIME<br /><div class="link-not-active"><?php echo esc_html(get_the_date()); ?></div></p>
-              <img class="work-details-info-icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/printing_effect_bnw.png" />
-              <p>PRINTING EFFECT<br /><div class="link-not-active"><?php the_terms( $post->ID, 'printingeffect'); ?></div></p>
-              <img class="work-details-info-icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/paper_bnw.png" />
-              <p>PAPER<br /><div class="link-not-active"><?php 
-                  the_terms( $post->ID, 'paper'); 
-              ?></div></p>
-            </div>
-          </div>
-        </div>
-
-        <?php 
         if($count%7==0) {
           $count = 0;
         }

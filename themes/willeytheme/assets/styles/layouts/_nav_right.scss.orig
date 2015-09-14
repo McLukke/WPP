@@ -90,7 +90,11 @@
 .nav-sorting {
 	color: #3B3B3B;
 	padding: 0;
+<<<<<<< HEAD
 	margin: auto;
+=======
+	margin: 0;
+>>>>>>> 2b4e0cccdeea889b6ab56ea8844ec07aadb9d13a
 	font-family: Futura-Book;
 	text-decoration: none;
 	position: absolute;
@@ -113,7 +117,10 @@
 
 .list1 {
 	color: #3B3B3B;
+<<<<<<< HEAD
 	width: 100%;
+=======
+>>>>>>> 2b4e0cccdeea889b6ab56ea8844ec07aadb9d13a
 	font-family: Futura-Book;
 	text-decoration: none;
 	display: inline-block;
@@ -144,7 +151,11 @@
 	color: #3B3B3B;
 	font-size: 1em;
 	font-family: Futura-Bold;
+<<<<<<< HEAD
+	width: 100%;
+=======
 	width: 100%; 
+>>>>>>> 2b4e0cccdeea889b6ab56ea8844ec07aadb9d13a
 	padding-top: 15px;
 	padding-bottom: 30px;
 	letter-spacing: 2px;

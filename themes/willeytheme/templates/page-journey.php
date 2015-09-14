@@ -30,7 +30,7 @@
 
         <div class="hidden-xs hidden-sm col-md-5 col-lg-5">
           <img class="icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/publish.png" />
-          <p class="journey-date"><?php the_time('M Y ') ?></p> 
+          <p class="journey-date"><?php the_time('M Y ') ?></p>
         </div>
       </div>
 
@@ -44,7 +44,7 @@
             <a href="http://www.facebook.com/sharer.php?u=<?php the_permalink();?>&amp;t=<?php the_title(); ?>" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
               <img class="icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/facebook.png" />
             </a>
-            <a href="http://twitter.com/home/?status=<?php the_title(); ?> - <?php the_permalink(); ?>" />
+            <a href="http://twitter.com/home/?status=<?php the_title(); ?> - <?php the_permalink(); ?>" target="_blank"/>
               <img class="icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/twitter.png" />
             </a>
             <a href="https://plus.google.com/share?url=<?php the_permalink(); ?>" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
@@ -58,7 +58,7 @@
 
         <div class="col-xs-6 col-sm-6 hidden-md hidden-lg">
           <img class="icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/publish.png" />
-          <p class="journey-date"><?php the_time('M Y ') ?></p> <!--<?php  esc_html(get_the_date()); ?> echo-->
+          <p class="journey-date">PUBLISH TIME<?php the_time('M Y ') ?></p> <!--<?php  esc_html(get_the_date()); ?> echo-->
         </div>
       </div>
     <?php }
