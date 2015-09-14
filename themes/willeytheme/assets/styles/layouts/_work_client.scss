@@ -7,6 +7,7 @@
 .entry-content {
 	background-color: lightgray;
 	padding-top: 20px;
+	padding-bottom: 38px;
  } 
 
 .social_share {
@@ -34,6 +35,17 @@
 	line-height: 12px;
 }
 
+.single-work-exit-button {
+	display: inline-block;
+	position: absolute;
+	right: 1.8vw;
+	max-width: 25px;
+	margin-top: 18px;
+}
+.single-work-return-button {
+		display: none;
+}
+
 @media screen and (max-width: $tablet) {
 	.social_share {
 		margin-top: 0px;
@@ -58,11 +70,21 @@
 	.work_container {
 		width: 100%;
 	}
-	// .img-box {
-	// 	margin: 0px -15px;
-	// }
 	.row.details-box {
 		margin-top: 20px;
 		margin-bottom: 20px;
+	}
+	.entry-content {
+		padding-top: 0px;
+		padding-bottom: 0px;
+	}
+	.single-work-exit-button {
+		display: none;
+	}
+	.single-work-return-button {
+		display: inline-block;
+		position: relative;
+		max-width: 25px;
+
 	}
 }
