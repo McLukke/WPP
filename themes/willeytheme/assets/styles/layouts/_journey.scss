@@ -62,24 +62,23 @@
 }
 
 .journey_feat_image {
-	width: 100vw;
-	height: 400px;
-	background-position: center top;
-	background-size: 100% auto;
-	background-repeat: no-repeat;
+    width: 100vw;
+    height: 400px;
+    background-position: center top;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
 }
 
 @media (min-width: $tablet) {
-	#journey_page {
-		width: 60vw;
-		float: left;
-	}
+    #journey_page {
+        width: 60vw;
+    }
 
-	.journey_feat_image {
-		width: 100%;
-		height: 200px;
-		margin-left: 0;
-	}
+    .journey_feat_image {
+        width: 100%;
+        height: 200px;
+        margin-left: 0;
+    }
 
 	.desktop_publish_time {
 		display: inline-block;

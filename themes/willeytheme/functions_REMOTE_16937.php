@@ -112,30 +112,3 @@ function posts_by_year() {
 
   return $years;
 }
-
-add_action("archive-work", "display_post_details");
-function display_post_details ($post_id, $class) {
-  if (has_post_thumbnail( $post_id ) ) {
-    $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'single-post-thumbnail' );
-    $image = $image[0];
-  }else{
-    $image = get_bloginfo('template_directory')."/wp-content/themes/willeytheme/assets/images/icons/black.png";
-  } ?>
-
-  <div class="item <?php echo $class; ?>" style="background-image: url('<?php echo $image; ?>')">
-    <div class="hover_text" >
-      <?php the_title('<h3>','</h3>'); ?>
-      <div class="work-details-info">
-        <img class="work-details-info-icon" src="<?php echo get_bloginfo('template_directory')?>/assets/images/icons/publish_bnw.png" />
-        <p>PUBLISH TIME<br /><div class="link-not-active"><?php echo esc_html(get_the_date()); ?></div></p>
-        <img class="work-details-info-icon" src="<?php echo get_bloginfo('template_directory')?>/assets/images/icons/printing_effect_bnw.png" />
-        <p>PRINTING EFFECT<br /><div class="link-not-active"><?php the_terms( $post_id, 'printingeffect'); ?></div></p>
-        <img class="work-details-info-icon" src="<?php echo get_bloginfo('template_directory')?>/assets/images/icons/paper_bnw.png" />
-        <p>PAPER<br /><div class="link-not-active"><?php 
-            the_terms( $post_id, 'paper'); 
-        ?></div></p>
-      </div>
-    </div>
-  </div>
-  <?php
-} ?>
