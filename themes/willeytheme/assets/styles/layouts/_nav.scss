@@ -23,6 +23,7 @@ body.admin-bar #sidebar-wrapper {
     left: 75vw;
     width: 0;
     height: 100%;
+    min-height: 100vh;
     margin-left: -75vw;
     overflow-y: auto;
     background: #fff;
@@ -75,6 +76,10 @@ body.admin-bar #sidebar-wrapper {
     margin: 0;
     padding: 0;
     list-style: none;
+    height: auto;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
 }
 
 .sidebar-nav li {
@@ -119,6 +124,19 @@ body.admin-bar #sidebar-wrapper {
     body.admin-bar .exit-button, 
     body.admin-bar #wrapper {
         top: 32px;
+    }
+
+    .sidebar-nav {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        height: auto;
+        -webkit-transform: translate(0, -60%);
+        -ms-transform: translate (0, -60%);
+        transform: translate (0, -60%);
     }
 
     #wrapper {
@@ -226,6 +244,12 @@ body.admin-bar #sidebar-wrapper {
 
 #share4 {
     opacity: 0.80;   
+}
+
+.menu_bottom {
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
 }
 
 // .nav-space {

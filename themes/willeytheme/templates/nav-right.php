@@ -6,10 +6,24 @@
       <li><span class="timeline-year">2014</span></li>
     </ul>
   <?php } else { ?>
-    <br>
-    <br>
     <h1 class="nav-title">SORTING</h1>
-    <br><br><br><br><br>
+    <ul class="brands">
+      <li>
+        <a href="<?php echo get_home_url() . "/?sorting=seasonal"; ?>" class="list1">ART BASEL</a>
+      </li>
+      <li>
+        <a href="<?php echo get_home_url() . "/?sorting=seasonal"; ?>" class="list1">ART SCHOOL MUSICAL</a>
+      </li>
+      <li>
+        <a href="<?php echo get_home_url() . "/?sorting=seasonal"; ?>" class="list1">WAI YIN ASSOCIATION</a>
+      </li>
+      <li>
+        <a href="<?php echo get_home_url() . "/?sorting=seasonal"; ?>" class="list1">SIMON BIRCH</a>
+      </li>
+      <li>
+        <a href="<?php echo get_home_url() . "/?sorting=other"; ?>" class="list1">OTHER</a>
+      </li>
+    </ul>
     <ul class="nav-sorting">
       <li>
         <a href="<?php echo get_home_url() . "/?sorting=seasonal"; ?>" class="list1">SEASONAL</a>
@@ -34,9 +48,7 @@
       <li>
         <a href="<?php echo get_home_url() . "/?sorting=brochure"; ?>" class="list1">BROCHURE</a>
       </li>
-
     </ul>
-
     <a href="#">
       <img src="<?php echo bloginfo('template_directory')?>/assets/images/icons/close.png" class="desktop_right_nav" />
     </a>
