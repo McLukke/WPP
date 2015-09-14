@@ -1,6 +1,7 @@
-.journey_page {
-	width: 100%;
+#journey_page {
+	width: 100vw;
 	height: 100%;
+	float: left;
 }
 
 .social_share img,
@@ -24,6 +25,7 @@
 	display: inline-block;
 }
 
+<<<<<<< HEAD
 .journey-text-wrapper {
 	padding: 25px 25px;
 }
@@ -59,20 +61,20 @@
 
 .row.social_share_wrapper {
 	padding-top: 15px;
-}
-
+=======
 .journey_feat_image {
 	width: 100vw;
 	height: 400px;
 	background-position: center top;
 	background-size: 100% auto;
 	background-repeat: no-repeat;
+	margin-left: -15px;
+>>>>>>> 30200512d6872f628f756c2b3f076cc9e3587de4
 }
 
 @media (min-width: $tablet) {
 	#journey_page {
 		width: 60vw;
-		float: left;
 	}
 
 	.journey_feat_image {
