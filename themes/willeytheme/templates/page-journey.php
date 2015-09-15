@@ -10,12 +10,12 @@
     foreach ( $all_posts as $post ) {
       setup_postdata($post); ?>
 
-      <div class="row">
+      <div id="<?php the_ID(); ?>" class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding">
           <?php if ( has_post_thumbnail() ) {
             $image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
           } else {
-            $image = bloginfo('template_directory')."/wp-content/themes/willeytheme/assets/images/icons/black.png";
+            $image = get_bloginfo('template_directory')."/assets/images/icons/black.png";
           } ?>
           <div class="journey_feat_image" style="background-image: url('<?php echo $image; ?>');"></div>
 
@@ -58,7 +58,7 @@
 
         <div class="col-xs-6 col-sm-6 hidden-md hidden-lg">
           <img class="icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/publish.png" />
-          <p class="journey-date">PUBLISH TIME<?php the_time('M Y ') ?></p> <!--<?php  esc_html(get_the_date()); ?> echo-->
+          <p class="journey-date"><?php the_time('M Y ') ?></p> <!--<?php  esc_html(get_the_date()); ?> echo-->
         </div>
       </div>
     <?php }
