@@ -2,7 +2,7 @@
   <?php if ( is_page('journey') ) { ?>
 
   <div class="timeline-wrapper">
-    <img class="work-details-info-icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/publish.png" />
+    <img class="icon-nav-right" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/publish.png" />
     <h1 class="nav-title">DATE</h1>
 
     <?php foreach(posts_by_year() as $year => $posts) : ?>
@@ -11,9 +11,9 @@
       <ul>
         <?php foreach($posts as $post) : setup_postdata($post); ?>
           <li>
-            <a href="#<?php echo get_the_ID() ?>" class="journey_date">
-              <h5 class="timeline-date"><?php echo get_the_date(); ?></h5>
-              <h5 class="timeline-event"><?php the_title(); ?></h5>
+            <a href="#<?php echo get_the_ID() ?>" class="list1">
+              <p class="timeline-date"><?php echo get_the_date('d M'); ?></p>
+              <p class="timeline-event"><?php the_title(); ?></p>
             </a>
             <br />
           </li> 
