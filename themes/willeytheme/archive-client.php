@@ -39,7 +39,7 @@
         <div class="item <?php echo $class; ?>" style="background-image: url('<?php echo $image; ?>')">
           <div class="hover_text"  >
           <?php the_title( '<h1>', '</h1>' ); ?>
-          <?php the_title( $count ); ?>
+          <?php //the_title( $count ); ?>
           </div>
         </div>
       <?php      
