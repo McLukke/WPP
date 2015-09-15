@@ -56,12 +56,6 @@ body.admin-bar #sidebar-wrapper {
     width: 75vw;
 }
 
-@media(min-width: 550px) {
-    #wrapper.toggled #sidebar-wrapper {
-    width: 40vw;
-    }
-}
-
 #page-content-wrapper {
     width: 100%;
     position: absolute;
@@ -152,8 +146,8 @@ body.admin-bar #sidebar-wrapper {
     }
 
     #wrapper {
-        padding-left: 20vw;
-        width: 20vw;
+        padding-left: 300px;
+        width: 300px;
         display: block;
     }
 
@@ -170,17 +164,17 @@ body.admin-bar #sidebar-wrapper {
     }
 
     #wrapper.toggled {
-        padding-left: 20vw;
-        width: 20vw;
+        padding-left: 300px;
+        width: 300px;
         display: block;
     }
 
     #sidebar-wrapper {
-        width: 20%;
+        width: 300px;
     }
 
     #wrapper.toggled #sidebar-wrapper {
-        width: 20%;
+        width: 300px;
     }
 
     #page-content-wrapper {
@@ -228,7 +222,7 @@ body.admin-bar #sidebar-wrapper {
 }
 
 .nav {
-    margin-left: -25px;
+    margin-left: -12px;
 }
 
 .nav li {
@@ -283,6 +277,24 @@ body.admin-bar #sidebar-wrapper {
 .current_page h5 {
     color: $purple !important;
 }
+
+
+// @media (min-width: 1050px) {
+//     #sidebar-wrapper,
+//     .sidebar-nav {
+//         width: 210px;
+//         max-width: 210px;
+//     }
+
+//     #wrapper {
+//         padding-left: 210px;
+//         width: 210px;
+//     }
+// }
+
+
+
+
 
 // .nav-space {
 //     margin-top: 10vh;
