@@ -15,6 +15,8 @@
                       'depth' => 2,
                       'container' => false,
                       'menu_class' => 'nav',
+                      'link_before' => '<p class="nav_menu_items">',
+                      'link_after' => '</p>',
                       //Process nav menu using our custom nav walker
                       'walker' => new wp_bootstrap_navwalker())
                     ); ?>

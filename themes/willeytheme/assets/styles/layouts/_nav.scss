@@ -87,6 +87,12 @@ body.admin-bar #sidebar-wrapper {
     transform: none;
 }
 
+
+
+#access li.current-menu-item a {
+    background-color: red;
+}
+
 .sidebar-nav li {
     text-indent: 20px;
     line-height: 40px;
@@ -107,6 +113,7 @@ body.admin-bar #sidebar-wrapper {
 .sidebar-nav li a:active,
 .sidebar-nav li a:focus {
     text-decoration: none;
+    color: $purple;
 }
 
 .sidebar-nav > .sidebar-brand {
@@ -133,7 +140,7 @@ body.admin-bar #sidebar-wrapper {
 
     .sidebar-nav {
         position: absolute;
-        top: 50%;
+        top: 43%;
         width: 100%;
         margin: 0;
         padding: 0;
@@ -224,6 +231,16 @@ body.admin-bar #sidebar-wrapper {
     margin-left: -25px;
 }
 
+.nav li {
+    margin-bottom: 10px;
+}
+
+.nav_menu_items {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-family: Futura-Heavy;
+}
+
 .sidebar-brand {
     margin-left: -15px;
 }
@@ -255,6 +272,16 @@ body.admin-bar #sidebar-wrapper {
     position: absolute;
     bottom: 50px;
     width: 100%;
+}
+
+.current_page,
+.current_page p,
+.current_page h1,
+.current_page h2,
+.current_page h3,
+.current_page h4,
+.current_page h5 {
+    color: $purple !important;
 }
 
 // .nav-space {

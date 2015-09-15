@@ -208,7 +208,6 @@
           gutter: 10
         });
 
-<<<<<<< Updated upstream
         //smooth scroll right-nav
         $('a[href*=#]:not([href=#])').click(function() {
           if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -224,23 +223,10 @@
             }
           }
         });
-=======
->>>>>>> Stashed changes
 
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
-        $(document).ready(function() {
-          var a = document.getElementsByTagName("A");
-          for(var i=0;i<a.length;i++){
-            console.log( a[i] );
-            if( window.location == a[i].href
-            || window.location.href.split("?")[0] == a[i].href
-            || window.location.href.split("#")[0] == a[i].href ){
-              $( a[i] ).addClass('current_page');
-            }
-          }
-        })
       }
     },
     // Home page
