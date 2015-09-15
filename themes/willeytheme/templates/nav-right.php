@@ -11,7 +11,7 @@
       <ul>
         <?php foreach($posts as $post) : setup_postdata($post); ?>
           <li>
-            <a href="#<?php echo $post->post_name;?>">
+            <a href="#<?php echo get_the_ID() ?>" class="journey_date">
               <h5 class="timeline-date"><?php echo get_the_date(); ?></h5>
               <h5 class="timeline-event"><?php the_title(); ?></h5>
             </a>
