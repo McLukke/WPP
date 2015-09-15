@@ -2,7 +2,8 @@
   <?php if ( is_page('journey') ) { ?>
 
   <div class="timeline-wrapper">
-    <img class="work-details-info-icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/publish.png" />
+    <c><img id="publsih-icon"class="work-details-info-icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/publish.png" /></c>
+   
     <h1 class="nav-title">DATE</h1>
 
     <?php foreach(posts_by_year() as $year => $posts) : ?>

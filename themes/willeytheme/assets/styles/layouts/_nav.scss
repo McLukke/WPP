@@ -56,6 +56,12 @@ body.admin-bar #sidebar-wrapper {
     width: 75vw;
 }
 
+@media(min-width: 550px) {
+    #wrapper.toggled #sidebar-wrapper {
+    width: 40vw;
+    }
+}
+
 #page-content-wrapper {
     width: 100%;
     position: absolute;
