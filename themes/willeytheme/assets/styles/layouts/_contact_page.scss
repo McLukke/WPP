@@ -1,6 +1,6 @@
 // theme from has 15 padding on content div
 #contact_page {
-	margin: 0 -15px;
+	// margin: 0 -15px;
 }
 
 .desktop_contact_form,
@@ -124,8 +124,9 @@ input.wpcf7-form-control.wpcf7-submit {
 
 	.desktop_contact_form {
 		display: inline-block;
-		height: 100vh;
-		padding: 50px 30px;
+		min-height: 100vh;
+		height: 100%;
+		padding: 50px 30px 10px 30px;
 		background-color: $light_grey;
 	}
 

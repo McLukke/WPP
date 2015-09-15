@@ -5,16 +5,20 @@
 	left: 0;
 }
 
+body.admin-bar #right-nav {
+	top: 46px;
+}
+
 #right-nav {
 	z-index: 2000;
 	position: fixed;
-	padding-top: 56px;
+	padding-top: 2vh;
 	top: 0;
 	right: 0;
 	bottom: 0;
 	width: 0;
-	// height: 100%;
-	min-height: 100vh;
+	height: 98vh;
+	min-height: 480px;
 	overflow-y: auto;
 	overflow-x: hidden;
   background: #fff;
@@ -33,6 +37,23 @@
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
+
+@media(min-width: 550px) {
+    #right-nav {
+    &.enabled {
+    width: 50vw;
+    }
+   }
+}
+
+@media(max-width: 750px) {
+	.work-details-info-icon {
+	display: none;
+}
+
+}
+
+
 
 .right-exit-menu {
 	z-index: 1000;
@@ -81,20 +102,17 @@
 	display: none;
 }
 
-.nav-title {
+.nav_title {
 	color: #8C006A;
 	font-size: 20px;
 	font-family: Futura-Book;
+	margin: 10px;
 }
 
 .nav-sorting {
 	color: #3B3B3B;
 	padding: 0;
-<<<<<<< HEAD
 	margin: auto;
-=======
-	margin: 0;
->>>>>>> 2b4e0cccdeea889b6ab56ea8844ec07aadb9d13a
 	font-family: Futura-Book;
 	text-decoration: none;
 	position: absolute;
@@ -104,6 +122,11 @@
   -moz-transform: translate(0,-50%);
   -o-transform: translate(0,-50%);
   transform: translate(0,-50%);
+}
+
+.icon-nav-right {
+	height: 31px;
+	width: 31px;
 }
 
 .brands {
@@ -117,21 +140,12 @@
 
 .list1 {
 	color: #3B3B3B;
-<<<<<<< HEAD
 	width: 100%;
-=======
->>>>>>> 2b4e0cccdeea889b6ab56ea8844ec07aadb9d13a
 	font-family: Futura-Book;
 	text-decoration: none;
 	display: inline-block;
-  	padding: 20px;
-  	font-size: 14px;
-}
-
-.list1 a {
-	color: #3B3B3B;
-	text-decoration: none;
-	font-family: Futura-Book;
+	padding: 20px;
+	font-size: 14px;
 }
 
 .list1:hover {
@@ -151,20 +165,16 @@
 	color: #3B3B3B;
 	font-size: 1em;
 	font-family: Futura-Bold;
-<<<<<<< HEAD
-	width: 100%;
-=======
 	width: 100%; 
->>>>>>> 2b4e0cccdeea889b6ab56ea8844ec07aadb9d13a
 	padding-top: 15px;
-	padding-bottom: 30px;
+	padding-bottom: 10px;
 	letter-spacing: 2px;
 	display: inline-block;
 	margin: -0.5rem 0 .5rem;
 	text-align: center;
 	&:before {
 		padding-right: 0.0125rem;
-		content: "─────────";
+		content: "───────";
 		font-size: 0.65rem;
 		position: relative;
 		top: -4px;
@@ -172,7 +182,7 @@
 	}
 	&:after {
 		padding-left: 0.0125rem;
-		content: "────────";
+		content: "───────";
 		font-size: 0.65rem;
 		position: relative;
 		top: -4px;
@@ -186,12 +196,6 @@
 
 .custom_menu_title {
 	display:none;
-	&:before {
-		content: "────";
-	}
-	&:after {
-		content: "────";
-	}
 }
 
 .timeline-wrapper {
@@ -201,7 +205,7 @@
 }
 
 .timeline-date {
-	font-weight: 500;
+	font-family: Futura-Heavy;
 	letter-spacing: 1px;
 }
 
@@ -209,6 +213,19 @@
 	font-weight: 200;
 	letter-spacing: 1px;
 }
+
+.nav_right_menu_container {
+	height: 75%;
+	overflow: auto;
+}
+
+
+
+
+
+
+
+
 
 @media (min-width: $tablet) {
 	.custom_menu_title {
@@ -228,13 +245,17 @@
 		max-width: 25px;
 	}
 
+	body.admin-bar #right-nav {
+		top: 32px;
+	}
+
 	#right-nav {
 		position: fixed;
 		right: 0;
 		width: 0;
 		float: right;
 		&.enabled {
-			width: 20vw;
+			width: 30vw;
 			position: fixed;
 			right: 0;
 		}
@@ -255,15 +276,11 @@
 	  transform: none;
 	}
 
-	.nav-sorting p {
-		font-size: 1em;
-	}
-
 	.desktop_right_nav {
 		display: inline-block;
 		text-align: center;
 		position: absolute;
-		bottom: 5vh;
+		bottom: 25px;
 		right: 8vw;
 		&.enabled {
 			max-width: 25px;
@@ -279,7 +296,7 @@
 		width: 0;
 	}
 
-	.nav-title {
+	.nav_title {
 		font-size: 18px;
 		margin-top: -12px;
 	}
@@ -290,3 +307,59 @@
 		display: none;
 	}
 }
+
+@media (min-width: 769px) and (max-width: 1058px) {
+    .timeline-year  {
+        &:before {
+            content: "──";
+        }
+        &:after {
+            content: "──";
+        }
+    }
+}
+
+@media (min-width: $tablet) and (max-width: 779px) {
+	.custom_menu_title {
+		&:before {
+			content: "─";
+		}
+		&:after {
+			content: "─";
+		}
+	}
+}
+
+@media (min-width: 780px) and (max-width: 859px) {
+	.custom_menu_title {
+		&:before {
+			content: "──";
+		}
+		&:after {
+			content: "──";
+		}
+	}
+}
+
+@media (min-width: 860px) and (max-width: 1049px) {
+	.custom_menu_title {
+		&:before {
+			content: "────";
+		}
+		&:after {
+			content: "────";
+		}
+	}
+}
+
+@media (min-width: 1050px) {
+	.custom_menu_title {
+		&:before {
+			content: "───────";
+		}
+		&:after {
+			content: "───────";
+		}
+	}
+}
+

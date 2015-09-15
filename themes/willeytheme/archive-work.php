@@ -1,8 +1,11 @@
 <?php
   if ( !empty($_GET['sorting']) ) {
     $sorting = $_GET['sorting'];
+  } else if ( !empty($_GET['brand']) ) {
+    $brand = $_GET['brand'];
   } else {
     $sorting = null;
+    $brand = null;
   }
 ?>
 
@@ -59,7 +62,7 @@
         break;
     }
 
-    if ( $sorting === null ) {
+    if ( $sorting === null && $brand === null) {
       display_post_details($post->ID, $class);
       
       if($count%7==0) {
@@ -69,7 +72,21 @@
         $count ++;
       }
       $how_many_posts ++;
-    } else {
+    } else if ( $sorting === null && !empty($brand) ) {
+      $post_terms = wp_get_post_terms ($post->ID, 'workbrand');
+      $current_post_custom_category = $post_terms[0]->slug;
+      if ( $current_post_custom_category === $brand ) {
+        display_post_details($post->ID, $class);
+
+        if($count%7==0) {
+          $count = 0;
+        }
+        if($count < 7){
+          $count ++;
+        }
+        $how_many_posts ++;
+      }
+    } else if ( $brand === null && !empty($sorting) ) {
       $post_terms = wp_get_post_terms ($post->ID, 'workcategory');
       $current_post_custom_category = $post_terms[0]->slug;
       if ( $current_post_custom_category === $sorting ) {
