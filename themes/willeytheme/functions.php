@@ -126,14 +126,38 @@ function display_post_details ($post_id, $class) {
     <div class="hover_text" onclick="location.href='<?php the_permalink(); ?>'">
       <?php the_title('<h3>','</h3>'); ?>
       <div class="work-details-info">
-        <img class="work-details-info-icon" src="<?php echo get_bloginfo('template_directory')?>/assets/images/icons/publish_bnw.png" />
-        <p>PUBLISH TIME<br /><div class="link-not-active"><?php echo esc_html(get_the_date()); ?></div></p>
-        <img class="work-details-info-icon" src="<?php echo get_bloginfo('template_directory')?>/assets/images/icons/printing_effect_bnw.png" />
-        <p>PRINTING EFFECT<br /><div class="link-not-active"><?php the_terms( $post_id, 'printingeffect'); ?></div></p>
-        <img class="work-details-info-icon" src="<?php echo get_bloginfo('template_directory')?>/assets/images/icons/paper_bnw.png" />
-        <p>PAPER<br /><div class="link-not-active"><?php 
-            the_terms( $post_id, 'paper'); 
-        ?></div></p>
+        
+        <div class="work-details-block">   
+          <img class="work-details-info-icon" src="<?php echo get_bloginfo('template_directory')?>/assets/images/icons/publish_bnw.png" />
+          <p class="title--work">PUBLISH TIME</p>
+          <div class="link-not-active">
+            <p>
+              <?php echo esc_html(get_the_date('d / m / Y')); ?>
+            </p>
+          </div>
+        </div>
+        
+        <div class="work-details-block">   
+          <img class="work-details-info-icon" src="<?php echo get_bloginfo('template_directory')?>/assets/images/icons/printing_effect_bnw.png" />
+          <p class="title--work">PRINTING EFFECT</p>
+          <div class="link-not-active">
+            <p>
+              <?php the_terms( $post_id, 'printingeffect');  ?>
+            </p>
+          </div>
+        </div>
+        
+        <div class="work-details-block">   
+          <img class="work-details-info-icon" src="<?php echo get_bloginfo('template_directory')?>/assets/images/icons/paper_bnw.png" />
+          <p class="title--work">PAPER</p>
+          <div class="link-not-active">
+            <p>
+              <?php the_terms( $post_id, 'paper');  ?>
+            </p>
+          </div>
+        </div>
+        
+        
       </div>
     </div>
   </div>

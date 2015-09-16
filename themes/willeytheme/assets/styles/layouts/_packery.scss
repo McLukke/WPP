@@ -16,6 +16,7 @@
     font-family: Futura-Bold;
     text-transform: uppercase;
     width: 100%;
+    padding-left: 4px;
   }
 
 .item {
@@ -51,7 +52,8 @@
 }
 
 .work-details-info p {
-  margin-bottom: 8px;
+  margin-top: 14px;
+  line-height: 0;
 }
 
 .link-not-active,
@@ -65,7 +67,7 @@
 }
 
 .link-not-active {
-  margin-left: 30px;
+  margin-left: 0px;
 }
 
 .link-not-active-journey,
@@ -103,9 +105,14 @@
   height: 30%;
 }
 
+.title--work {
+  padding-top: 10px;
+}
+
 @media (min-width: $tablet) and (max-width: 1000px) {
   .item .hover_text h3 {
-    font-size: 1.8em;
+    font-size: 1.3em;
+
   }
 }
 
@@ -129,6 +136,9 @@
     left: 25px;
     width: 60%;
     height: 30%;
+  }
+  .hover_text {
+    font-size: 8px;
   }
 }
 
@@ -179,3 +189,22 @@
     width: 0;//calc(1/29*100%);
   }
 }
+
+@media screen and (min-width: 1280px) {
+    .hover_text {
+      padding: 10px 6px;
+    }
+    .work-details-info {
+      left: 11px;
+    }
+}
+
+@media screen and (min-width: 751px) {
+    .link-not-active {
+      margin-left: 30px;
+    }
+}
+
+
+
+
