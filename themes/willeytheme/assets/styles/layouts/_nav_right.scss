@@ -366,18 +366,3 @@ body.admin-bar #right-nav {
 	// }
 }
 
-
-@media(min-width: 550px) {
-    #right-nav {
-    &.enabled {
-    width: 50vw;
-    }
-   }
-}
-
-@media(max-width: 850px) {
-	.work-details-info-icon {
-	display: none;
-}
-
-}
