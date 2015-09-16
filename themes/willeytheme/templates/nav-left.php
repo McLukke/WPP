@@ -28,6 +28,7 @@
               <!-- <a class="grayscale" id="share4" href="#"><img src="<?php //echo bloginfo('template_directory'); ?>/assets/images/icons/upload.png" class="sidebar-bottom"></a> -->
           </ul>
           <div class="menu_bottom">
+            <?php echo qtranxf_generateLanguageSelectCode('image'); ?>
             <a class="language" href="#"><img src="<?php echo bloginfo('template_directory')?>/assets/images/icons/english.png" class="language"></a>
             <a class="language" href="#"><img src="<?php echo bloginfo('template_directory')?>/assets/images/icons/chinese.png" class="language"></a>
             <br>
