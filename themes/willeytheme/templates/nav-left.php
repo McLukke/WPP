@@ -1,4 +1,4 @@
-<!-- <div id="wrapper"> -->
+<div id="wrapper"> -->
         <!-- Sidebar -->
 
       <div class="nav-space"></div>
@@ -28,8 +28,10 @@
               <!-- <a class="grayscale" id="share4" href="#"><img src="<?php //echo bloginfo('template_directory'); ?>/assets/images/icons/upload.png" class="sidebar-bottom"></a> -->
           </ul>
           <div class="menu_bottom">
-            <a class="language" href="#"><img src="<?php echo bloginfo('template_directory')?>/assets/images/icons/english.png" class="language"></a>
-            <a class="language" href="#"><img src="<?php echo bloginfo('template_directory')?>/assets/images/icons/chinese.png" class="language"></a>
+            
+            <a class="language"> <?php echo qtranxf_generateLanguageSelectCode('image'); ?></a>
+            <!-- <a class="language" href="#"><img src="<?//php echo bloginfo('template_directory')?>/assets/images/icons/english.png" class="language"></a>
+            <a class="language" href="#"><img src="<?//php echo bloginfo('template_directory')?>/assets/images/icons/chinese.png" class="language"></a> -->
             <br>
             <span class="credits"> &copy; Willey Printing Ltd. 2015</span>
           </div>
@@ -37,4 +39,4 @@
       <div class="menu-close">
         <a href="#"><img src="<?php echo bloginfo('template_directory')?>/assets/images/icons/close.png" class="exit-button"></a>
       </div>
-<!-- </div> -->
+<!-- </div>
