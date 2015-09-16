@@ -225,7 +225,54 @@ body.admin-bar #sidebar-wrapper {
 
 .language {
     max-height: 18px;
+    opacity: 0.4;
+    // background-image: url(<?php echo bloginfo('template_directory')?>/assets/images/icons/email.png; ?>);
+    // background-image: url("<?php echo qtranxf_generateLanguageSelectCode('image'); ?>");
 }
+
+// .qtranxs_flag_en {
+//     max-height: 18px;
+// }
+
+// .qtranxs_flag_zh {
+//     max-height: 18px;
+// }
+
+.qtranxs_image_zh,
+.qtranxs_image_en{
+   img{ 
+    display: none;
+    }
+}
+
+.qtranxs_image_en {
+    background-repeat: no-repeat;
+    height: 25px;
+    width: 25px;
+    float: left;
+    margin-right: 2px;
+    display: block;
+    background-image: url(http://willey.app/wp-content/themes/willeytheme/assets/images/flags/gb.png);
+    background-size: cover;
+}
+
+.qtranxs_image_zh {
+    background-image: url(http://willey.app/wp-content/themes/willeytheme/assets/images/flags/cn.png); 
+    background-repeat: no-repeat;
+    height: 25px;
+    width: 25px;
+    float: left;
+    margin-right: 2px;
+    display: block;
+    background-size: cover;
+}
+
+.qtranxs_language_chooser {
+    height: 25px;
+    margin: auto;
+    width: 54px;
+}
+
 
 .nav {
     margin-left: -12px;
