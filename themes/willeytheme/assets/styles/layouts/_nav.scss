@@ -221,6 +221,36 @@ body.admin-bar #sidebar-wrapper {
     max-height: 18px;
 }
 
+.qtranxs_image_en {
+    background-repeat: no-repeat;
+    height: 25px;
+    width: 25px;
+    float: left;
+    margin-right: 2px;
+    display: block;
+    background-image: url(../../assets/images/flags/gb.png);
+    background-size: cover;
+}
+
+.qtranxs_image_zh {
+    background-image: url(../../assets/images/flags/cn.png); 
+    background-repeat: no-repeat;
+    height: 25px;
+    width: 25px;
+    float: left;
+    margin-right: 2px;
+    display: block;
+    background-size: cover;
+}
+
+.qtranxs_language_chooser {
+    height: 25px;
+    margin: auto;
+    width: 54px;
+}
+
+
+
 .nav {
     margin-left: -12px;
 }

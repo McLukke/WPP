@@ -9,7 +9,8 @@
             <h1><?php the_title(); ?></h1>
             <?php echo $post->post_content; ?>
 
-            <?php echo do_shortcode ( '[contact-form-7 id="22" title="Enquiry Form"]' ); ?>
+            <h1><?php qtranxf_getLanguage() ?></h1>
+            <?php //echo do_shortcode ( '[contact-form-7 id="22" title="Enquiry Form"]' ); ?>
         </div>
     </div>
 
