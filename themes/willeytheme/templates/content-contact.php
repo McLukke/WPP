@@ -39,7 +39,8 @@
         </span>
         <span>
             <img class="contact_icons" src="<?php echo bloginfo('template_directory'); ?>/assets/images/icons/email.png" alt="Email Address" />
-            <p>info@willey.com.hk</p>
+
+            <a href="mailto:info@willey.com.hk">  info@willey.com.hk</a>
         </span>
         <br />
 
