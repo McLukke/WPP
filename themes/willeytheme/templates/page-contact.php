@@ -17,7 +17,7 @@
         echo do_shortcode ( '[MultipleMarkerMap id="contact_us_map" z="15" lat="22.265704" lon="114.235443" marker="22.265704,114.235443" w="100%"]' ); ?>
     <br />
     <div class="contact_details">
-        <p>Contact:</p>
+        <p><?php echo do_shortcode ("[:en]English Text[:zh]Deutsch[:]"); ?></p>
         <span>
             <img class="contact_icons" src="<?php echo bloginfo('template_directory'); ?>/assets/images/icons/contact.png" alt="Contact Address" />
             <p>2/F, Silver Tech Tower, 26 Cheung Lee Street, Chai Wan. Hong Kong</p>
