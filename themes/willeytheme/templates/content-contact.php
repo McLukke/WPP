@@ -40,7 +40,7 @@
         <span>
             <img class="contact_icons" src="<?php echo bloginfo('template_directory'); ?>/assets/images/icons/email.png" alt="Email Address" />
 
-            <a href="mailto:info@willey.com.hk">  info@willey.com.hk</a>
+            <a class="email" href="mailto:info@willey.com.hk">  info@willey.com.hk</a>
         </span>
         <br />
 
