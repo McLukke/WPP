@@ -1,15 +1,10 @@
-<?php
-/**
- * Template Name: Contact Us Template
- */
-?>
 <div id="contact_page">
     <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
         <div class="desktop_contact_form">
             <h1><?php the_title(); ?></h1>
-            <?php echo $post->post_content; ?>
+<?php the_content() ?>
 
-            <h1><?php qtranxf_getLanguage() ?></h1>
+            <!-- <h1><?php qtranxf_getLanguage() ?></h1> -->
             <?php //echo do_shortcode ( '[contact-form-7 id="22" title="Enquiry Form"]' ); ?>
         </div>
     </div>
@@ -18,7 +13,18 @@
         echo do_shortcode ( '[MultipleMarkerMap id="contact_us_map" z="15" lat="22.265704" lon="114.235443" marker="22.265704,114.235443" w="100%"]' ); ?>
     <br />
     <div class="contact_details">
-        <p><?php echo do_shortcode ("[:en]English Text[:zh]Deutsch[:]"); ?></p>
+        <p>
+            <?php 
+                $lang = qtranxf_getlanguage();
+
+                if($lang == "zh"){
+                    echo 'English';                     
+                }else{
+                    echo 'Chinese';
+                }
+
+            ?>
+        </p>
         <span>
             <img class="contact_icons" src="<?php echo bloginfo('template_directory'); ?>/assets/images/icons/contact.png" alt="Contact Address" />
             <p>2/F, Silver Tech Tower, 26 Cheung Lee Street, Chai Wan. Hong Kong</p>
