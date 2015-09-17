@@ -221,6 +221,10 @@ body.admin-bar #sidebar-wrapper {
     max-height: 18px;
 }
 
+.qtranxs_image {
+    opacity: 0.50;
+}
+
 .qtranxs_image_en {
     background-repeat: no-repeat;
     height: 25px;
@@ -230,6 +234,7 @@ body.admin-bar #sidebar-wrapper {
     display: block;
     background-image: url(../../assets/images/flags/gb.png);
     background-size: cover;
+    opacity: 0.50;
 }
 
 .qtranxs_image_zh {
