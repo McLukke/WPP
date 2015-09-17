@@ -201,6 +201,7 @@
           $('#mission_button').removeClass('ON');
         });
 
+        // Packery
         var $container = $('#packery');
         // init
         $container.packery({

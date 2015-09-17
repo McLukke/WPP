@@ -40,12 +40,9 @@ body.admin-bar #right-nav {
 
 @media(max-width: 750px) {
 	.work-details-info-icon {
-	display: none;
+		display: none;
+	}
 }
-
-}
-
-
 
 .right-exit-menu {
 	z-index: 1000;
@@ -254,7 +251,7 @@ body.admin-bar #right-nav {
 		width: 0;
 		float: right;
 		&.enabled {
-			width: 300px;
+			width: 200px;
 			position: fixed;
 			right: 0;
 		}
@@ -351,6 +348,13 @@ body.admin-bar #right-nav {
 }
 
 @media (min-width: 1050px) {
+	#right-nav {
+		width: 0;
+		&.enabled {
+			width: 250px;
+		}
+	}
+
 	.custom_menu_title {
 		&:before {
 			content: "───────";
