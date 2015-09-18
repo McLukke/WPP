@@ -202,12 +202,12 @@
         });
 
         // Packery
-        var $container = $('#packery');
-        // init
-        $container.packery({
-          itemSelector: '.item',
-          gutter: 10
-        });
+        // var $container = $('.packery');
+        // // init
+        // $container.packery({
+        //   itemSelector: '.item',
+        //   gutter: 10
+        // });
 
         //smooth scroll right-nav
         $('a[href*=#]:not([href=#])').click(function() {
@@ -228,6 +228,10 @@
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
+        $(window).resize( function (){
+          $('.packery').packery();
+        });
+
         $(document).ready(function() {
           var a = document.getElementsByTagName("A");
           for(var i=0;i<a.length;i++) {
