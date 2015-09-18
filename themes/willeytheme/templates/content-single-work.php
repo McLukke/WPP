@@ -52,21 +52,22 @@
             <div class="col-xs-6 col-sm-6 col-md-12 col-lg-12">
               <div class="social_share">
                  <p>Share by:</p>
-                  <a href="">
-                    <img class="icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/email.png" />
-                  </a>  
-                  <a href="">
-                    <img class="icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/google.png" />
-                  </a>
-                  <a href="">
-                    <img class="icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/twitter.png" />
-                  </a>
-                  <a href="">
-                    <img class="icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/google.png" />
-                  </a>
-                  <a href="">
-                    <img class="icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/weibo.png" />
-                  </a>
+
+                <a href="mailto:voilah@mailnesia.com?Subject=<?php echo the_title(); ?>" target="_top">
+                  <img class="icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/email.png" />
+                </a>  
+                <a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" rel="nofollow" target="_blank">
+                  <img class="icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/facebook.png" />
+                </a>
+                <a href="https://twitter.com/intent/tweet?source=webclient&amp;original_referer=<?php the_permalink(); ?>;text=&amp;url=<?php the_permalink(); ?>; rel="nofollow" target="_blank"">
+                  <img class="icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/twitter.png" />
+                </a>
+                <a href="https://plus.google.com/share?url=<?php the_permalink(); ?>" rel="nofollow" target="_blank">
+                  <img class="icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/google.png" />
+                </a>
+                <a href="http://service.weibo.com/share/share.php?title=<?php the_title(); ?>&amp;url=<?php the_permalink(); ?>" rel="nofollow" target="_blank">
+                  <img class="icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/weibo.png" />
+                </a>
               </div>
               <!--end social_share--> 
             </div> 

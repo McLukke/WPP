@@ -10,6 +10,7 @@
  * always reference jQuery with $, even when in .noConflict() mode.
  * ======================================================================== */
 
+
 (function($) {
 
   // Use this variable to set up the common and page specific functions. If you
@@ -17,9 +18,8 @@
   var Sage = {
     // All pages
     'common': {
-      init: function() {
+    init: function() {
         // JavaScript to be fired on all pages
-        
         $(document).on("scroll", function () {
           if ( $(document).scrollTop() > 0 ) {
             $('header').addClass('tiny_header');
@@ -225,17 +225,10 @@
           }
         });
 
-      },
-      finalize: function() {
-        // JavaScript to be fired on all pages, after page specific JS is fired
-        $(window).resize( function (){
-          $('.packery').packery();
-        });
-
         $(document).ready(function() {
           var a = document.getElementsByTagName("A");
           for(var i=0;i<a.length;i++) {
-            console.log( a[i] );
+            // console.log( a[i] );
             if( window.location === a[i].href ||
               window.location.href.split("?")[0] === a[i].href ||
               window.location.href.split("#")[0] === a[i].href ){
@@ -243,7 +236,12 @@
             }
           }
         });
-
+      },
+      finalize: function() {
+        // JavaScript to be fired on all pages, after page specific JS is fired
+        $(window).resize( function (){
+          $('.packery').packery();
+        });
       }
     },
     // Home page

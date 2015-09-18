@@ -2,8 +2,18 @@
 /**
  * Template Name: Journey Template
  */
-?>
-<div id="journey_page">
+?><?php
+  if ( !empty($_GET['id']) ) {
+    echo '<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>';
+    echo '<script type="text/javascript">'
+      , "window.onload=function() {
+          $('html,body').animate({
+            scrollTop: $('#" . $_GET['id'] . "').offset().top
+          }, 1000);
+        };"
+      , '</script>';
+  }
+?><div id="journey_page">
   <?php $args = array ( 'numberposts' => -1 );
   $all_posts = get_posts ( $args );
   if ( $all_posts ) {
@@ -37,21 +47,21 @@
           <div class="col-xs-6 col-sm-6 divider">
             <div class="social_share_journey">
               <p>Share by:</p><br />
-              <a href="">
-                <img class="icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/email.png" />
-              </a>
-              <a href="http://www.facebook.com/sharer.php?u=<?php the_permalink();?>&amp;t=<?php the_title(); ?>" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
-                <img class="icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/facebook.png" />
-              </a>
-              <a href="http://twitter.com/home/?status=<?php the_title(); ?> - <?php the_permalink(); ?>" target="_blank"/>
-                <img class="icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/twitter.png" />
-              </a>
-              <a href="https://plus.google.com/share?url=<?php the_permalink(); ?>" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
-                <img class="icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/google.png" />
-              </a>
-              <a href="">
-                <img class="icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/weibo.png" />
-              </a>
+                <a href="mailto:voilah@mailnesia.com?Subject=<?php echo the_title(); ?>" target="_top">
+                  <img class="icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/email.png" />
+                </a>  
+                <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo get_home_url() . "/journey/?id=" . $post->ID; ?>" rel="nofollow" target="_blank">
+                  <img class="icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/facebook.png" />
+                </a>
+                <a href="https://twitter.com/intent/tweet?source=webclient&amp;original_referer=<?php echo get_home_url(); ?>;text=&amp;url=<?php echo get_home_url() . "/journey/?id=" . $post->ID; ?>; rel="nofollow" target="_blank"">
+                  <img class="icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/twitter.png" />
+                </a>
+                <a href="https://plus.google.com/share?url=<?php echo get_home_url() . "/journey/?id=" . $post->ID; ?>" rel="nofollow" target="_blank">
+                  <img class="icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/google.png" />
+                </a>
+                <a href="http://service.weibo.com/share/share.php?title=<?php the_title(); ?>&amp;url=<?php echo get_home_url() . "/journey/?id=" . $post->ID; ?>" rel="nofollow" target="_blank">
+                  <img class="icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/weibo.png" />
+                </a>
             </div>
           </div>
 
