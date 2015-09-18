@@ -17,7 +17,7 @@ body.admin-bar #right-nav {
 	right: 0;
 	bottom: 0;
 	width: 0;
-	height: 98vh;
+	height: 100vh;
 	min-height: 480px;
 	overflow-y: auto;
 	overflow-x: hidden;
@@ -40,12 +40,9 @@ body.admin-bar #right-nav {
 
 @media(max-width: 750px) {
 	.work-details-info-icon {
-	display: none;
+		display: none;
+	}
 }
-
-}
-
-
 
 .right-exit-menu {
 	z-index: 1000;
@@ -211,6 +208,10 @@ body.admin-bar #right-nav {
 	overflow: auto;
 }
 
+.sorting_icon {
+	display: none;
+}
+
 
 
 
@@ -254,7 +255,7 @@ body.admin-bar #right-nav {
 		width: 0;
 		float: right;
 		&.enabled {
-			width: 300px;
+			width: 200px;
 			position: fixed;
 			right: 0;
 		}
@@ -278,8 +279,9 @@ body.admin-bar #right-nav {
 	.desktop_right_nav {
 		display: inline-block;
 		text-align: center;
-		position: absolute;
-		bottom: 25px;
+		position: fixed;
+		bottom: 15px;
+		margin-top: 10px;
 		&.enabled {
 			max-width: 25px;
 			-webkit-transition: all 0.5s ease;
@@ -297,6 +299,10 @@ body.admin-bar #right-nav {
 	.nav_title {
 		font-size: 18px;
 		margin-top: -12px;
+	}
+
+	.sorting_icon {
+		display: inline-block;
 	}
 }
 
@@ -351,6 +357,13 @@ body.admin-bar #right-nav {
 }
 
 @media (min-width: 1050px) {
+	#right-nav {
+		width: 0;
+		&.enabled {
+			width: 250px;
+		}
+	}
+
 	.custom_menu_title {
 		&:before {
 			content: "───────";
