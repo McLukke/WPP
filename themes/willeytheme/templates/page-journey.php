@@ -50,7 +50,7 @@
                 <a href="mailto:voilah@mailnesia.com?Subject=<?php echo the_title(); ?>" target="_top">
                   <img class="icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/email.png" />
                 </a>  
-                <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo get_home_url() . "/journey/?id=" . $post->ID; ?>" rel="nofollow" target="_blank">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo get_home_url() . "/journey/%3Fid%3D" . $post->ID; ?>" rel="nofollow" target="_blank">
                   <img class="icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/facebook.png" />
                 </a>
                 <a href="https://twitter.com/intent/tweet?source=webclient&amp;original_referer=<?php echo get_home_url(); ?>;text=&amp;url=<?php echo get_home_url() . "/journey/?id=" . $post->ID; ?>; rel="nofollow" target="_blank"">
