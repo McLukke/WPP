@@ -43,15 +43,6 @@ span {
 	margin: 5px 0 10px 0;
 }
 
-// .mission_popup h1,  
-// .about_popup h1 {
-// 	margin-bottom: 30px;
-// }
-
-// .sustainability_popup h1 {
-// 	margin-bottom: 70px;
-// }
-
 @media ( min-width: $tablet ) {
 	.about_desktop {
 		display: inline-block;
@@ -62,18 +53,13 @@ span {
 	}
 
 	.company_toggle_buttons {
-		position: fixed;
-		top: 0;
-		margin-top: 20px;
+		position: absolute;
+		top: 20px;
 		right: 20px;
 		max-width: 22px;
 		display: block;
 		float: right;
-		z-index: 1500;
-	}
-
-	body.admin-bar .company_toggle_buttons {
-		top: 32px;
+		z-index: 500;
 	}
 
 	.company_toggle_buttons img {
@@ -83,60 +69,93 @@ span {
 	}
 
 	// Background Images for About Willey Printing
-	#background_images {
-		position: absolute;
-		top: 0;
-		left: 0;
+	.about_bg,
+	.mission_bg,
+	.sustain_bg,
+	.image1,
+	.image2,
+	.image3,
+	.image4 {
 		width: 100%;
-	}
-
-	.bg_image {
-		height: 85vh;
-		display: block;
-		float: left;
-		margin: 0;
+		height: 100%;
 		position: relative;
 		top: 0;
 		left: 0;
-		background-image: no-repeat;
-		background-position: center center;
-		background-size: cover;
+		display: block;
+		float: left;
 		overflow: hidden;
-		// border: 1px solid red;
+		background-image: no-repeat;
+		background-size: cover;
 	}
 
-	#bg_image1,
-	#bg_image4,
-	#bg_image5,
-	#bg_image6 {
-		width: 60%;
+	.about_bg .image5 {
+		display: hidden;
 	}
 
-	#bg_image2,
-	#bg_image3,
-	#bg_image7 {
+	.about_bg .image1 {
+		width: 70%;
+		height: 85%;
+	}
+
+	.about_bg .image2 {
+		width: 30%;
+		height: 85%;
+	}
+
+	.about_bg .image3 {
 		width: 40%;
+		height: 15%;
 	}
 
-	#bg_image4 {
-		height: 32vh;
+	.about_bg .image4 {
+		width: 60%;
+		height: 15%;
 	}
 
-	#bg_image5 {
-		height: 53vh;
+	// Background Images for Mission Statement
+	.mission_bg .image1 {
+		width: 40%;
+		height: 85%;
+	}
+
+	.mission_bg .image2 {
+		width: 60%;
+		height: 30%;
+	}
+
+	.mission_bg .image3 {
+		width: 60%;
+		height: 55%;
+	}
+
+	.mission_bg .image4 {
+		width: 70%;
+		height: 15%;
+	}
+
+	.mission_bg .image5 {
+		width: 30%;
+		height: 15%;
+	}
+
+	// Background Images for Sustainability
+	.sustain_bg .image1 {
+		width: 75%;
+		height: 100%;
+	}
+
+	.sustain_bg .image2 {
+		width: 25%;
+		height: 100%;
+	}
+
+	.sustain_bg .image3,
+	.sustain_bg .image4,
+	.sustain_bg .image5 {
+		display: none;
 	}
 
 	// Popup windows & text
-	#about_anchor_div,
-	#mission_anchor_div,
-	#sustain_anchor_div {
-		width: 100%;
-		height: 85vh;
-		position: relative;
-		z-index: 1000;
-		// border: 1px solid green;
-	}
-
 	.about_popup,
 	.mission_popup,
 	.sustainability_popup {
@@ -149,7 +168,7 @@ span {
 
 	.about_popup {
 		right: 10px;
-		bottom: -5%;
+		bottom: 10%;
 		height: 35%;
 		min-height: 200px;
 		margin-right: 10px;
@@ -159,7 +178,7 @@ span {
 
 	.mission_popup {
 		left: 10px;
-		bottom: 3%;
+		bottom: 5%;
 		height: 35%;
 		min-width: 430px;
 		min-height: 260px;
@@ -168,7 +187,7 @@ span {
 
 	.sustainability_popup {
 		right: 10px;
-		bottom: 3%;
+		bottom: 5%;
 		height: 35%;
 		min-width: 400px;
 		min-height: 250px;
@@ -189,4 +208,16 @@ span {
 		position: relative;
 	}
 }
+
+.mission_popup h1,  
+.about_popup h1 {
+	margin-bottom: 30px;
+}
+
+.sustainability_popup h1 {
+	margin-bottom: 70px;
+}
+ 
+
+
 
