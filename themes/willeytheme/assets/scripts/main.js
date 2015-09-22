@@ -101,23 +101,30 @@
           $(".menu-close-right").addClass("enabled");
         });
 
-        //Gray share buttons
+        // menu share buttons
+        $('#menu_share1')
+          .mouseenter(function() {
+            $(this).prop('src', '/wp-content/themes/willeytheme/assets/images/icons/facebook.png');
+          })
+          .mouseleave(function() {
+            $(this).prop('src', '/wp-content/themes/willeytheme/assets/images/icons/facebook_mono.png');
+          });
 
-        $("#share1").hover(function () {
-        $(this).toggleClass("grayscale-off");
-      });
+        $('#menu_share2')
+          .mouseenter(function() {
+            $(this).prop('src', '/wp-content/themes/willeytheme/assets/images/icons/linkedin.png');
+          })
+          .mouseleave(function() {
+            $(this).prop('src', '/wp-content/themes/willeytheme/assets/images/icons/linkedin_mono.png');
+          });
 
-        $("#share2").hover(function () {
-        $(this).toggleClass("grayscale-off");
-      });
-
-        $("#share3").hover(function () {
-        $(this).toggleClass("grayscale-off");
-      });
-
-        $("#share4").hover(function () {
-        $(this).toggleClass("grayscale-off");
-      });
+        $('#menu_share3')
+          .mouseenter(function() {
+            $(this).prop('src', '/wp-content/themes/willeytheme/assets/images/icons/email.png');
+          })
+          .mouseleave(function() {
+            $(this).prop('src', '/wp-content/themes/willeytheme/assets/images/icons/email_mono.png');
+          });
 
       // About Company Page
         // About Willey Button
@@ -216,6 +223,23 @@
           $('#mission_button').removeClass('ON');
         });
 
+        // Work single exit buttons
+        $('.single-work-exit-button')
+          .mouseenter(function() {
+            $(this).prop('src', '/wp-content/themes/willeytheme/assets/images/icons/close_colour.png');
+          })
+          .mouseleave(function() {
+            $(this).prop('src', '/wp-content/themes/willeytheme/assets/images/icons/close.png');
+          });
+
+        $('#work_single_return')
+          .mouseenter(function() {
+            $(this).prop('src', '/wp-content/themes/willeytheme/assets/images/icons/return_colour.png');
+          })
+          .mouseleave(function() {
+            $(this).prop('src', '/wp-content/themes/willeytheme/assets/images/icons/return.png');
+          });
+
         // Packery
         // var $container = $('.packery');
         // // init
@@ -230,7 +254,7 @@
             var target = $(this.hash);
             target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
             // console.log("target");
-            
+
             if (target.length) {
               $('html,body').animate({
                 scrollTop: target.offset().top

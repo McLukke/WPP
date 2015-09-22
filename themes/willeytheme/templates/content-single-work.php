@@ -1,7 +1,5 @@
 <?php while (have_posts()) : the_post(); ?>
   <article <?php post_class(); ?>>
-    <header>
-    </header>
 
 <div class="entry-content">
     <div class="work_container">
@@ -13,7 +11,7 @@
 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
   <a href="#">
       <img class="single-work-exit-button" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/close.png" onclick="location.href='<?php echo get_home_url(); ?>';" />
-      <img class="right_menu_button" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/return.png" onclick="location.href='<?php echo get_home_url(); ?>';" />
+      <img id="work_single_return" class="right_menu_button" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/return.png" onclick="location.href='<?php echo get_home_url(); ?>';" />
   </a>
 </div>
 </div></div></div>

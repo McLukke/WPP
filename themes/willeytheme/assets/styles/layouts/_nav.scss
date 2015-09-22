@@ -210,11 +210,11 @@ body.admin-bar #sidebar-wrapper {
 }
 
 .sidebar-bottom {
-    max-height: 22px;
+    max-width: 25px;
 }
 
 .language {
-    max-height: 18px;
+    max-width: 25px;
 }
 
 .qtranxs_image img {
@@ -331,8 +331,11 @@ body.admin-bar #sidebar-wrapper {
     }
 }
 
-
-
+#menu_share1:hover,
+#menu_share2:hover,
+#menu_share3:hover {
+    width: 27px;
+}
 
 
 // .nav-space {
