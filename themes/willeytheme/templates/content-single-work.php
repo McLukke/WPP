@@ -21,7 +21,7 @@
       <div class="content-single-work container-fluid">
         <div class="row">
           <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-            <h1><?php single_post_title()+get_the_ID(); ?></h1>
+            <h1 class="title-single-work"><?php single_post_title()+get_the_ID(); ?></h1>
           </div>
         </div> 
         <!--end row-->
@@ -51,23 +51,10 @@
         <div class="row details-box">
             <div class="col-xs-6 col-sm-6 col-md-12 col-lg-12">
               <div class="social_share">
-                 <p>Share by:</p>
-
-                <a href="mailto:voilah@mailnesia.com?Subject=<?php echo the_title(); ?>" target="_top">
-                  <img class="icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/email.png" />
-                </a>  
-                <a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" rel="nofollow" target="_blank">
-                  <img class="icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/facebook.png" />
-                </a>
-                <a href="https://twitter.com/intent/tweet?source=webclient&amp;original_referer=<?php the_permalink(); ?>;text=&amp;url=<?php the_permalink(); ?>; rel="nofollow" target="_blank"">
-                  <img class="icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/twitter.png" />
-                </a>
-                <a href="https://plus.google.com/share?url=<?php the_permalink(); ?>" rel="nofollow" target="_blank">
-                  <img class="icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/google.png" />
-                </a>
-                <a href="http://service.weibo.com/share/share.php?title=<?php the_title(); ?>&amp;url=<?php the_permalink(); ?>" rel="nofollow" target="_blank">
-                  <img class="icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/weibo.png" />
-                </a>
+              <p>Share by:</p><br />
+              <?php if ( function_exists( 'ADDTOANY_SHARE_SAVE_KIT' ) ) { 
+                ADDTOANY_SHARE_SAVE_KIT( array( 'linkname' => ( is_home() ? get_bloginfo( 'description' ) : wp_title( '', false ) ), 'linkurl' => ( is_ssl() ? 'https://' : 'http://' ) . $_SERVER["HTTP_HOST"] . $_SERVER['REQUEST_URI'] ) );
+              } ?>
               </div>
               <!--end social_share--> 
             </div> 

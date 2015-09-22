@@ -96,6 +96,7 @@ body.admin-bar #sidebar-wrapper {
     display: block;
     text-decoration: none;
     color: #3B3B3B;
+    letter-spacing: 1px;
 }
 
 .sidebar-nav li a:hover {
@@ -134,7 +135,7 @@ body.admin-bar #sidebar-wrapper {
 
     .sidebar-nav {
         position: absolute;
-        top: 43%;
+        top: 40%;
         width: 100%;
         margin: 0;
         padding: 0;
@@ -203,9 +204,8 @@ body.admin-bar #sidebar-wrapper {
 
 .logo {
     
-    max-height: 60px;
+    max-height: 72px;
     width: auto;
-    margin-bottom: 100px;
     margin-top: 30px;
 }
 
@@ -254,6 +254,7 @@ body.admin-bar #sidebar-wrapper {
 
 .nav {
     margin-left: -12px;
+    margin-top: 40px;
 }
 
 .nav li {

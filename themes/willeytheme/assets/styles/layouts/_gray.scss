@@ -9,10 +9,10 @@
     Safari 6+ iOS,
     Opera 15+
   */
-  -webkit-filter: grayscale(1);
+  -webkit-filter: saturate(0%);
 
   /* Firefox 35+ */
-  filter: grayscale(1);
+  filter: saturate(0%);
 
   /* IE 6-9 */
   filter: gray;
@@ -32,8 +32,8 @@
 
 .grayscale.grayscale-off,
 .grayscale.grayscale-fade:hover {
-  -webkit-filter: grayscale(0);
-  filter:         grayscale(0);
+  -webkit-filter: saturate(100%);
+  filter:         saturate(100%);
 }
 
 /* Background element */
