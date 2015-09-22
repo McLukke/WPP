@@ -95,8 +95,6 @@
           $('.desktop_right_nav').removeClass('enabled');
         });
 
-
-
         $('.menu-open-right').click(function(e){
           e.preventDefault();
           $("#right-nav").addClass("enabled");
@@ -127,18 +125,25 @@
           if ( $(this).attr('class') === 'ON' ) {
             return false;
           } else {
-            $('.about_popup').removeClass('hidden');
-            $('.mission_popup').addClass('hidden');
-            $('.sustainability_popup').addClass('hidden');
+            // [superceeded] popup text boxes
+            // $('.about_popup').removeClass('hidden');
+            // $('.mission_popup').addClass('hidden');
+            // $('.sustainability_popup').addClass('hidden');
 
+            // show appropriate icons
             $(this).prop('src', '/wp-content/themes/willeytheme/assets/images/icons/about.png');
             $('#mission_button').prop('src', '/wp-content/themes/willeytheme/assets/images/icons/mission_bnw.png');
             $('#sustain_button').prop('src', '/wp-content/themes/willeytheme/assets/images/icons/sustainability_bnw.png');
 
-            // change bg
-            $('.about_bg').removeClass('hidden');
-            $('.mission_bg').addClass('hidden');
-            $('.sustain_bg').addClass('hidden');
+            // [superceeded] change bg
+            // $('.about_bg').removeClass('hidden');
+            // $('.mission_bg').addClass('hidden');
+            // $('.sustain_bg').addClass('hidden');
+
+            // jump to textbox
+            $('html,body').animate({
+              scrollTop: $('#about_anchor_div').offset().top
+            }, 1000);
           }
 
           // turn this class "ON" for next click enquiry
@@ -152,20 +157,25 @@
           if ( $(this).attr('class') === 'ON' ) {
             return false;
           } else {
-            // hide inactive icons
-            $('.about_popup').addClass('hidden');
-            $('.mission_popup').removeClass('hidden');
-            $('.sustainability_popup').addClass('hidden');
+            // [superceeded] popup text boxes
+            // $('.about_popup').addClass('hidden');
+            // $('.mission_popup').removeClass('hidden');
+            // $('.sustainability_popup').addClass('hidden');
 
             // show appropriate icons
             $('#about_button').prop('src', '/wp-content/themes/willeytheme/assets/images/icons/about_bnw.png');
             $(this).prop('src', '/wp-content/themes/willeytheme/assets/images/icons/mission.png');
             $('#sustain_button').prop('src', '/wp-content/themes/willeytheme/assets/images/icons/sustainability_bnw.png');
 
-            // change bg
-            $('.about_bg').addClass('hidden');
-            $('.mission_bg').removeClass('hidden');
-            $('.sustain_bg').addClass('hidden');
+            // [superceeded] change bg
+            // $('.about_bg').addClass('hidden');
+            // $('.mission_bg').removeClass('hidden');
+            // $('.sustain_bg').addClass('hidden');
+
+            // jump to textbox
+            $('html,body').animate({
+              scrollTop: $('#mission_anchor_div').offset().top
+            }, 1000);
           }
 
           // turn this class "ON" for next click enquiry
@@ -179,20 +189,25 @@
           if ( $(this).attr('class') === 'ON' ) {
             return false;
           } else {
-            // hide inactive icons
-            $('.about_popup').addClass('hidden');
-            $('.mission_popup').addClass('hidden');
-            $('.sustainability_popup').removeClass('hidden');
+            // [superceeded] popup text boxes
+            // $('.about_popup').addClass('hidden');
+            // $('.mission_popup').addClass('hidden');
+            // $('.sustainability_popup').removeClass('hidden');
 
             // show appropriate icons
             $('#about_button').prop('src', '/wp-content/themes/willeytheme/assets/images/icons/about_bnw.png');
             $('#mission_button').prop('src', '/wp-content/themes/willeytheme/assets/images/icons/mission_bnw.png');
             $(this).prop('src', '/wp-content/themes/willeytheme/assets/images/icons/sustainability.png');
 
-            // change bg
-            $('.about_bg').addClass('hidden');
-            $('.mission_bg').addClass('hidden');
-            $('.sustain_bg').removeClass('hidden');
+            // [superceeded] change bg
+            // $('.about_bg').addClass('hidden');
+            // $('.mission_bg').addClass('hidden');
+            // $('.sustain_bg').removeClass('hidden');
+
+            // jump to textbox
+            $('html,body').animate({
+              scrollTop: $('#sustain_anchor_div').offset().top
+            }, 1000);
           }
 
           // turn this class "ON" for next click enquiry
@@ -209,12 +224,12 @@
         //   gutter: 10
         // });
 
-        //smooth scroll right-nav
+        // smooth scroll right-nav
         $('a[href*=#]:not([href=#])').click(function() {
           if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
             var target = $(this.hash);
             target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-            console.log("target");
+            // console.log("target");
             
             if (target.length) {
               $('html,body').animate({
@@ -225,6 +240,7 @@
           }
         });
 
+        // check all <a> tags on page and make current page purple
         $(document).ready(function() {
           var a = document.getElementsByTagName("A");
           for(var i=0;i<a.length;i++) {
