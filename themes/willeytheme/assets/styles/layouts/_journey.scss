@@ -47,7 +47,8 @@
 .journey_blurb {
 	border-right: 1px solid black;
 	padding-right: 20px;
-	margin-right: -17px
+	margin-right: -17px;
+	overflow: hidden;
 }
 
 .content-padding {
@@ -62,7 +63,7 @@
 .journey_feat_image {
     width: 100vw;
     height: 400px;
-    background-position: center top;
+    background-position: center;
     background-size: 100% auto;
     background-repeat: no-repeat;
 }
@@ -73,7 +74,7 @@
 
 @media (min-width: $tablet) {
 	.journey-date {
-		margin-top: -4px;
+		margin-top: -5px;
 	}
 	
   #journey_page {
