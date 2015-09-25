@@ -275,6 +275,13 @@
               $( a[i] ).addClass('current_page');
             }
           }
+
+          if (navigator.appVersion.indexOf("Win")!=-1 && navigator.userAgent.indexOf("Chrome") >- 1) {
+            $(body).css("overflow-x", "hidden");
+          // } else if (navigator.appVersion.indexOf("Mac")!=-1) {
+
+          }
+
         });
       },
       finalize: function() {
