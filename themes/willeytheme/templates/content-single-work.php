@@ -1,7 +1,5 @@
 <?php while (have_posts()) : the_post(); ?>
   <article <?php post_class(); ?>>
-    <header>
-    </header>
 
 <div class="entry-content">
     <div class="work_container">
@@ -13,7 +11,7 @@
 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
   <a href="#">
       <img class="single-work-exit-button" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/close.png" onclick="location.href='<?php echo get_home_url(); ?>';" />
-      <img class="right_menu_button" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/return.png" onclick="location.href='<?php echo get_home_url(); ?>';" />
+      <img id="work_single_return" class="right_menu_button" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/return.png" onclick="location.href='<?php echo get_home_url(); ?>';" />
   </a>
 </div>
 </div></div></div>
@@ -29,19 +27,23 @@
           <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
             <p><?php the_content() ?></p>
           </div>
-          <div class="hidden-xs hidden-sm col-md-6 col-lg-6">
+          <div class="hidden-xs hidden-sm col-md-6 col-lg-6 borderdiv">
             <div class="work-icon-assets">
-              <img class="work-details-info-icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/publish.png" />
-              <p>PUBLISH TIME<br />
-              <p class=""><?php echo esc_html(get_the_date()); ?></p><br />
-              <!--end cat-->       
-              <img class="work-details-info-icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/printing_effect.png" />
-              <p>PRINTING EFFECT<br />
-              <p class="link-not-active-journey"><?php the_terms( $post->ID, 'printingeffect'); ?></p><br />
-              <!--end cat-->         
-              <img class="work-details-info-icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/paper.png" />
-              <p>PAPER<br />
-              <p class="link-not-active-journey"><?php the_terms( $post->ID, 'paper'); ?></p>
+              <img class="work-details-info-icon2" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/publish.png" />
+              <p class="link-not-active-journey">PUBLISH TIME</p>
+              <p class="link-not-active-journey clearfix"><?php echo esc_html(get_the_date()); ?></p>
+            </div>
+              <!--end cat-->
+            <div class="work-icon-assets">    
+              <img class="work-details-info-icon2" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/printing_effect.png" />
+              <p class="link-not-active-journey">PRINTING EFFECT</p>
+              <p class="link-not-active-journey clearfix"><?php the_terms( $post->ID, 'printingeffect'); ?></p>
+            </div>
+              <!--end cat-->
+            <div class="work-icon-assets">
+              <img class="work-details-info-icon2" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/paper.png" />
+              <p class="link-not-active-journey">PAPER</p>
+              <p class="link-not-active-journey clearfix"><?php the_terms( $post->ID, 'paper'); ?></p>
               <!--end cat-->
             </div> 
           </div>
@@ -59,23 +61,26 @@
               <!--end social_share--> 
             </div> 
 
-            <div class="col-xs-6 col-sm-6 hidden-md hidden-lg">
-              <div class="work-icon-assets">
-                <img class="work-details-info-icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/publish.png" />
-                <p>PUBLISH TIME<br />
-                <p><?php echo esc_html(get_the_date()); ?></p><br />
-                <!--end cat-->       
-                <img class="work-details-info-icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/printing_effect.png" />
-                <p>PRINTING EFFECT<br />
-                <p class="link-not-active-journey"><?php the_terms( $post->ID, 'printingeffect'); ?></p><br />
-                <!--end cat-->         
-                <img class="work-details-info-icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/paper.png" />
-                <p>PAPER<br />
-                <p class="link-not-active-journey"><?php the_terms( $post->ID, 'paper'); ?></p>
-                <!--end cat-->
-              </div>
-              <!--end work-icon-assets--> 
+          <div class="col-xs-6 col-sm-6 hidden-md hidden-lg borderdiv">
+            <div class="work-icon-assets">
+              <img class="work-details-info-icon2" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/publish.png" />
+              <p class="link-not-active-journey">PUBLISH TIME</p>
+              <p class="link-not-active-journey clearfix"><?php echo esc_html(get_the_date()); ?></p>
             </div>
+              <!--end cat-->
+            <div class="work-icon-assets">    
+              <img class="work-details-info-icon2" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/printing_effect.png" />
+              <p class="link-not-active-journey">PRINTING EFFECT</p>
+              <p class="link-not-active-journey clearfix"><?php the_terms( $post->ID, 'printingeffect'); ?></p>
+            </div>
+              <!--end cat-->
+            <div class="work-icon-assets">
+              <img class="work-details-info-icon2" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/paper.png" />
+              <p class="link-not-active-journey">PAPER</p>
+              <p class="link-not-active-journey clearfix"><?php the_terms( $post->ID, 'paper'); ?></p>
+              <!--end cat-->
+            </div> 
+          </div>
         </div>
         <!--end row details-box-->
       </div>

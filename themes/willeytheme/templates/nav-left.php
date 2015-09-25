@@ -22,15 +22,15 @@
                     ); ?>
               </li>
               <br>
-              <a class="grayscale" id="share1" href="#"><img src="<?php echo bloginfo('template_directory')?>/assets/images/icons/facebook.png" class="sidebar-bottom"></a>
-              <a class="grayscale" id="share2" href="#"><img src="<?php echo bloginfo('template_directory')?>/assets/images/icons/linkedin.png" class="sidebar-bottom"></a>
-              <a class="grayscale" id="share3" href="#"><img src="<?php echo bloginfo('template_directory')?>/assets/images/icons/email.png" class="sidebar-bottom"></a>
+              <a href="#"><img id="menu_share1" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/facebook_mono.png" class="sidebar-bottom"></a>
+              <a href="#"><img id="menu_share2" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/linkedin_mono.png" class="sidebar-bottom"></a>
+              <a href="#"><img id="menu_share3" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/email_mono.png" class="sidebar-bottom"></a>
               <!-- <a class="grayscale" id="share4" href="#"><img src="<?php //echo bloginfo('template_directory'); ?>/assets/images/icons/upload.png" class="sidebar-bottom"></a> -->
           </ul>
           <div class="menu_bottom">
             <?php echo qtranxf_generateLanguageSelectCode('image'); ?>
-            <!-- <a class="language" href="#"><img src="<?php echo bloginfo('template_directory')?>/assets/images/icons/english.png" class="language"></a>
-            <a class="language" href="#"><img src="<?php echo bloginfo('template_directory')?>/assets/images/icons/chinese.png" class="language"></a> -->
+            <!-- <a class="language" href="#"><img src="<?php //echo bloginfo('template_directory')?>/assets/images/icons/english.png" class="language"></a>
+            <a class="language" href="#"><img src="<?php //echo bloginfo('template_directory')?>/assets/images/icons/chinese.png" class="language"></a> -->
             <br>
             <span class="credits"> &copy; Willey Printing Ltd. 2015</span>
           </div>

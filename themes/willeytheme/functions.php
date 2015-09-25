@@ -37,10 +37,10 @@ add_action( 'after_setup_theme', 'wpt_setup' );
         } endif;
 
 // Register bootstrap files and jQuery:
-//Register Packery file
+// Register Packery file
 function wpt_register_js() {
-    wp_register_script('jquery.bootstrap.min', get_template_directory_uri() . '/assets/scripts/js/bootstrap.js', 'jquery');
-    wp_enqueue_script('jquery.bootstrap.min');
+    // wp_register_script('jquery.bootstrap.min', get_template_directory_uri() . '/assets/scripts/js/bootstrap.js', 'jquery');
+    // wp_enqueue_script('jquery.bootstrap.min');
 
     wp_register_script('packery.pkgd.js', get_template_directory_uri() . '/assets/scripts/js/packery.pkgd.js', 'jquery',false,true);
     wp_enqueue_script('packery.pkgd.js');
