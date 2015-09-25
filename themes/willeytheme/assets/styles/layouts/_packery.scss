@@ -24,9 +24,9 @@
   float: left;
   background-repeat: no-repeat;
   width: 100%;
-  max-width: auto; 
+  // min-width: 162px;
   height: 25vh;
-  min-height: 180px;
+  min-height: 250px;
   background-size: cover;
   background-position:center center;
   z-index: 500;
@@ -44,9 +44,8 @@
 
 .work-details-info {
   position: absolute;
-  bottom: 28px;
-  left: 25px;
-  width: 70%;
+  bottom: 0;
+  width: 90%;
 }
 
 .work-details-info-icon {
@@ -54,7 +53,6 @@
   width: 20px;
   margin-right: 10px;
   float: left;
-  margin-top: -7px;
 }
 
 .work-details-block {
@@ -62,15 +60,16 @@
 }
 
 .work-details-info p {
-  margin-top: 14px;
-  line-height: 5px;
+  line-height: 15px;
   font-family: 'Lato', sans-serif;
   font-weight: 700;
+  margin-left: 30px;
 }
 
 .link-not-active p {
   font-weight: 400;
   font-family: 'Lato', sans-serif;
+  margin-left: 0;
 }
 
 .link-not-active p a,
@@ -185,30 +184,36 @@
 
   .item {
     width: calc(3/12*100%);
+    // min-width: 162px;
     height: 25vh;
     overflow: hidden;
     display: block;
     float: left;
+    min-height: 250px;
 
     &.wide{
       width: calc(6/12*100%);
+      // min-width: 324px;      
     }
     &.tall{
       height: 50vh;
-      min-height: 360px;
+      min-height: 500px;
     }
     &.extra_tall {
       height: 75vh;
-      min-height: 540px;
+      min-height: 750px;
     }
     &.extra_wide {
       width: calc( 5/12 * 100% );
+      // min-width: 270px;
     }
     &.extra_extra_wide {
       width: calc( 7/12 * 100% );
+      // min-width: 378px;
     }
     &.last_div {
       width: calc( 4/12 * 100%);
+      // min-width: 216px;
     }
   }
 
