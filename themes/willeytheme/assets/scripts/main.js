@@ -66,6 +66,7 @@
           e.preventDefault();
           $('#right-nav').addClass('enabled');
           $('.desktop_right_nav').addClass('enabled');
+          $(".right-exit-menu").addClass("enabled");
         });
 
       // Journey Page Right Nav

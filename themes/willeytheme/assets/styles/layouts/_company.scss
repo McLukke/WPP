@@ -52,6 +52,11 @@ span {
 // 	margin-bottom: 70px;
 // }
 
+#company_bg_screen {
+	z-index: 900;
+	opacity: 0.8;
+}
+
 @media ( min-width: $tablet ) {
 	.about_desktop {
 		display: inline-block;
@@ -116,6 +121,10 @@ span {
 	#bg_image3,
 	#bg_image7 {
 		width: 40%;
+	}
+
+	#bg_image7 {
+		float: right;
 	}
 
 	#bg_image4 {

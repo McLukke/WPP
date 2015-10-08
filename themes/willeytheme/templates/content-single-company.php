@@ -205,10 +205,22 @@
       </div>
 
       <div id="background_images">
-        <?php foreach ( $picturesArray as $picture ) { ?>
-          <div class="bg_image" id="<?php echo "bg_image".$counter; ?>" style="background-image:url(<?php echo esc_html($picture); ?>)"></div>
-          <?php $counter++;
+      <div id="company_bg_screen">
+        <?php 
+        $imageCounter = 0;
+        foreach ( $picturesArray as $picture ) {
+          if ($imageCounter == 0 || $imageCounter == 2 || $imageCounter == 5) {
+            echo '<div class="row">';
+          }
+        ?>
+          <div class="bg_image" id="<?php echo "bg_image".$counter; ?>" style="background-image:url(<?php echo esc_html($picture); ?>)"></div><?php 
+          if ($imageCounter == 1 || $imageCounter == 4 || $imageCounter == 6) {
+            echo '</div>';
+          }
+          $imageCounter++;
+          $counter++;
         } ?>
+      </div>
       </div>
 
     </div><!--about_desktop-->
