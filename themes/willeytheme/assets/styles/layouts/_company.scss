@@ -52,11 +52,6 @@ span {
 // 	margin-bottom: 70px;
 // }
 
-#company_bg_screen {
-	z-index: 900;
-	opacity: 0.8;
-}
-
 @media ( min-width: $tablet ) {
 	.about_desktop {
 		display: inline-block;
@@ -93,10 +88,18 @@ span {
 		top: 0;
 		left: 0;
 		width: 100%;
+		z-index: 0;
+	}
+
+	.company_bg_screen {
+		z-index: 900;
+		background-color: rgba(0,0,0,0.3);
+		width: 100%;
+		height: 100%;
 	}
 
 	.bg_image {
-		height: 85vh;
+		height: 100vh;
 		display: block;
 		float: left;
 		margin: 0;
@@ -123,16 +126,14 @@ span {
 		width: 40%;
 	}
 
-	#bg_image7 {
-		float: right;
-	}
-
 	#bg_image4 {
-		height: 32vh;
+		// height: 32vh;
+		height: 40vh;
 	}
 
 	#bg_image5 {
-		height: 53vh;
+		// height: 53vh;
+		height: 60vh;
 	}
 
 	// Popup windows & text
@@ -140,7 +141,7 @@ span {
 	#mission_anchor_div,
 	#sustain_anchor_div {
 		width: 100%;
-		height: 85vh;
+		height: 100vh;
 		position: relative;
 		z-index: 1000;
 		// border: 1px solid green;
@@ -151,37 +152,60 @@ span {
 	.sustainability_popup {
 		background: #FFFFFF;
 		position: absolute;
-		width: 60%;
 		overflow-y: auto;
+		background-color: rgba(225,225,225,0.85);
 		// border: 1px solid red;
 	}
 
 	.about_popup {
-		right: 10px;
-		bottom: -5%;
-		height: 35%;
-		min-height: 200px;
-		margin-right: 10px;
 		padding: 15px 100px 15px 15px;
-
+		width: 95%;
+		height: 35%;
+		bottom: 10%;
+		right: 10px;
+		min-height: 200px;
+		margin-right: 10px; 
+		@media (min-width: $desktop) {
+			padding: 15px;
+			width: 60%;
+			height: auto;
+			bottom: 5%;
+			right: 0;
+		}
 	}
 
 	.mission_popup {
-		left: 10px;
-		bottom: 3%;
+		padding: 15px 70px 15px 15px;
+		width: 95%;
 		height: 35%;
+		bottom: 10%;
+		left: 3%;
 		min-width: 430px;
 		min-height: 260px;
-		padding: 15px 70px 15px 15px;
+		@media (min-width: $desktop) {
+			padding: 15px;
+			width: 60%;
+			height: auto;
+			bottom: 5%;
+			right: 0;
+		}
 	}
 
 	.sustainability_popup {
-		right: 10px;
-		bottom: 3%;
+		padding: 15px 60px 15px 15px;
+		width: 95%;
 		height: 35%;
+		bottom: 4%;
+		right: 3%;
 		min-width: 400px;
 		min-height: 250px;
-		padding: 15px 60px 15px 15px;
+		@media (min-width: $desktop) {
+			padding: 15px;
+			width: 60%;
+			height: auto;
+			bottom: 5%;
+			right: 0;
+		}
 	}
 
 	.entry-content h1 {

@@ -37,9 +37,9 @@
             <img class="contact_icons" src="<?php echo bloginfo('template_directory'); ?>/assets/images/icons/printer.png" alt="Fax Number" />
             <p>(852) 2555 1179</p>
         </span>
-        <span>
-            <img class="contact_icons" src="<?php echo bloginfo('template_directory'); ?>/assets/images/icons/email.png" alt="Email Address" />
-            <a class="contact_email" href="mailto:info@willey.com.hk"><br />&nbsp;&nbsp;info@willey.com.hk</a>
+        <span class="contact_email_span">
+            <img class="contact_email_icon" src="<?php echo bloginfo('template_directory'); ?>/assets/images/icons/email.png" alt="Email Address" />
+            <a class="contact_email" href="mailto:info@willey.com.hk">&nbsp;&nbsp;info@willey.com.hk</a>
         </span>
         <br />
 

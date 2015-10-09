@@ -114,8 +114,7 @@ body.admin-bar #right-nav {
 }
 
 .icon-nav-right {
-	height: 31px;
-	width: 31px;
+	width: 20px;
 }
 
 .brands {
@@ -135,6 +134,9 @@ body.admin-bar #right-nav {
 	display: inline-block;
 	padding: 20px;
 	font-size: 14px;
+	@media (max-width: $tablet) {
+		padding: 12px;
+	}
 }
 
 .list1:hover {
@@ -196,6 +198,7 @@ body.admin-bar #right-nav {
 .timeline-date {
 	font-family: Futura-Heavy;
 	letter-spacing: 1px;
+	text-transform: uppercase;
 }
 
 .timeline-event {

@@ -205,7 +205,6 @@
       </div>
 
       <div id="background_images">
-      <div id="company_bg_screen">
         <?php 
         $imageCounter = 0;
         foreach ( $picturesArray as $picture ) {
@@ -213,14 +212,15 @@
             echo '<div class="row">';
           }
         ?>
-          <div class="bg_image" id="<?php echo "bg_image".$counter; ?>" style="background-image:url(<?php echo esc_html($picture); ?>)"></div><?php 
+          <div class="bg_image" id="<?php echo "bg_image".$counter; ?>" style="background-image:url(<?php echo esc_html($picture); ?>)">
+            <div class="company_bg_screen"></div>
+          </div><?php 
           if ($imageCounter == 1 || $imageCounter == 4 || $imageCounter == 6) {
             echo '</div>';
           }
           $imageCounter++;
           $counter++;
         } ?>
-      </div>
       </div>
 
     </div><!--about_desktop-->
