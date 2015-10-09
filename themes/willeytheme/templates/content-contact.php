@@ -10,7 +10,7 @@
     </div>
 
     <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5"><?php
-        echo do_shortcode ( '[MultipleMarkerMap id="contact_us_map" z="15" lat="22.265704" lon="114.235443" marker="22.265704,114.235443" w="100%"]' ); ?>
+        echo do_shortcode ( '[MultipleMarkerMap id="contact_us_map" draggable="false" scrollwheel="false" scale="false" hidecontrols="true" z="15" lat="22.265704" lon="114.235443" marker="22.265704,114.235443" w="100%"]' ); ?>
     <br />
     <div class="contact_details">
 
