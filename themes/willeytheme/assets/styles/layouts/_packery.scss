@@ -55,7 +55,10 @@
 
 .work-details-block {
   padding-bottom: 0px;
-  @media (min-width: $widescreen) {
+  p {
+    line-height: 23px;
+  }
+  @media (min-width: $tablet) {
     padding-bottom: 10px;
   }
 }
