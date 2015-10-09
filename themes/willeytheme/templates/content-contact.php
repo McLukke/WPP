@@ -1,5 +1,5 @@
 <div id="contact_page">
-    <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
+    <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
         <div class="desktop_contact_form">
             <h1><?php the_title(); ?></h1>
 <?php the_content() ?>
@@ -9,7 +9,7 @@
         </div>
     </div>
 
-    <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5"><?php
+    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5"><?php
         echo do_shortcode ( '[MultipleMarkerMap id="contact_us_map" z="15" lat="22.265704" lon="114.235443" marker="22.265704,114.235443" w="100%"]' ); ?>
     <br />
     <div class="contact_details">
