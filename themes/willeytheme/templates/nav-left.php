@@ -21,7 +21,6 @@
                       'walker' => new wp_bootstrap_navwalker())
                     ); ?>
               </li>
-              <br>
               <a href="#" class="nav-icon"><img id="menu_share1" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/facebook_mono.png" class="sidebar-bottom"></a>
               <a href="#" class="nav-icon"><img id="menu_share2" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/linkedin_mono.png" class="sidebar-bottom"></a>
               <a href="#" class="nav-icon"><img id="menu_share3" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/email_mono.png" class="sidebar-bottom"></a>

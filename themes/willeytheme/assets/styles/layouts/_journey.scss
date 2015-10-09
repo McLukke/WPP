@@ -69,14 +69,13 @@
 }
 
 .journey-date {
-	margin-top: 0px;
+	margin-top: 3px;
+	@media (min-width: $tablet) {
+		margin-top: -3px;
+	}
 }
 
 @media (min-width: $tablet) {
-	.journey-date {
-		margin-top: -5px;
-	}
-	
   #journey_page {
       width: 60vw;
   }
