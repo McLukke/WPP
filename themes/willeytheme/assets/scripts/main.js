@@ -18,6 +18,52 @@
     // All pages
     'common': {
     init: function() {
+// function initMap() {
+//   var customMapType = new google.maps.StyledMapType([
+//       {
+//         stylers: [
+//           {hue: '#890000'},
+//           {visibility: 'simplified'},
+//           {gamma: 0.5},
+//           {weight: 0.5}
+//         ]
+//       },
+//       {
+//         elementType: 'labels',
+//         stylers: [{visibility: 'off'}]
+//       },
+//       {
+//         featureType: 'water',
+//         stylers: [{color: '#890000'}]
+//       }
+//     ], {
+//       name: 'Custom Style'
+//   });
+//   var customMapTypeId = 'custom_style';
+
+//   var map = new google.maps.Map(document.getElementById('contact_us_map'), {
+//     zoom: 15,
+//     panControl: false,
+//     streetViewControl: false,
+//     mapTypeControl: false,
+//     disableDoubleClickZoom: true,
+//     hidecontrols: true,
+//     scrollwheel: false,
+//     draggable: false,
+//     zoomControl: false,
+//     marker: {lat: 22.265704, lng: 114.235443},
+//     center: {lat: 22.265704, lng: 114.235443},
+//     mapTypeControlOptions: {
+//       mapTypeIds: [google.maps.MapTypeId.ROADMAP, customMapTypeId]
+//     }
+//   });
+
+//   map.mapTypes.set(customMapTypeId, customMapType);
+//   map.setMapTypeId(customMapTypeId);
+// }
+
+
+
         // JavaScript to be fired on all pages
         $(document).on("scroll", function () {
           if ( $(document).scrollTop() > 0 ) {

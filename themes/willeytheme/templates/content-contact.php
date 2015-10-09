@@ -8,9 +8,11 @@
             <?php //echo do_shortcode ( '[contact-form-7 id="22" title="Enquiry Form"]' ); ?>
         </div>
     </div>
-
-    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5"><?php
+    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+        <div id="contact_us_map">
+        <?php
         echo do_shortcode ( '[MultipleMarkerMap id="contact_us_map" draggable="false" scrollwheel="false" scale="false" hidecontrols="true" z="15" lat="22.265704" lon="114.235443" marker="22.265704,114.235443" w="100%"]' ); ?>
+        </div>
     <br />
     <div class="contact_details">
 
@@ -67,4 +69,8 @@
         
         <?php echo do_shortcode ( '[contact-form-7 id="22" title="Enquiry Form"]' ); ?>
     </div>
+    <!--
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCv2_hi1EyXXIUgKlG0_dAUOBrNCbCmToc&signed_in=true&callback=initMap"
+        async defer></script>
+    -->
 </div>

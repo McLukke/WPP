@@ -41,6 +41,10 @@ function MultipleMarkerMap_call($attr) {
 		var latlng = new google.maps.LatLng(' . $attr['lat'] . ', ' . $attr['lon'] . ');
 		var myOptions = {
 			zoom: ' . $attr['z'] . ',
+			draggable: false, 
+			zoomControl: false, 
+			scrollwheel: false, 
+			disableDoubleClickZoom: true,
 			center: latlng,
 			mapTypeId: google.maps.MapTypeId.' . $attr['maptype'] . '
 		};
