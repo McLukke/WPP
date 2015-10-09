@@ -11,10 +11,6 @@
 }
 
 .item .hover_text h3 {
-    font-size: 28px;
-    line-height: 30px;  
-    font-family: 'Lato', sans-serif;
-    font-weight: 700;
     text-transform: uppercase;
     width: 100%;
     padding-left: 4px;
@@ -49,6 +45,7 @@
 }
 
 .work-details-info-icon {
+  margin-top: 5px;
   height: 20px;
   width: 20px;
   margin-right: 10px;
@@ -56,20 +53,23 @@
 }
 
 .work-details-block {
-  padding-bottom: 10px;
+  padding-bottom: 0px;
+  @media (min-width: $widescreen) {
+    padding-bottom: 10px;
+  }
 }
 
-.work-details-info p {
-  line-height: 20px;
-  font-family: 'Lato', sans-serif;
-  font-weight: 700;
-  margin-left: 30px;
-}
+// .work-details-info p {
+//   line-height: 20px;
+//   font-family: 'Lato', sans-serif;
+//   font-weight: 700;
+//   margin-left: 30px;
+// }
 
-.link-not-active p {
-  font-weight: 400;
-  font-family: 'Lato', sans-serif;
-  margin-left: 0;
+// .link-not-active p {
+//   font-weight: 400;
+//   font-family: 'Lato', sans-serif;
+//   margin-left: 0;
 }
 
 .link-not-active p a,
@@ -126,26 +126,6 @@
   // height: 200px;
 }
 
-.item .hover_text h2 {
-  font-size: 2em !important;
-  line-height: 1em !important;
-  position: absolute;
-  top: 15px;
-  left: 25px;
-  width: 60%;
-  height: 30%;
-}
-
-@media (min-width: $tablet) {
-  .item .hover_text h3 {
-    font-size: 28px;
-    line-height: 30px;
-    font-family: 'Lato', sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
-  }
-}
-
 @media screen and (max-width: $tablet) {
   .grid-sizer {
     width: calc(6/12*100%);
@@ -158,15 +138,6 @@
     // height: 200px;
   }
 
-  .item .hover_text h2 {
-    font-size: 2em !important;
-    line-height: 1em !important;
-    position: absolute;
-    top: 15px;
-    left: 25px;
-    width: 60%;
-    height: 30%;
-  }
   .hover_text {
     font-size: 8px;
   }

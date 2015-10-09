@@ -129,11 +129,8 @@ body.admin-bar #right-nav {
 .list1 {
 	color: #3B3B3B;
 	width: 100%;
-	font-family: Futura;
 	text-decoration: none;
-	display: inline-block;
 	padding: 20px;
-	font-size: 14px;
 	@media (max-width: $tablet) {
 		padding: 12px;
 	}
@@ -142,13 +139,11 @@ body.admin-bar #right-nav {
 .list1:hover {
 	text-decoration: none;
 	color: #8C006A;
-	font-family: Futura;
 }
 
 .list1:hover a {
 	text-decoration: none;
 	color: #8C006A;
-	font-family: Futura;
 }
 
 .timeline-year,
