@@ -81,23 +81,6 @@ body.admin-bar #sidebar-wrapper {
     -webkit-transform: translate(0,-50%);
     -ms-transform: translate(0,-50%);
     transform: translate(0,-50%);
-    // padding-bottom: 80px;
-    @media (min-width: $tablet) {
-        position: absolute;
-        top: 15vh;
-        height: 85vh;
-        width: 100%;
-        margin: 0;
-        list-style: none;
-        height: auto;
-        padding-bottom: 80px;
-    }
-    @media (min-width: $widescreen) {
-        position: absolute;
-        top: 25vh;
-        height: 75vh;
-        padding-bottom: 80px;
-    }
 }
 
 
@@ -312,15 +295,33 @@ body.admin-bar #sidebar-wrapper {
 }
 
 .menu_bottom {
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-    height: auto;
+    display: none;
     @media (max-width: 767px) {
+        display: block;
         position: relative;
         bottom: auto;
         margin-top: 20px;
         height: 60px;
+    }
+}
+
+.menu_language {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: auto;
+    display: block;
+    @media (max-width: 767px) {
+        display: none;
+    }
+}
+
+@media only screen and 
+(min-width: 320px) and 
+(max-width: 736px) and 
+(orientation: landscape) {
+    .sidebar-nav {
+        margin-top: 100px;
     }
 }
 
