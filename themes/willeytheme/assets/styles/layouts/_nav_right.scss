@@ -38,12 +38,6 @@ body.admin-bar #right-nav {
   transition: all 0.5s ease;
 }
 
-@media(max-width: 750px) {
-	.work-details-info-icon {
-		display: none;
-	}
-}
-
 .right-exit-menu {
 	z-index: 1000;
 	position: absolute;
