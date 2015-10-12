@@ -10,11 +10,13 @@
   <div class="packery js-packery client_page" data-packery-options='{ "gutter": 0, "itemSelector": ".item", "columnWidth": ".grid-sizer", "percentPosition": true }'>
     <div class="gutter-sizer"></div>
     <div class="grid-sizer"></div>
-      <?php 
+      <p><?php echo $pods->display('background_images'); ?></p></span>
+
+      <?php
       $count = 1;
 
-      while (have_posts()) : the_post(); 
-      
+      while (have_posts()) : the_post();
+
         switch ($count) {
         case 4:
         case 3:
@@ -37,14 +39,14 @@
         $image = $image[0]; ?>
 
         <div class="item <?php echo $class; ?>" style="background-image: url('<?php echo $image; ?>')">
-          <div class="hover_text"  >
+          <?php /* <div class="hover_text"  > */ ?>
           <?php //the_title( '<h1>', '</h1>' ); ?>
           <?php //the_title( $count ); ?>
-          </div>
+          <!-- </div> -->
         </div>
-      <?php      
+      <?php
       }
-      
+
       $count ++;
 
       endwhile; ?>
