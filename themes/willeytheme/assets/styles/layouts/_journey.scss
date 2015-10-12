@@ -45,14 +45,14 @@
 }
 
 .journey_blurb {
-	border-right: 1px solid black;
+	border-right: 1px solid #bbb;
 	padding-right: 20px;
 	margin-right: -17px;
 	overflow: hidden;
 }
 
 .content-padding {
-	padding: 25px 20px;
+	padding: 25px 30px;
 }
 
 .row.social_share_wrapper,
@@ -75,23 +75,53 @@
 	}
 }
 
-@media (min-width: $tablet) {
-  #journey_page {
-      width: 60vw;
-  }
+.journey-content{
+	background: #eee;
+}
 
-  .journey_feat_image {
-      width: 100%;
-      height: 200px;
-      margin-left: 0;
-  }
+.timeline-event{
+	line-height:1.5;
+}
 
-	.desktop_publish_time {
-		display: inline-block;
+#timeline-list{
+	.list1{
+		display:block;
+		padding:8px 20px;
 	}
+}
 
-	.mobile_publish_time {
-		display: none;
+h5.timeline-year{
+	padding-top:20px;
+	padding-bottom: 15px;
+}
+
+@media (min-width: $tablet) {
+
+	.page-template-page-journey{
+		main.main{
+			padding-right: 300px;
+		}
+	  #journey_page {
+	      // width: 60vw;
+	  }
+
+	  .journey_feat_image {
+	      width: 100%;
+	      height: 200px;
+	      margin-left: 0;
+	  }
+
+		.desktop_publish_time {
+			display: inline-block;
+		}
+
+		.mobile_publish_time {
+			display: none;
+		}
+
+		.journey-date-box{
+			padding-top: 10px;
+		}
 	}
 
 }

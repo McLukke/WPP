@@ -45,7 +45,7 @@ main.main {
 	}
 }
 
-#left_menu_button, 
+#left_menu_button,
 .right_menu_button, /*work page*/
 #right_menu, /*journey page*/
 .single-work-return-button /*single-work*/ {
@@ -85,7 +85,7 @@ main.main {
 		top: 32px;
 	}
 
-	body.admin-bar main.main, 
+	body.admin-bar main.main,
 	body.admin-bar main.main.tiny_header {
 		top: 0;
 	}
@@ -107,6 +107,7 @@ main.main {
 	// Journey Page
 	#journey_page #right-nav,
 	#journey_page #right-nav.enabled {
-		width: 20vw;
+		width: 300px;
+		// width: 20vw;
 	}
 }

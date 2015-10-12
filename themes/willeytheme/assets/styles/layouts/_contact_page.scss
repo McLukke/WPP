@@ -31,11 +31,12 @@
 	clear: both;
 	margin-bottom: 10px;
 	width: 100%;
+
 }
 
 .contact_details span p {
-	padding-top: 5px;
-	padding-left: 24px;
+	//padding-top: 5px;
+	padding-left: 26px;
 }
 
 .contact_icons {
@@ -44,14 +45,15 @@
 	margin-top: 10px;
 }
 
-.contact_email_icon {
-	max-width: 20px;
-	margin-top: 0px;
-	float: left;
-}
+span.contact_email_span {
+	margin-bottom: 20px;
 
-.contact_email_span {
-	margin-top: 10px;
+	.contact_email_icon {
+		max-width: 20px;
+		float: left;
+		margin-top: 10px;
+	}
+
 }
 
 .contact_form_icons {
@@ -67,11 +69,11 @@
 .contact_email {
 	margin-left: 2px;
 
-  font-size: 11px;
+  // font-size: 11px;
   line-height: 17px;
 	@media (min-width: $tablet) {
 		p {
-	    font-size: 15px;
+	    // font-size: 15px;
 	    line-height: 23px;
 	  }
 	}
@@ -169,9 +171,6 @@ input.wpcf7-form-control.wpcf7-submit {
 	z-index: 0;
 	border: none !important;
 	height: 50vh !important;
-	@media (min-width: 65vh) {
-		height: 65vh !important;
-	}
 }
 
 @media ( min-width: $tablet ) {
@@ -237,6 +236,13 @@ input.wpcf7-form-control.wpcf7-submit {
 		border: 1px solid #808080;
 		background-position: right 13px bottom 0px;
 	}
+}
+
+div.wpcf7-validation-errors{
+	border:0;
+}
+div.wpcf7-response-output{
+	display: none;
 }
 
 @media ( min-width: $desktop ) {

@@ -4,7 +4,7 @@
   <div class="timeline-wrapper">
     <img class="icon-nav-right" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/publish.png" />
     <h1 class="nav-title">
-       <?php if ( qtranxf_getLanguage() == "en" ){ 
+       <?php if ( qtranxf_getLanguage() == "en" ){
           echo "DATE"; }
             elseif ( qtranxf_getLanguage() == "zh" ){
           echo "日期"; } ?>
@@ -13,7 +13,7 @@
     <?php foreach(posts_by_year() as $year => $posts) : ?>
       <h5 class="timeline-year"><span><?php echo $year; ?></span><h5>
 
-      <ul>
+      <ul id="timeline-list">
         <?php foreach($posts as $post) : setup_postdata($post); ?>
           <li>
             <a href="#<?php echo get_the_ID() ?>" class="list1">
@@ -21,7 +21,7 @@
               <p class="timeline-event"><?php the_title(); ?></p>
             </a>
             <br />
-          </li> 
+          </li>
         <?php endforeach; ?>
       </ul>
     <?php endforeach; ?>
@@ -30,7 +30,7 @@
   <?php } else { ?>
     <img class="sorting_icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/folder.png" />
     <h1 class="nav_title">
-      <?php if ( qtranxf_getLanguage() == "en" ){ 
+      <?php if ( qtranxf_getLanguage() == "en" ){
         echo "SORTING"; }
           elseif ( qtranxf_getLanguage() == "zh" ){
         echo "XSORTING"; } ?>
@@ -38,7 +38,7 @@
     <div class="nav_right_menu_container">
       <h5 class="custom_menu_title">
         <span>
-          <?php if ( qtranxf_getLanguage() == "en" ){ 
+          <?php if ( qtranxf_getLanguage() == "en" ){
             echo "BRAND"; }
               elseif ( qtranxf_getLanguage() == "zh" ){
             echo "XBRAND"; } ?>
@@ -59,8 +59,8 @@
       </ul>
 
       <h5 class="custom_menu_title">
-        <span>      
-          <?php if ( qtranxf_getLanguage() == "en" ){ 
+        <span>
+          <?php if ( qtranxf_getLanguage() == "en" ){
           echo "CATEGORY"; }
             elseif ( qtranxf_getLanguage() == "zh" ){
           echo "XCATEGORY"; } ?>

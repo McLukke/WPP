@@ -30,14 +30,14 @@
           <div class="journey_feat_image" style="background-image: url('<?php echo $image; ?>');"></div>
         </div>
       </div>
-      <div class="content-padding">
+      <div class="content-padding journey-content">
         <?php the_title('<h1>', '</h1>'); ?>
         <div class="row content_info_wrapper">
-          <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
+          <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
             <div class="journey_blurb"><?php the_excerpt(); ?></div>
           </div>
 
-          <div class="hidden-xs hidden-sm col-md-5 col-lg-5">
+          <div class="hidden-xs hidden-sm col-md-4 col-lg-4 journey-date-box">
             <img class="icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/publish.png" />
             <p class="journey-date"><?php the_time('M Y ') ?></p>
           </div>
@@ -47,7 +47,7 @@
           <div class="col-xs-6 col-sm-6 divider">
             <div class="social_share_journey">
               <p>Share by:</p><br />
-              <?php if ( function_exists( 'ADDTOANY_SHARE_SAVE_KIT' ) ) { 
+              <?php if ( function_exists( 'ADDTOANY_SHARE_SAVE_KIT' ) ) {
                 ADDTOANY_SHARE_SAVE_KIT( array( 'linkname' => ( is_home() ? get_bloginfo( 'description' ) : wp_title( '', false ) ), 'linkurl' => ( is_ssl() ? 'https://' : 'http://' ) . $_SERVER["HTTP_HOST"] . $_SERVER['REQUEST_URI'] ) );
               } ?>
             </div>

@@ -47,17 +47,17 @@
         <?php if ( qtranxf_getLanguage() === "en" ) { ?>
           <h1><?php echo $pods->display('mission_statement_title'); ?></h1>
           <div class="row">
-            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <h2><?php echo $pods->display('mission_column1_title'); ?></h2>
               <p><?php echo $pods->display('mission_column1'); ?></p>
             </div>
 
-            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <h2><?php echo $pods->display('mission_column2_title'); ?></h2>
               <p><?php echo $pods->display('mission_column2'); ?></p>
             </div>
 
-            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <h2><?php echo $pods->display('mission_column3_title'); ?></h2>
               <p><?php echo $pods->display('mission_column3'); ?></p>
             </div>
@@ -65,17 +65,17 @@
         <?php } else { ?>
           <h1><?php echo $pods->display('mission_statement_title_zh'); ?></h1>
           <div class="row">
-            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <h2><?php echo $pods->display('mission_column1_title_zh'); ?></h2>
               <p><?php echo $pods->display('mission_column1_zh'); ?></p>
             </div>
 
-            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <h2><?php echo $pods->display('mission_column2_title_zh'); ?></h2>
               <p><?php echo $pods->display('mission_column2_zh'); ?></p>
             </div>
 
-            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <h2><?php echo $pods->display('mission_column3_title_zh'); ?></h2>
               <p><?php echo $pods->display('mission_column3_zh'); ?></p>
             </div>
@@ -88,12 +88,12 @@
         <?php if (qtranxf_getLanguage() === 'en') { ?>
           <h1><?php echo $pods->display('sustainability_title'); ?></h1>
           <div class="row">
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
               <span><h2><?php echo $pods->display('sustainability_column1_title'); ?></h2>
               <p><?php echo $pods->display('sustainability_column1'); ?></p></span>
             </div>
 
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
               <span><h2><?php echo $pods->display('sustainability_column2_title'); ?></h2>
               <p><?php echo $pods->display('sustainability_column2'); ?></p></span>
             </div>
@@ -101,12 +101,12 @@
         <?php } else { ?>
           <h1><?php echo $pods->display('sustainability_title_zh'); ?></h1>
           <div class="row">
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
               <span><h2><?php echo $pods->display('sustainability_column1_title_zh'); ?></h2>
               <p><?php echo $pods->display('sustainability_column1_zh'); ?></p></span>
             </div>
 
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
               <span><h2><?php echo $pods->display('sustainability_column2_title_zh'); ?></h2>
               <p><?php echo $pods->display('sustainability_column2_zh'); ?></p></span>
             </div>
@@ -141,7 +141,7 @@
             <h1><?php echo $pods->display('mission_statement_title_zh'); ?></h1>
           <?php } ?>
           <div class="row">
-            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <?php if ( qtranxf_getLanguage() === 'en' ) { ?>
                 <span><h2><?php echo $pods->display('mission_column1_title'); ?></h2>
                 <p><?php echo $pods->display('mission_column1'); ?></p></span>
@@ -151,7 +151,7 @@
               <?php } ?>
             </div>
 
-            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <?php if ( qtranxf_getLanguage() === 'en' ) { ?>
                 <span><h2><?php echo $pods->display('mission_column2_title'); ?></h2>
                 <p><?php echo $pods->display('mission_column2'); ?></p></span>
@@ -161,7 +161,7 @@
               <?php } ?>
             </div>
 
-            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <?php if ( qtranxf_getLanguage() === 'en' ) { ?>
                 <span><h2><?php echo $pods->display('mission_column3_title'); ?></h2>
                 <p><?php echo $pods->display('mission_column3'); ?></p></span>
@@ -181,7 +181,7 @@
             <h1><?php echo $pods->display('sustainability_title_zh'); ?></h1>
           <?php } ?>
           <div class="row">
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
               <?php if ( qtranxf_getLanguage() === 'en' ) { ?>
                 <span><h2><?php echo $pods->display('sustainability_column1_title'); ?></h2>
                 <p><?php echo $pods->display('sustainability_column1'); ?></p></span>
@@ -191,7 +191,7 @@
               <?php } ?>
             </div>
 
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
               <?php if ( qtranxf_getLanguage() === 'en' ) { ?>
                 <span><h2><?php echo $pods->display('sustainability_column2_title'); ?></h2>
                 <p><?php echo $pods->display('sustainability_column2'); ?></p></span>
@@ -205,16 +205,16 @@
       </div>
 
       <div id="background_images">
-        <?php 
+        <?php
         $imageCounter = 0;
         foreach ( $picturesArray as $picture ) {
           if ($imageCounter == 0 || $imageCounter == 2 || $imageCounter == 5) {
-            echo '<div class="row">';
+            echo '<div class="row row'.$imageCounter.'">';
           }
         ?>
           <div class="bg_image" id="<?php echo "bg_image".$counter; ?>" style="background-image:url(<?php echo esc_html($picture); ?>)">
             <div class="company_bg_screen"></div>
-          </div><?php 
+          </div><?php
           if ($imageCounter == 1 || $imageCounter == 4 || $imageCounter == 6) {
             echo '</div>';
           }

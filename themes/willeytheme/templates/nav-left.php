@@ -9,7 +9,7 @@
                   <a href="<?php echo get_home_url(); ?>"><img src="<?php echo bloginfo('template_directory')?>/assets/images/icons/logofull.png" class="logo"></a>
               </li>
               <li>
-                <br /><?php /* Primary navigation */
+                <?php /* Primary navigation */
                     wp_nav_menu( array(
                       'menu' => 'top_menu',
                       'depth' => 2,
@@ -21,17 +21,20 @@
                       'walker' => new wp_bootstrap_navwalker())
                     ); ?>
               </li>
-              <a href="#" class="nav-icon"><img id="menu_share1" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/facebook_mono.png" class="sidebar-bottom"></a>
-              <a href="#" class="nav-icon"><img id="menu_share2" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/linkedin_mono.png" class="sidebar-bottom"></a>
-              <a href="#" class="nav-icon"><img id="menu_share3" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/email_mono.png" class="sidebar-bottom"></a>
-              <!-- <a class="grayscale" id="share4" href="#"><img src="<?php //echo bloginfo('template_directory'); ?>/assets/images/icons/upload.png" class="sidebar-bottom"></a> -->
-            <div class="menu_bottom">
+              <li class="nav-icons">
+                <a href="#" class="nav-icon"><img id="menu_share1" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/facebook_mono.png" class="sidebar-bottom"></a>
+                <a href="#" class="nav-icon"><img id="menu_share2" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/linkedin_mono.png" class="sidebar-bottom"></a>
+                <a href="#" class="nav-icon"><img id="menu_share3" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/email_mono.png" class="sidebar-bottom"></a>
+                <!-- <a class="grayscale" id="share4" href="#"><img src="<?php //echo bloginfo('template_directory'); ?>/assets/images/icons/upload.png" class="sidebar-bottom"></a> -->
+              </li>
+
+            <li class="menu_bottom">
               <?php echo qtranxf_generateLanguageSelectCode('image'); ?>
               <!-- <a class="language" href="#"><img src="<?php //echo bloginfo('template_directory')?>/assets/images/icons/english.png" class="language"></a>
               <a class="language" href="#"><img src="<?php //echo bloginfo('template_directory')?>/assets/images/icons/chinese.png" class="language"></a> -->
               <br>
               <span class="credits"> &copy; Willey Printing Ltd. 2015</span>
-            </div>
+            </li>
           </ul>
           <div class="menu_language">
             <?php echo qtranxf_generateLanguageSelectCode('image'); ?>

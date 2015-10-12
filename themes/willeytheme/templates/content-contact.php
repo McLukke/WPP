@@ -19,11 +19,11 @@
         <span>
             <img class="contact_icons" src="<?php echo bloginfo('template_directory'); ?>/assets/images/icons/contact.png" alt="Contact Address" />
              <p>
-            <?php 
+            <?php
                 $lang = qtranxf_getlanguage();
 
                 if($lang == "zh"){
-                    echo '柴灣祥利街26號銀星中心';                     
+                    echo '柴灣祥利街26號銀星中心';
                 }else{
                     echo '2/F, Silver Tech Tower, 26 Cheung Lee Street, Chai Wan. Hong Kong';
                 }
@@ -40,22 +40,21 @@
             <p>(852) 2555 1179</p>
         </span>
         <span class="contact_email_span">
-            <img class="contact_email_icon" src="<?php echo bloginfo('template_directory'); ?>/assets/images/icons/email.png" alt="Email Address" />
-            <a class="contact_email" href="mailto:info@willey.com.hk">&nbsp;&nbsp;info@willey.com.hk</a>
+            <img class="contact_email_icon" src="<?php echo bloginfo('template_directory'); ?>/assets/images/icons/email.png" alt="Email Address" /><p><a class="contact_email" href="mailto:info@willey.com.hk">info@willey.com.hk</a></p>
         </span>
-        <br />
 
-        <p>
-            <?php 
+
+        <p><strong>
+            <?php
                 $lang = qtranxf_getlanguage();
 
                 if($lang == "zh"){
-                    echo '跟著我們';                     
+                    echo '跟著我們';
                 }else{
                     echo 'Follow us on:';
                 }
             ?>
-        </p>
+        <strong></p>
             <!-- <p>Follow us on:<br /></p> -->
             <p>
             <a href=""><img class="icon" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/facebook.png"></img></a>
@@ -66,7 +65,7 @@
     <div class="mobile_contact_form">
         <h1>Get in Touch<br />with Us</h1>
         <p>Request a quote or to discuss your next design project. We work with clients all over the world.</p>
-        
+
         <?php echo do_shortcode ( '[contact-form-7 id="22" title="Enquiry Form"]' ); ?>
     </div>
     <!--
