@@ -7,7 +7,7 @@
   padding: 25px 15px;
   font-size: 12px;
   @media (max-width: $tablet) {
-    opacity: 0;
+    opacity: 1;
   }
 }
 
@@ -156,7 +156,7 @@
   }
 
   .hover_text {
-    font-size: 8px;
+    display:none;
   }
 
 
@@ -215,7 +215,7 @@
     // padding-bottom: 0;
     line-height: 0;
     padding:20px;
-    h3{
+    h3 {
       font-size: 30px;
     }
     .work-details-info {
@@ -224,7 +224,7 @@
 
      .work-details-block{
 
-        p{
+        p {
           font-size: 15px;
           line-height: 20px;
         }
