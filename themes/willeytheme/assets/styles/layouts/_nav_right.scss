@@ -212,12 +212,12 @@ body.admin-bar #right-nav {
 	}
 
 	.right_work_menu .right_menu_button {
-		display: block;
+		display: none;
 	}
 
 	.right_work_menu .right_menu_button_white {
-		z-index: 8000;
-		display: inline-block;
+		z-index: 2000;
+		display: block;
 		margin-top: 20px;
 		margin-left: 10px;
 		// position: fixed;
