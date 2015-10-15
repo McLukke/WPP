@@ -34,7 +34,7 @@
         <?php the_title('<h1>', '</h1>'); ?>
         <div class="row content_info_wrapper">
           <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
-            <div class="journey_blurb"><?php the_excerpt(); ?></div>
+            <div class="journey_blurb"><?php the_content(); ?></div>
           </div>
 
           <div class="hidden-xs hidden-sm col-md-4 col-lg-4 journey-date-box">
