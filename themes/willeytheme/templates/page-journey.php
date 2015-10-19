@@ -27,7 +27,7 @@
           } else {
             $image = get_bloginfo('template_directory')."/assets/images/icons/black.png";
           } ?>
-          <div class="journey_feat_image" style="background-image: url('<?php echo $image; ?>');"></div>
+          <div><img class="journey_feat_image" src="<?php echo $image; ?>"></div>
         </div>
       </div>
       <div class="content-padding journey-content">
