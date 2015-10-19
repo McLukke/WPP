@@ -216,13 +216,13 @@ body.admin-bar #right-nav {
 	}
 
 	.right_work_menu .right_menu_button_white {
-		z-index: 2000;
+		z-index: 1000;
 		display: block;
 		margin-top: 20px;
 		margin-left: 10px;
 		// position: fixed;
 		// max-width: 25px;
-		z-index: 700;
+		position: relative;
     display: block;
     margin-top: 20px;
     margin-left: 8vw;
