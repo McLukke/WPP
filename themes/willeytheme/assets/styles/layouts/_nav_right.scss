@@ -74,7 +74,7 @@ body.admin-bar #right-nav {
 
 .desktop_right_nav {
 	max-width: 0;
-	display: none;
+	// display: none;
 }
 
 .right_work_menu .right_menu_button {
@@ -82,7 +82,7 @@ body.admin-bar #right-nav {
 }
 
 .right_work_menu .right_menu_button_white {
-	display: none;
+	// display: none;
 }
 
 .nav_title {
@@ -95,13 +95,13 @@ body.admin-bar #right-nav {
 	padding: 0;
 	margin: auto;
 	text-decoration: none;
-	position: absolute;
+	// position: absolute;
 	width: 100%;
-	top: 50%;
-	-webkit-transform: translate(0,-50%);
-  -moz-transform: translate(0,-50%);
-  -o-transform: translate(0,-50%);
-  transform: translate(0,-50%);
+	// top: 50%;
+	// -webkit-transform: translate(0,-50%);
+ //  -moz-transform: translate(0,-50%);
+ //  -o-transform: translate(0,-50%);
+ //  transform: translate(0,-50%);
 }
 
 .icon-nav-right {
@@ -113,7 +113,7 @@ body.admin-bar #right-nav {
 	padding: 0;
 	margin: auto;
 	text-decoration: none;
-	display: none;
+	// display: none;
 }
 
 .list1 {
@@ -144,7 +144,7 @@ body.admin-bar #right-nav {
 	padding-bottom: 10px;
 	letter-spacing: 2px;
 	display: inline-block;
-	margin: -0.5rem 0 .5rem;
+	margin: 1rem 0 .5rem;
 	text-align: center;
 	&:before {
 		padding-right: 0.0125rem;
@@ -169,7 +169,7 @@ body.admin-bar #right-nav {
 }
 
 .custom_menu_title {
-	display:none;
+	// display:none;
 }
 
 .timeline-wrapper {
@@ -190,7 +190,7 @@ body.admin-bar #right-nav {
 }
 
 .nav_right_menu_container {
-	height: 75%;
+	// height: 75%;
 	overflow: auto;
 }
 
@@ -218,13 +218,13 @@ body.admin-bar #right-nav {
 	.right_work_menu .right_menu_button_white {
 		z-index: 1000;
 		display: block;
-		margin-top: 20px;
+		// margin-top: 25px;
 		margin-left: 10px;
-		// position: fixed;
+		position: fixed;
 		// max-width: 25px;
-		position: relative;
+		// position: relative;
     display: block;
-    margin-top: 20px;
+    margin-top: 25px;
     margin-left: 10vw;
     // position: fixed;
     width: 25px;

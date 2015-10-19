@@ -50,11 +50,11 @@ main.main {
 #right_menu, /*journey page*/
 .single-work-return-button /*single-work*/ {
 	max-width: 25px;
-	position: relative;
-	margin-top: 75px;
-	&.tiny_header {
-		margin-top: 35px;
-	}
+	position: fixed;
+	margin-top: 35px;
+	// &.tiny_header {
+	// 	margin-top: 35px;
+	// }
 }
 
 .right_menu_button {

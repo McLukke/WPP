@@ -71,7 +71,7 @@
         $category_terms = get_terms( 'workcategory' );
         foreach ( $category_terms as $category_term ) {
           ?>  <li>
-              <a href="<?php echo get_home_url() . "/?brand=" . $category_term->slug; ?>">
+              <a href="<?php echo get_home_url() . "/?sorting=" . $category_term->slug; ?>">
                 <p class="list1">
                    <?php echo $category_term->name; ?>
                  </p>
