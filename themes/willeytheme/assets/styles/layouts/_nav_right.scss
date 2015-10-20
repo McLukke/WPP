@@ -148,15 +148,17 @@ body.admin-bar #right-nav {
 	text-align: center;
 	&:before {
 		padding-right: 0.0125rem;
-		content: "───────";
+		content: "─────";
 		font-size: 0.65rem;
-		position: relative;
+	  font-family: sans-serif;
+  	position: relative;
 		top: -4px;
 		letter-spacing: 0;
 	}
 	&:after {
 		padding-left: 0.0125rem;
-		content: "───────";
+	  font-family: sans-serif;
+		content: "─────";
 		font-size: 0.65rem;
 		position: relative;
 		top: -4px;
@@ -332,14 +334,14 @@ body.admin-bar #right-nav {
 }
 
 @media (min-width: 860px) and (max-width: 1049px) {
-	.custom_menu_title {
-		&:before {
-			content: "────";
-		}
-		&:after {
-			content: "────";
-		}
-	}
+	// .custom_menu_title {
+	// 	&:before {
+	// 		content: "────";
+	// 	}
+	// 	&:after {
+	// 		content: "────";
+	// 	}
+	// }
 }
 
 @media (min-width: 1050px) {
@@ -350,14 +352,14 @@ body.admin-bar #right-nav {
 		}
 	}
 
-	.custom_menu_title {
-		&:before {
-			content: "───────";
-		}
-		&:after {
-			content: "───────";
-		}
-	}
+	// .custom_menu_title {
+	// 	&:before {
+	// 		content: "───────";
+	// 	}
+	// 	&:after {
+	// 		content: "───────";
+	// 	}
+	// }
 
 	// #right-nav {
 	// 	width: 210px;

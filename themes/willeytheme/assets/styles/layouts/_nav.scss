@@ -223,7 +223,10 @@ body.admin-bar #sidebar-wrapper {
     display: block;
     background-image: url(../../assets/images/flags/gb.png);
     background-size: cover;
+}
 
+:lang(en-US) .qtranxs_image_en {
+    background-image: url(../../assets/images/flags/gb-active.png);
 }
 
 .qtranxs_image_zh {
@@ -235,6 +238,10 @@ body.admin-bar #sidebar-wrapper {
     margin-left: 4px;
     display: block;
     background-size: cover;
+}
+
+:lang(zh-CN) .qtranxs_image_zh{
+   background-image: url(../../assets/images/flags/cn-active.png);
 }
 
 .qtranxs_language_chooser {
