@@ -12,7 +12,7 @@ body.admin-bar #right-nav {
 #right-nav {
 	z-index: 2000;
 	position: fixed;
-	padding-top: 2vh;
+	padding-top: 24px;
 	top: 0;
 	right: 0;
 	bottom: 0;
@@ -38,29 +38,29 @@ body.admin-bar #right-nav {
   transition: all 0.5s ease;
 }
 
-.right-exit-menu {
-	z-index: 1000;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 0;
-	height: 100vh;
-	overflow-y: auto;
-	overflow-x: hidden;
-	background: transparent;
-	text-align: center;
-	&.enabled {
-		width: 25vw;
-		-webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-	}
-		-webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-}
+// .right-exit-menu {
+// 	z-index: 1000;
+// 	position: absolute;
+// 	top: 0;
+// 	left: 0;
+// 	width: 0;
+// 	height: 100vh;
+// 	overflow-y: auto;
+// 	overflow-x: hidden;
+// 	background: transparent;
+// 	text-align: center;
+// 	&.enabled {
+// 		width: 25vw;
+// 		-webkit-transition: all 0.5s ease;
+//     -moz-transition: all 0.5s ease;
+//     -o-transition: all 0.5s ease;
+//     transition: all 0.5s ease;
+// 	}
+// 		-webkit-transition: all 0.5s ease;
+//     -moz-transition: all 0.5s ease;
+//     -o-transition: all 0.5s ease;
+//     transition: all 0.5s ease;
+// }
 
 .menu-open-right {
 	z-index: 1000;
@@ -154,6 +154,7 @@ body.admin-bar #right-nav {
   	position: relative;
 		top: -4px;
 		letter-spacing: 0;
+		color:#bdbdbd;
 	}
 	&:after {
 		padding-left: 0.0125rem;
@@ -163,6 +164,7 @@ body.admin-bar #right-nav {
 		position: relative;
 		top: -4px;
 		letter-spacing: 0;
+		color:#bdbdbd;
 	}
   span{
     margin: 0 12px;
@@ -203,6 +205,23 @@ body.admin-bar #right-nav {
 
 
 
+	.desktop_right_nav {
+		display: inline-block;
+		text-align: center;
+		position: fixed;
+		top: 15px;
+		right: 15px;
+		margin-top: 10px;
+		opacity: .5;
+		&.enabled {
+			max-width: 25px;
+			-webkit-transition: all 0.5s ease;
+	    -moz-transition: all 0.5s ease;
+	    -o-transition: all 0.5s ease;
+	    transition: all 0.5s ease;
+	    opacity: 1
+		}
+	}
 
 
 
@@ -264,20 +283,6 @@ body.admin-bar #right-nav {
 	  transform: none;
 	}
 
-	.desktop_right_nav {
-		display: inline-block;
-		text-align: center;
-		position: fixed;
-		bottom: 15px;
-		margin-top: 10px;
-		&.enabled {
-			max-width: 25px;
-			-webkit-transition: all 0.5s ease;
-	    -moz-transition: all 0.5s ease;
-	    -o-transition: all 0.5s ease;
-	    transition: all 0.5s ease;
-		}
-	}
 
 	.right-exit-menu,
 	.right-exit-menu.enabled {

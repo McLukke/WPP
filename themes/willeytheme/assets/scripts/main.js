@@ -103,7 +103,7 @@
           $(".right-exit-menu").addClass("enabled");
           $('.exit-button').addClass('enabled');
           $('.desktop_right_nav').addClass('enabled');
-          $('#left_menu_button').addClass('hidden');
+          // $('#left_menu_button').addClass('hidden');
         });
 
       // Work Page Desktop
@@ -120,7 +120,7 @@
           $('#right-nav').addClass('enabled');
           $('.right-exit-menu').addClass('enabled');
           $('.exit-button').addClass('enabled');
-          $('#left_menu_button').addClass('hidden');
+          // $('#left_menu_button').addClass('hidden');
         });
 
       // exit button for both left and right menus
@@ -130,7 +130,7 @@
           $("#wrapper").removeClass("toggled");
           $('#right-nav').removeClass('enabled');
           $('.right-exit-menu').removeClass('enabled');
-          $('#left_menu_button').removeClass('hidden');
+          // $('#left_menu_button').removeClass('hidden');
           $('.right_menu_button').removeClass('hidden');
           $('#right_menu').removeClass('hidden');
         });
