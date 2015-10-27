@@ -94,6 +94,7 @@
           $('.exit-button').addClass('enabled');
           $('.right_menu_button').addClass('hidden');
           $('#right_menu').addClass('hidden');
+          $("#right-nav").removeClass("enabled");
         });
 
       // Right menu toggle
