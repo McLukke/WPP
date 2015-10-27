@@ -87,17 +87,26 @@
           }
 
           if ( $(window).scrollTop() >= parseInt($('#about_anchor_div').css("height"))*1.8 ) {
+            $('#about_button').removeClass('ON');
+            $('#mission_button').removeClass('ON');
             $('#sustain_button').addClass('ON');
+
             $('#about_button').prop('src', '/wp-content/themes/willeytheme/assets/images/icons/about_bnw.png');
             $('#mission_button').prop('src', '/wp-content/themes/willeytheme/assets/images/icons/mission_bnw.png');
             $('#sustain_button').prop('src', '/wp-content/themes/willeytheme/assets/images/icons/sustainability.png');
           } else if ( $(window).scrollTop() >= parseInt($('#about_anchor_div').css("height"))*0.8 ) {
+            $('#about_button').removeClass('ON');
             $('#mission_button').addClass('ON');
+            $('#sustain_button').removeClass('ON');
+
             $('#about_button').prop('src', '/wp-content/themes/willeytheme/assets/images/icons/about_bnw.png');
             $('#mission_button').prop('src', '/wp-content/themes/willeytheme/assets/images/icons/mission.png');
             $('#sustain_button').prop('src', '/wp-content/themes/willeytheme/assets/images/icons/sustainability_bnw.png');
           } else {
             $('#about_button').addClass('ON');
+            $('#mission_button').removeClass('ON');
+            $('#sustain_button').removeClass('ON');
+
             $('#about_button').prop('src', '/wp-content/themes/willeytheme/assets/images/icons/about.png');
             $('#mission_button').prop('src', '/wp-content/themes/willeytheme/assets/images/icons/mission_bnw.png');
             $('#sustain_button').prop('src', '/wp-content/themes/willeytheme/assets/images/icons/sustainability_bnw.png');
@@ -202,9 +211,9 @@
             // $('.sustainability_popup').addClass('hidden');
 
             // show appropriate icons
-            $(this).prop('src', '/wp-content/themes/willeytheme/assets/images/icons/about.png');
-            $('#mission_button').prop('src', '/wp-content/themes/willeytheme/assets/images/icons/mission_bnw.png');
-            $('#sustain_button').prop('src', '/wp-content/themes/willeytheme/assets/images/icons/sustainability_bnw.png');
+            // $(this).prop('src', '/wp-content/themes/willeytheme/assets/images/icons/about.png');
+            // $('#mission_button').prop('src', '/wp-content/themes/willeytheme/assets/images/icons/mission_bnw.png');
+            // $('#sustain_button').prop('src', '/wp-content/themes/willeytheme/assets/images/icons/sustainability_bnw.png');
 
             // [superceeded] change bg
             // $('.about_bg').removeClass('hidden');
@@ -234,9 +243,9 @@
             // $('.sustainability_popup').addClass('hidden');
 
             // show appropriate icons
-            $('#about_button').prop('src', '/wp-content/themes/willeytheme/assets/images/icons/about_bnw.png');
-            $(this).prop('src', '/wp-content/themes/willeytheme/assets/images/icons/mission.png');
-            $('#sustain_button').prop('src', '/wp-content/themes/willeytheme/assets/images/icons/sustainability_bnw.png');
+            // $('#about_button').prop('src', '/wp-content/themes/willeytheme/assets/images/icons/about_bnw.png');
+            // $(this).prop('src', '/wp-content/themes/willeytheme/assets/images/icons/mission.png');
+            // $('#sustain_button').prop('src', '/wp-content/themes/willeytheme/assets/images/icons/sustainability_bnw.png');
 
             // [superceeded] change bg
             // $('.about_bg').addClass('hidden');
@@ -266,9 +275,9 @@
             // $('.sustainability_popup').removeClass('hidden');
 
             // show appropriate icons
-            $('#about_button').prop('src', '/wp-content/themes/willeytheme/assets/images/icons/about_bnw.png');
-            $('#mission_button').prop('src', '/wp-content/themes/willeytheme/assets/images/icons/mission_bnw.png');
-            $(this).prop('src', '/wp-content/themes/willeytheme/assets/images/icons/sustainability.png');
+            // $('#about_button').prop('src', '/wp-content/themes/willeytheme/assets/images/icons/about_bnw.png');
+            // $('#mission_button').prop('src', '/wp-content/themes/willeytheme/assets/images/icons/mission_bnw.png');
+            // $(this).prop('src', '/wp-content/themes/willeytheme/assets/images/icons/sustainability.png');
 
             // [superceeded] change bg
             // $('.about_bg').addClass('hidden');
