@@ -86,23 +86,21 @@
             $('#main_logo').addClass('hidden');
           }
 
-          if ( window.location.href === "http://willey.neon.19degrees.io/company/about/" ) {
-            if ( $(window).scrollTop() >= 0 ) {
-              $('#about_button').addClass('ON');
-              $('#about_button').prop('src', '/wp-content/themes/willeytheme/assets/images/icons/about.png');
-              $('#mission_button').prop('src', '/wp-content/themes/willeytheme/assets/images/icons/mission_bnw.png');
-              $('#sustain_button').prop('src', '/wp-content/themes/willeytheme/assets/images/icons/sustainability_bnw.png');
-            } else if ( $(window).scrollTop() >= parseInt($('#about_anchor_div').css("height"))*0.8 ) {
-              $('#mission_button').addClass('ON');
-              $('#about_button').prop('src', '/wp-content/themes/willeytheme/assets/images/icons/about_bnw.png');
-              $('#mission_button').prop('src', '/wp-content/themes/willeytheme/assets/images/icons/mission.png');
-              $('#sustain_button').prop('src', '/wp-content/themes/willeytheme/assets/images/icons/sustainability_bnw.png');
-            } else if ( $(window).scrollTop() >= parseInt($('#about_anchor_div').css("height"))*1.8 ) {
-              $('#sustain_button').addClass('ON');
-              $('#about_button').prop('src', '/wp-content/themes/willeytheme/assets/images/icons/about_bnw.png');
-              $('#mission_button').prop('src', '/wp-content/themes/willeytheme/assets/images/icons/mission_bnw.png');
-              $('#sustain_button').prop('src', '/wp-content/themes/willeytheme/assets/images/icons/sustainability.png');
-            }
+          if ( $(window).scrollTop() >= parseInt($('#about_anchor_div').css("height"))*1.8 ) {
+            $('#sustain_button').addClass('ON');
+            $('#about_button').prop('src', '/wp-content/themes/willeytheme/assets/images/icons/about_bnw.png');
+            $('#mission_button').prop('src', '/wp-content/themes/willeytheme/assets/images/icons/mission_bnw.png');
+            $('#sustain_button').prop('src', '/wp-content/themes/willeytheme/assets/images/icons/sustainability.png');
+          } else if ( $(window).scrollTop() >= parseInt($('#about_anchor_div').css("height"))*0.8 ) {
+            $('#mission_button').addClass('ON');
+            $('#about_button').prop('src', '/wp-content/themes/willeytheme/assets/images/icons/about_bnw.png');
+            $('#mission_button').prop('src', '/wp-content/themes/willeytheme/assets/images/icons/mission.png');
+            $('#sustain_button').prop('src', '/wp-content/themes/willeytheme/assets/images/icons/sustainability_bnw.png');
+          } else {
+            $('#about_button').addClass('ON');
+            $('#about_button').prop('src', '/wp-content/themes/willeytheme/assets/images/icons/about.png');
+            $('#mission_button').prop('src', '/wp-content/themes/willeytheme/assets/images/icons/mission_bnw.png');
+            $('#sustain_button').prop('src', '/wp-content/themes/willeytheme/assets/images/icons/sustainability_bnw.png');
           }
         });
 
