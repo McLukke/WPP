@@ -221,11 +221,13 @@ body.admin-bar #right-nav {
     transition: all 0.5s ease;
     opacity: 1
 	}
-	@media (max-width: 767px) {
+}
+
+@media (max-width: 767px) {
+	.desktop_right_nav {
 		margin-top: 20px;
 	}
 }
-
 
 
 
