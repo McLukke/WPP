@@ -388,6 +388,40 @@ body.admin-bar #sidebar-wrapper {
 }
 
 
+// menu on mobile
+@media only screen and 
+(max-width: 767px) and 
+(orientation: portrait) {
+    .sidebar-nav {
+        top: 45%;
+    }
+
+    .sidebar-brand img {
+        margin: 25px auto;
+    }
+
+    #menu-primary {
+        margin-top: 20px;
+    }
+
+    .sidebar-nav li {
+        line-height: 10px;
+    }
+
+    .menu_bottom {
+        margin-top: 15px;
+    }
+}
+
+@media only screen and 
+(max-width: 767px) and 
+(orientation: landscape) {
+    .sidebar-nav {
+        top: 60%;
+    }
+}
+
+
 // .nav-space {
 //     margin-top: 10vh;
 // }
