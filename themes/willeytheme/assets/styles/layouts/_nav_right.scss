@@ -205,24 +205,26 @@ body.admin-bar #right-nav {
 
 
 
-	.desktop_right_nav {
-		display: inline-block;
-		text-align: center;
-		position: fixed;
-		top: 15px;
-		right: 15px;
-		margin-top: 10px;
-		opacity: .5;
-		&.enabled {
-			max-width: 25px;
-			-webkit-transition: all 0.5s ease;
-	    -moz-transition: all 0.5s ease;
-	    -o-transition: all 0.5s ease;
-	    transition: all 0.5s ease;
-	    opacity: 1
-		}
+.desktop_right_nav {
+	display: inline-block;
+	text-align: center;
+	position: fixed;
+	top: 15px;
+	right: 15px;
+	margin-top: 10px;
+	opacity: .5;
+	&.enabled {
+		max-width: 25px;
+		-webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    opacity: 1
 	}
-
+	@media (max-width: 767px) {
+		margin-top: 20px;
+	}
+}
 
 
 
