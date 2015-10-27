@@ -86,7 +86,7 @@
             $('#main_logo').addClass('hidden');
           }
 
-          if ( window.location === "http://willey.neon.19degrees.io/company/about/" ) {
+          if ( window.location.href === "http://willey.neon.19degrees.io/company/about/" ) {
             if ( $(window).scrollTop() >= 0 ) {
               $('#about_button').addClass('ON');
               $('#about_button').prop('src', '/wp-content/themes/willeytheme/assets/images/icons/about.png');
