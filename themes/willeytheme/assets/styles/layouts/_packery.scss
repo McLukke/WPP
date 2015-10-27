@@ -116,6 +116,20 @@
   margin-top: -7px;
 }
 
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+  .work_container .link-not-active-journey {
+    font-size: 11px;
+  }
+
+  .work_container .social_share img {
+    margin-bottom: 10px;
+  }
+
+  .work_container .work-icon-assets img.work-details-info-icon2 {
+    max-width: 21px;
+  }
+}
+
 .clearfix {
   clear: both;
   margin: -18px 0 10px 35px;
