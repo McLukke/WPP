@@ -339,6 +339,9 @@
 
         // check all <a> tags on page and make current page purple
         $(document).ready(function() {
+
+          $( "workcategory/" ).replaceAll( "?sorting=" );
+
           var a = document.getElementsByTagName("A");
           for(var i=0;i<a.length;i++) {
             // console.log( a[i] );

@@ -33,15 +33,15 @@
       <?php if ( qtranxf_getLanguage() == "en" ){
         echo "SORTING"; }
           elseif ( qtranxf_getLanguage() == "zh" ){
-        echo "XSORTING"; } ?>
+        echo "分類"; } ?>
     </h1>
     <div class="nav_right_menu_container">
-      <h5 class="custom_menu_title">
+      <!-- <h5 class="custom_menu_title">
         <span>
           <?php if ( qtranxf_getLanguage() == "en" ){
             echo "BRAND"; }
               elseif ( qtranxf_getLanguage() == "zh" ){
-            echo "XBRAND"; } ?>
+            echo "XBrands"; } ?>
         </span>
       </h5>
       <ul class="brands">
@@ -56,17 +56,29 @@
                 </a>
               </li>
             <?php } ?>
-      </ul>
+      </ul> -->
 
       <h5 class="custom_menu_title">
         <span>
           <?php if ( qtranxf_getLanguage() == "en" ){
           echo "CATEGORY"; }
             elseif ( qtranxf_getLanguage() == "zh" ){
-          echo "XCATEGORY"; } ?>
+          echo "種類"; } ?>
         </span>
       </h5>
-      <ul class="nav-sorting">
+
+       <?php /* Primary navigation */
+          wp_nav_menu( array(
+            'menu' => 'work list',
+            'depth' => 2,
+            'container' => false,
+            'menu_class' => 'nav-sorting',
+            'link_before' => '<p class="list1">',
+            'link_after' => '</p>',
+            //Process nav menu using our custom nav walker
+            'walker' => new wp_bootstrap_navwalker())
+          ); ?>
+      <ul class="nav-sorting hide">
         <?php
         $category_terms = get_terms( 'workcategory' );
         foreach ( $category_terms as $category_term ) {

@@ -32,7 +32,7 @@ unset($file, $filepath);
 /* Theme setup */
 add_action( 'after_setup_theme', 'wpt_setup' );
     if ( ! function_exists( 'wpt_setup' ) ):
-        function wpt_setup() {  
+        function wpt_setup() {
             register_nav_menu( 'primary', __( 'Primary navigation', 'wptuts' ) );
         } endif;
 
@@ -107,8 +107,8 @@ function display_post_details ($post_id, $class) {
         <img class="work-details-info-icon" src="<?php echo get_bloginfo('template_directory')?>/assets/images/icons/printing_effect_bnw.png" />
         <p>PRINTING EFFECT<br /><div class="link-not-active"><?php the_terms( $post_id, 'printingeffect'); ?></div></p>
         <img class="work-details-info-icon" src="<?php echo get_bloginfo('template_directory')?>/assets/images/icons/paper_bnw.png" />
-        <p>PAPER<br /><div class="link-not-active"><?php 
-            the_terms( $post_id, 'paper'); 
+        <p>PAPER<br /><div class="link-not-active"><?php
+            the_terms( $post_id, 'paper');
         ?></div></p>
       </div>
     </div>
@@ -116,7 +116,7 @@ function display_post_details ($post_id, $class) {
   <?php
 } ?>
 =======
-// retrieve right-nav data once and display 
+// retrieve right-nav data once and display
 function posts_by_year() {
   // array to use for results
   $years = array();

@@ -29,12 +29,19 @@ foreach ($sage_includes as $file) {
 }
 unset($file, $filepath);
 
+
 /* Theme setup */
 add_action( 'after_setup_theme', 'wpt_setup' );
     if ( ! function_exists( 'wpt_setup' ) ):
-        function wpt_setup() {  
-            register_nav_menu( 'primary', __( 'Primary navigation', 'wptuts' ) );
-        } endif;
+        function wpt_setup() {
+          $locations = array(
+            'right_work_sort' => __( 'For Sorting Work', 'text_domain' ),
+            'primary'=> __( 'Primary navigation', 'wptuts' )
+          );
+          register_nav_menus( $locations );
+
+        }
+      endif;
 
 // Register bootstrap files and jQuery:
 // Register Packery file
@@ -88,7 +95,7 @@ function custom_front_page($wp_query){
 
 }
 
-// retrieve right-nav data once and display 
+// retrieve right-nav data once and display
 function posts_by_year() {
   // array to use for results
   $years = array();
@@ -126,28 +133,8 @@ function display_post_details ($post_id, $class) {
     <div class="hover_text" onclick="location.href='<?php the_permalink(); ?>'">
       <?php the_title('<h3>','</h3>'); ?>
       <div class="work-details-info">
-        
-        <div class="work-details-block">   
-          <img class="work-details-info-icon" src="<?php echo get_bloginfo('template_directory')?>/assets/images/icons/publish_bnw.png" />
-          <p class="title--work">PUBLISH TIME</p>
-          <div class="link-not-active">
-            <p>
-              <?php echo esc_html(get_the_date('d / m / Y')); ?>
-            </p>
-          </div>
-        </div>
-        
-        <div class="work-details-block">   
-          <img class="work-details-info-icon" src="<?php echo get_bloginfo('template_directory')?>/assets/images/icons/printing_effect_bnw.png" />
-          <p class="title--work">PRINTING EFFECT</p>
-          <div class="link-not-active">
-            <p>
-              <?php the_terms( $post_id, 'printingeffect');  ?>
-            </p>
-          </div>
-        </div>
-        
-        <div class="work-details-block">   
+
+        <div class="work-details-block">
           <img class="work-details-info-icon" src="<?php echo get_bloginfo('template_directory')?>/assets/images/icons/paper_bnw.png" />
           <p class="title--work">PAPER</p>
           <div class="link-not-active">
@@ -156,8 +143,27 @@ function display_post_details ($post_id, $class) {
             </p>
           </div>
         </div>
-        
-        
+
+        <div class="work-details-block">
+          <img class="work-details-info-icon" src="<?php echo get_bloginfo('template_directory')?>/assets/images/icons/printing_effect_bnw.png" />
+          <p class="title--work">PRINTING EFFECT</p>
+          <div class="link-not-active">
+            <p>
+              <?php the_terms( $post_id, 'printingeffect');  ?>
+            </p>
+          </div>
+        </div>
+
+         <div class="work-details-block">
+          <img class="work-details-info-icon" src="<?php echo get_bloginfo('template_directory')?>/assets/images/icons/publish_bnw.png" />
+          <p class="title--work">PUBLISH TIME</p>
+          <div class="link-not-active">
+            <p>
+              <?php echo esc_html(get_the_date('d / m / Y')); ?>
+            </p>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
