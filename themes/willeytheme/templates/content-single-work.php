@@ -19,13 +19,13 @@
       <div class="content-single-work container-fluid">
         <div class="row">
           <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-            <h1 class="title-single-work"><?php single_post_title()+get_the_ID(); ?></h1>
+            <h1 class="title-single-work"><?php single_post_title(); //+get_the_ID(); ?></h1>
           </div>
         </div>
         <!--end row-->
         <div class="row">
           <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-            <p><?php the_content() ?></p>
+            <p><?php the_excerpt() ?></p>
           </div>
           <div class="hidden-xs hidden-sm col-md-6 col-lg-6 borderdiv">
              <div class="work-icon-assets">
@@ -92,6 +92,7 @@
       <!--end container-fluid-->
           <div class="img-box">
             <?php the_post_thumbnail( 'full', array( 'alt' => 'Responsive image', 'class' => 'image-full-width' ) ); ?>
+            <?php the_content() ?>
           </div>
           <!--end img-box-->
     </div>
