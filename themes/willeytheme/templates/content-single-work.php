@@ -90,7 +90,7 @@
         <!--end row details-box-->
       </div>
       <!--end container-fluid-->
-          <div class="img-box">
+          <div class="img-box" style="padding:0px 20px">
             <?php //the_post_thumbnail( 'full', array( 'alt' => 'Responsive image', 'class' => 'image-full-width' ) ); ?>
             <?php the_content() ?>
           </div>
