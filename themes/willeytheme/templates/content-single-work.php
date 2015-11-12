@@ -91,7 +91,7 @@
       </div>
       <!--end container-fluid-->
           <div class="img-box">
-            <?php the_post_thumbnail( 'full', array( 'alt' => 'Responsive image', 'class' => 'image-full-width' ) ); ?>
+            <?php //the_post_thumbnail( 'full', array( 'alt' => 'Responsive image', 'class' => 'image-full-width' ) ); ?>
             <?php the_content() ?>
           </div>
           <!--end img-box-->
