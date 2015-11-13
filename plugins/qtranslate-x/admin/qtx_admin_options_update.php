@@ -6,6 +6,7 @@ require_once(QTRANSLATE_DIR.'/admin/qtx_import_export.php');
 
 function qtranxf_editConfig(){
 	global $q_config;
+	if(!qtranxf_verify_nonce('qtranslate-x_configuration_form')) return;
 	// init some needed variables
 	if(!isset($q_config['url_info']['errors'])) $q_config['url_info']['errors'] = array();
 	if(!isset($q_config['url_info']['warnings'])) $q_config['url_info']['warnings'] = array();
@@ -45,36 +46,35 @@ function qtranxf_editConfig(){
 		if(strlen($lang)!=2) $errors[] = __('Language Code has to be 2 characters long!', 'qtranslate');
 		$langs=array(); qtranxf_load_languages($langs);
 		$language_names = $langs['language_name'];
-		if($original_lang=='' && empty($errors)) {
-			// new language
-			if(isset($language_names[$lang])) {
-				$errors[] = __('There is already a language with the same Language Code!', 'qtranslate');
-			} 
-		}
-		if($original_lang!='' && empty($errors)) {
-			// language update
-			if($lang!=$original_lang&&isset($language_names[$lang])) {
-				$errors[] = __('There is already a language with the same Language Code!', 'qtranslate');
-			} else {
-				if($lang!=$original_lang){
-					// remove old language
-					qtranxf_unsetLanguage($langs,$original_lang);
-					qtranxf_unsetLanguage($q_config,$original_lang);
-				}
-				if(in_array($original_lang,$q_config['enabled_languages'])) {
-					// was enabled, so set modified one to enabled too
-					for($i = 0; $i < sizeof($q_config['enabled_languages']); $i++) {
-						if($q_config['enabled_languages'][$i] == $original_lang) {
-							$q_config['enabled_languages'][$i] = $lang;
+		if(empty($errors)){
+			if(empty($original_lang)) {
+				// new language
+				if(isset($language_names[$lang])) {
+					$errors[] = __('There is already a language with the same Language Code!', 'qtranslate');
+				} 
+			}else{
+				// language update
+				if($lang!=$original_lang&&isset($language_names[$lang])) {
+					$errors[] = __('There is already a language with the same Language Code!', 'qtranslate');
+				} else {
+					if($lang!=$original_lang){
+						// remove old language
+						qtranxf_unsetLanguage($langs,$original_lang);
+						qtranxf_unsetLanguage($q_config,$original_lang);
+						// if was enabled, set modified one to enabled too
+						foreach($q_config['enabled_languages'] as $k => $lng) {
+							if($lng != $original_lang) continue;
+							$q_config['enabled_languages'][$k] = $lng;
+							break;
 						}
 					}
-				}
-				if($original_lang==$q_config['default_language']){
-					// was default, so set modified the default
-					$q_config['default_language'] = $lang;
-				}
-				if($q_config['language'] == $original_lang){
-					qtranxf_setLanguageAdmin($lang);
+					if($original_lang==$q_config['default_language']){
+						// was default, so set modified the default
+						$q_config['default_language'] = $lang;
+					}
+					if($q_config['language'] == $original_lang){
+						qtranxf_setLanguageAdmin($lang);
+					}
 				}
 			}
 		}
@@ -95,12 +95,25 @@ function qtranxf_editConfig(){
 			qtranxf_save_languages($langs);
 			qtranxf_enableLanguage($lang);
 			//qtranxf_update_config_header_css();
+
+			$original_lang = $lang;
+			$s = 'Custom Language Properties Used';
+			$b = 'I use the following language properties for '.$lang.':'.PHP_EOL .PHP_EOL;
+			foreach($lang_props as $k => $v){
+				$b .= $k.': '.$v.PHP_EOL;
+			}
+			$b .= PHP_EOL .'which should probably be used as a default preset on the plugin.'.PHP_EOL;
+			$b .= PHP_EOL .'Thank you very much!'.PHP_EOL;
+			$u = 'qtranslateteam@gmail.com?subject='.rawurlencode($s).'&body='.rawurlencode($b);
+			$messages[] = sprintf(__('The new language properties have been saved. If you think these properties should be the preset default, please %ssend email%s to the development team.', 'qtranslate'),'<a href="mailto:'.$u.'"><strong>','</strong></a>');
 		}
 		if(!empty($errors)||isset($_GET['edit'])) {
 			// get old values in the form
 			$language_code = $lang;
 		}else{
-			$lang_props = array();//reset form for new language
+			//reset form for new language
+			$lang_props = array();
+			$original_lang = '';
 		}
 	}
 	elseif(isset($_GET['convert'])){
@@ -213,6 +226,7 @@ function qtranxf_editConfig(){
 			$languages[$key-1] = $language;
 			$q_config['enabled_languages'] = $languages;
 			$msg = __('New order saved.', 'qtranslate');
+			qtranxf_update_config_header_css();
 			break;
 		}
 		$messages[] = $msg;
@@ -231,6 +245,7 @@ function qtranxf_editConfig(){
 			$languages[$key+1] = $language;
 			$q_config['enabled_languages'] = $languages;
 			$msg = __('New order saved.', 'qtranslate');
+			qtranxf_update_config_header_css();
 			break;
 		}
 		$messages[] = $msg;
@@ -415,7 +430,7 @@ function qtranxf_reloadConfig() {
 	global $q_config;
 	$url_info = isset($q_config['url_info']) ? $q_config['url_info'] : null;
 	//qtranxf_dbg_log('qtranxf_reloadConfig: $url_info: ',$url_info);
-	qtranxf_del_admin_filters();
+	qtranxf_del_conf_filters();
 	qtranxf_loadConfig();
 	qtranxf_admin_loadConfig();
 	if($url_info){

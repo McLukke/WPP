@@ -3,37 +3,22 @@
 Plugin Name: AddToAny Share Buttons
 Plugin URI: https://www.addtoany.com/
 Description: Share buttons for your pages including AddToAny's universal sharing button, Facebook, Twitter, Google+, Pinterest, WhatsApp and many more.  [<a href="options-general.php?page=add-to-any.php">Settings</a>]
-Version: 1.6.6
+Version: 1.6.7
 Author: AddToAny
 Author URI: https://www.addtoany.com/
 Text Domain: add-to-any
 Domain Path: /languages
 */
-
-if ( ! isset( $A2A_locale ) ) {
-	$A2A_locale = '';
-}
 	
 $A2A_SHARE_SAVE_plugin_basename = plugin_basename( dirname( __FILE__ ) );
+$A2A_SHARE_SAVE_plugin_dir = untrailingslashit( plugin_dir_path( __FILE__ ) );
+$A2A_SHARE_SAVE_plugin_url_path = untrailingslashit( plugin_dir_url( __FILE__ ) );
 
-// WordPress Must-Use?
-if ( basename( dirname( __FILE__ ) ) == 'mu-plugins' ) {
-	// __FILE__ expected in /wp-content/mu-plugins (parent directory for auto-execution)
-	// /wp-content/mu-plugins/add-to-any
-	$A2A_SHARE_SAVE_plugin_url_path = WPMU_PLUGIN_URL . '/add-to-any';
-	$A2A_SHARE_SAVE_plugin_dir = WPMU_PLUGIN_DIR . '/add-to-any';
-} 
-else {
-	// /wp-content/plugins/add-to-any
-	$A2A_SHARE_SAVE_plugin_url_path = WP_PLUGIN_URL . '/' . $A2A_SHARE_SAVE_plugin_basename;
-	$A2A_SHARE_SAVE_plugin_dir = WP_PLUGIN_DIR . '/' . $A2A_SHARE_SAVE_plugin_basename;
-}
-
-// Fix SSL
-if ( is_ssl() ) {
-	$A2A_SHARE_SAVE_plugin_url_path = str_replace( 'http:', 'https:', $A2A_SHARE_SAVE_plugin_url_path );
-}
-
+// HTTPS?
+$A2A_SHARE_SAVE_plugin_url_path = is_ssl() ? str_replace( 'http:', 'https:', $A2A_SHARE_SAVE_plugin_url_path ) : $A2A_SHARE_SAVE_plugin_url_path;
+// Set AddToAny locale (JavaScript)
+$A2A_locale = ! isset ( $A2A_locale ) ? '' : $A2A_locale;
+// Set plugin options
 $A2A_SHARE_SAVE_options = get_option( 'addtoany_options' );
 
 function A2A_SHARE_SAVE_init() {
@@ -62,14 +47,14 @@ function A2A_SHARE_SAVE_link_vars( $linkname = false, $linkurl = false ) {
 	// Set linkname
 	if ( ! $linkname ) {
 		if ( isset( $post ) ) {
-			$linkname = strip_tags( get_the_title( $post->ID ) );
+			$linkname = html_entity_decode( strip_tags( get_the_title( $post->ID, ENT_QUOTES, 'UTF-8' ) ) );
 		}
 		else {
 			$linkname = '';
 		}
 	}
 	
-	$linkname_enc = rawurlencode( html_entity_decode( $linkname, ENT_QUOTES, 'UTF-8' ) );
+	$linkname_enc = rawurlencode( $linkname );
 	
 	// Set linkurl
 	if ( ! $linkurl ) {
@@ -429,7 +414,7 @@ function ADDTOANY_SHARE_SAVE_BUTTON( $args = array() ) {
 			$button	= '<img src="' . $button_src . '"' . $button_width . $button_height . ' alt="Share"/>';
 		}
 		
-		$button_html = $html_container_open . $html_wrap_open . '<a class="a2a_dd' . $button_class . ' addtoany_share_save" href="https://www.addtoany.com/share_save' .$button_href_querystring . '"' . $button_id
+		$button_html = $html_container_open . $html_wrap_open . '<a class="a2a_dd' . $button_class . ' addtoany_share_save" href="https://www.addtoany.com/share' .$button_href_querystring . '"' . $button_id
 			. $style . $button_target
 			. '>' . $button . '</a>';
 	
@@ -975,7 +960,7 @@ function A2A_SHARE_SAVE_stylesheet() {
 		// wp_add_inline_style requires WP 3.3+
 		if ( '3.3' <= get_bloginfo( 'version' ) ) {
 		
-			// Prepare inline CSS for media queries on floating bars
+			// Prepare inline CSS
 			$inline_css = '';
 			
 			$vertical_type = ( isset( $options['floating_vertical'] ) && 'none' != $options['floating_vertical'] ) ? $options['floating_vertical'] : false;
@@ -1012,11 +997,8 @@ function A2A_SHARE_SAVE_stylesheet() {
 					is_numeric( $options['floating_horizontal_responsive_min_width'] ) 
 				) ? $options['floating_horizontal_responsive_min_width'] : '981';
 				
-				// If there is inline CSS already
-				if ( 0 < strlen( $inline_css ) ) {
-					// Insert newline
-					$inline_css .= "\n";
-				}
+				// Insert newline if there is inline CSS already
+				$inline_css = 0 < strlen( $inline_css ) ? $inline_css . "\n" : $inline_css;
 				
 				// Set media query
 				$inline_css .= '@media screen and (min-width:' . $horizontal_min_width . 'px){' . "\n"
@@ -1025,9 +1007,18 @@ function A2A_SHARE_SAVE_stylesheet() {
 				
 			}
 			
+			// If additional CSS (custom CSS for AddToAny) is set
+			if ( ! empty( $options['additional_css'] ) ) {
+				$custom_css = stripslashes( $options['additional_css'] );
+				
+				// Insert newline if there is inline CSS already
+				$inline_css = 0 < strlen( $inline_css ) ? $inline_css . "\n" : $inline_css;
+				
+				$inline_css .= $custom_css;
+			}
+			
 			// If there is inline CSS
 			if ( 0 < strlen( $inline_css ) ) {
-			
 				// Insert inline CSS
 				wp_add_inline_style( 'A2A_SHARE_SAVE', $inline_css );	
 			}
@@ -1041,13 +1032,12 @@ function A2A_SHARE_SAVE_stylesheet() {
 add_action( 'wp_print_styles', 'A2A_SHARE_SAVE_stylesheet' );
 
 
-
 /**
  * Cache AddToAny
  */
 
 function A2A_SHARE_SAVE_refresh_cache() {
-	$contents = wp_remote_fopen( 'http://www.addtoany.com/ext/updater/files_list/' );
+	$contents = wp_remote_fopen( 'https://www.addtoany.com/ext/updater/files_list/' );
 	$file_urls = explode( "\n", $contents, 20 );
 	$upload_dir = wp_upload_dir();
 	
