@@ -88,7 +88,7 @@
           </div>
         </div>
         <!--end row details-box-->
-          <div id="work-main-content"  style="padding:0px 20px">
+          <div id="work-main-content" style="padding:0px">
             <?php the_content() ?>
           </div>
 
