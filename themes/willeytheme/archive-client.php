@@ -35,18 +35,6 @@
             $class = "";
         }?>
 
-        <p style="color:white">
-        <?php
-
-          if( get_post_meta($post->ID,'background_color',true)){
-            $color = get_post_meta($post->ID,'background_color',true);
-          }else{
-            $color = "#000000";
-          }
-
-          ?>
-      </p>
-
       <?php
 
       if (has_post_thumbnail( $post->ID ) ) {
