@@ -88,13 +88,12 @@
           </div>
         </div>
         <!--end row details-box-->
-      </div>
-      <!--end container-fluid-->
-          <div class="img-box" style="padding:0px 20px">
-            <?php //the_post_thumbnail( 'full', array( 'alt' => 'Responsive image', 'class' => 'image-full-width' ) ); ?>
+          <div id="work-main-content"  style="padding:0px 20px">
             <?php the_content() ?>
           </div>
-          <!--end img-box-->
+
+      </div><!--end container-fluid-->
+
     </div>
     <!--end work_container-->
 </div>
