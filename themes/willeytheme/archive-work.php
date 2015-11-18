@@ -1,4 +1,4 @@
-<?php $posts = query_posts($query_string . '&orderby=rand&posts_per_page=5'); ?>
+<?php $posts = query_posts($query_string . '&orderby=rand&posts_per_page=60&post_type=work'); ?>
 <?php
   if ( !empty($_GET['sorting']) ) {
     $sorting = $_GET['sorting'];
