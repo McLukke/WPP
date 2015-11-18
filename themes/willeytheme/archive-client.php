@@ -1,5 +1,67 @@
 <?php
-$posts = query_posts($query_string . '&orderby=rand');
+// WP_Query arguments
+$args = array (
+  'post_type'              => array( 'client' ),
+  'posts_per_page'         => '5',
+  'orderby'                => 'rand',
+);
+
+// The Query
+$query = new WP_Query( $args );
+
+// The Loop
+if ( $query->have_posts() ) {
+  while ( $query->have_posts() ) { $query->the_post();
+    // do something
+
+
+
+
+<?php
+
+$count = 1;
+$color = "#000000";
+
+the_title();
+
+if (has_post_thumbnail( $post->ID ) ) {
+  $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
+  $image = $image[0]; ?>
+
+  <div class="item <?php echo $class; ?>" style="background-image: url('<?php echo $image; ?>'); background-color: <?php echo $color; ?> ">
+    <?php
+    $books = pods( 'client', $params );
+    echo $books->field( 'background_color' );
+    /* <div class="hover_text"  > */ ?>
+    <?php //the_title( '<h1>', '</h1>' ); ?>
+    <?php //the_title( $count ); ?>
+    <!-- </div> -->
+
+  </div>
+<?php
+}
+
+$count ++;
+
+
+
+
+
+
+    // do something ends
+  }
+} else {
+  // no posts found
+}
+
+// Restore original Post Data
+wp_reset_postdata();
+
+?>
+
+
+
+<?php
 
 if (!have_posts()) : ?>
       <div class="alert alert-warning">
