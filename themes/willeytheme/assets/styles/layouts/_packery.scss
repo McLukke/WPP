@@ -178,8 +178,11 @@
 }
 
 @media screen and (min-width: $tablet) {
-  .hover_text:hover {
+  .hover_text{
     z-index: 1000;
+    transition: all 0.5s ease;
+  }
+  .hover_text:hover {
     opacity: 1;
   }
 

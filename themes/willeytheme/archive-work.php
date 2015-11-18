@@ -32,12 +32,12 @@
 <div class="packery js-packery" data-packery-options='{ "gutter": 0, "itemSelector": ".item", "columnWidth": ".grid-sizer", "percentPosition": true }'>
   <div class="gutter-sizer"></div>
   <div class="grid-sizer"></div>
-  <?php 
+  <?php
   $how_many_posts=0;
-  $count=1; 
+  $count=1;
 
-  while (have_posts()) : the_post(); 
-  
+  while (have_posts()) : the_post();
+
     switch ($count) {
       case 1:
           $class = "";
@@ -64,7 +64,7 @@
 
     if ( $sorting === null && $brand === null) {
       display_post_details($post->ID, $class);
-      
+
       if($count%7==0) {
         $count = 0;
       }
@@ -111,3 +111,4 @@
 </div>
 <?php include('templates/nav-right.php'); ?>
 <?php the_posts_navigation(); ?>
+
