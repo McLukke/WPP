@@ -343,31 +343,31 @@
           // $( "workcategory/" ).replaceAll( "?sorting=" );
 
           //on Local
-          $("a[href^='http://localhost/workcategory/']")
-           .each(function()
-           {
-              this.href = this.href.replace(/^http:\/\/localhost\/workcategory\//,
-                 "http://localhost/?sorting=");
-              this.href = this.href.slice(0,-1);
-           });
+          // $("a[href^='http://localhost/workcategory/']")
+          //  .each(function()
+          //  {
+          //     this.href = this.href.replace(/^http:\/\/localhost\/workcategory\//,
+          //        "http://localhost/?sorting=");
+          //     this.href = this.href.slice(0,-1);
+          //  });
 
-          //on Demo
-           $("a[href^='http://willey.neon.19degrees.io/workcategory/']")
-           .each(function()
-           {
-              this.href = this.href.replace(/^http:\/\/willey\.neon\.19degrees\.io\/workcategory\//,
-                 "http://willey.neon.19degrees.io/?sorting=");
-              this.href = this.href.slice(0,-1);
-           });
+          // //on Demo
+          //  $("a[href^='http://willey.neon.19degrees.io/workcategory/']")
+          //  .each(function()
+          //  {
+          //     this.href = this.href.replace(/^http:\/\/willey\.neon\.19degrees\.io\/workcategory\//,
+          //        "http://willey.neon.19degrees.io/?sorting=");
+          //     this.href = this.href.slice(0,-1);
+          //  });
 
-          //on live
-           $("a[href^='http://willey.com.hk/workcategory/']")
-           .each(function()
-           {
-              this.href = this.href.replace(/^http:\/\/willey\.com\.hk\/workcategory\//,
-                 "http://willey.com.hk/?sorting=");
-              this.href = this.href.slice(0,-1);
-           });
+          // //on live
+          //  $("a[href^='http://willey.com.hk/workcategory/']")
+          //  .each(function()
+          //  {
+          //     this.href = this.href.replace(/^http:\/\/willey\.com\.hk\/workcategory\//,
+          //        "http://willey.com.hk/?sorting=");
+          //     this.href = this.href.slice(0,-1);
+          //  });
 
 
           var a = document.getElementsByTagName("A");
