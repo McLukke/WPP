@@ -17,8 +17,6 @@ if ( $query->have_posts() ) {
 
 
 
-<?php
-
 $count = 1;
 $color = "#000000";
 
@@ -31,11 +29,7 @@ if (has_post_thumbnail( $post->ID ) ) {
   <div class="item <?php echo $class; ?>" style="background-image: url('<?php echo $image; ?>'); background-color: <?php echo $color; ?> ">
     <?php
     $books = pods( 'client', $params );
-    echo $books->field( 'background_color' );
-    /* <div class="hover_text"  > */ ?>
-    <?php //the_title( '<h1>', '</h1>' ); ?>
-    <?php //the_title( $count ); ?>
-    <!-- </div> -->
+    echo $books->field( 'background_color' );?>
 
   </div>
 <?php
