@@ -1,6 +1,7 @@
-<?php $posts = query_posts($query_string . '&orderby=rand'); ?>
+<?php
+$posts = query_posts($query_string . '&orderby=rand');
 
-<?php if (!have_posts()) : ?>
+if (!have_posts()) : ?>
       <div class="alert alert-warning">
         <?php _e('Sorry, no results were found.', 'sage'); ?>
       </div>
