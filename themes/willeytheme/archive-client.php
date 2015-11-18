@@ -1,63 +1,5 @@
-<?php
-// WP_Query arguments
-$args = array (
-  'post_type'              => array( 'client' ),
-  'posts_per_page'         => '5',
-  'orderby'                => 'rand',
-);
-
-// The Query
-$query = new WP_Query( $args );
-
-// The Loop
-if ( $query->have_posts() ) {
-  while ( $query->have_posts() ) { $query->the_post();
-    // do something
-
-
-
-
-$count = 1;
-$color = "#000000";
-
-the_title();
-
-if (has_post_thumbnail( $post->ID ) ) {
-  $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
-  $image = $image[0]; ?>
-
-  <div class="item <?php echo $class; ?>" style="background-image: url('<?php echo $image; ?>'); background-color: <?php echo $color; ?> ">
-    <?php
-    $books = pods( 'client', $params );
-    echo $books->field( 'background_color' );?>
-
-  </div>
-<?php
-}
-
-$count ++;
-
-
-
-
-
-
-    // do something ends
-  }
-} else {
-  // no posts found
-}
-
-// Restore original Post Data
-wp_reset_postdata();
-
-?>
-
-
-
-<?php
-
-if (!have_posts()) : ?>
+<?php $posts = query_posts($query_string . '&orderby=rand'); ?>
+<?php if (!have_posts()) : ?>
       <div class="alert alert-warning">
         <?php _e('Sorry, no results were found.', 'sage'); ?>
       </div>
@@ -90,11 +32,21 @@ if (!have_posts()) : ?>
             break;
         default:
             $class = "";
-        }
+        }?>
 
-        if( get_post_meta($post->ID,'background_color',true)){
-          $color = get_post_meta($post->ID,'background_color',true);
-        }
+        <p style="color:white">
+        <?php
+
+          if( get_post_meta($post->ID,'background_color',true)){
+            $color = get_post_meta($post->ID,'background_color',true);
+          }else{
+            $color = "#000000";
+          }
+
+          ?>
+      </p>
+
+      <?php
 
       if (has_post_thumbnail( $post->ID ) ) {
         $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
