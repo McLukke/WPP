@@ -1,4 +1,4 @@
-<?php $posts = query_posts($query_string . '&posts_per_page=60&post_type=work'); ?>
+<?php $posts = query_posts($query_string . '&posts_per_page=60&post_type=work&orderby=menu_order'); ?>
 <?php
   if ( !empty($_GET['sorting']) ) {
     $sorting = $_GET['sorting'];
@@ -112,4 +112,3 @@
 </div>
 <?php include('templates/nav-right.php'); ?>
 <?php the_posts_navigation(); ?>
-
