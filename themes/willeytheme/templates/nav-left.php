@@ -33,7 +33,9 @@
               <!-- <a class="language" href="#"><img src="<?php //echo bloginfo('template_directory')?>/assets/images/icons/english.png" class="language"></a>
               <a class="language" href="#"><img src="<?php //echo bloginfo('template_directory')?>/assets/images/icons/chinese.png" class="language"></a> -->
               <br>
-              <span class="credits"> &copy; Willey Printing Ltd. 2015</span>
+              <span class="credits">
+                Copyright &copy; Willey Printing <?php echo date("Y"); ?>.<br/> All rights reserved.
+              </span>
             </li>
           </ul>
           <div class="menu_language">
@@ -41,7 +43,9 @@
             <!-- <a class="language" href="#"><img src="<?php //echo bloginfo('template_directory')?>/assets/images/icons/english.png" class="language"></a>
             <a class="language" href="#"><img src="<?php //echo bloginfo('template_directory')?>/assets/images/icons/chinese.png" class="language"></a> -->
             <br>
-            <span class="credits"> &copy; Willey Printing Ltd. 2015</span>
+            <span class="credits">
+                Copyright &copy; Willey Printing <?php echo date("Y"); ?>.<br/> All rights reserved.
+            </span>
           </div>
       </div>
       <div class="menu-close">
