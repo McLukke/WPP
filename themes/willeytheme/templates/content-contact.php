@@ -23,7 +23,7 @@
                 $lang = qtranxf_getlanguage();
 
                 if($lang == "zh"){
-                    echo '柴灣祥利街26號銀星中心';
+                    echo '柴灣祥利街26號銀星中心2樓全層';
                 }else{
                     echo '2/F, Silver Tech Tower, 26 Cheung Lee Street, Chai Wan. Hong Kong';
                 }
