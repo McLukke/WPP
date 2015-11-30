@@ -1,7 +1,6 @@
 <div id="right-nav">
   <?php if ( is_page('journal') ) { ?>
 
-
   <div class="timeline-wrapper">
     <img class="icon-nav-right" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/publish.png" />
     <h1 class="nav-title">
