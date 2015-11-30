@@ -3,7 +3,7 @@ Contributors: micropat, addtoany
 Tags: AddToAny, sharing, share, social, share button, share buttons, social media, media, marketing, bookmark, bookmarks, save, post, posts, page, pages, images, image, admin, analytics, statistics, stats, links, plugin, shortcode, sidebar, widget, responsive, email, e-mail, print, seo, button, woocommerce, ecommerce, e-commerce, amazon, delicious, google, tumblr, linkedin, digg, reddit, facebook, facebook share, facebook like, like, twitter, twitter button, twitter share, tweet, tweet button, google plus, pinterest, pin, pin it, pinit, wanelo, buffer, stumbleupon, bitly, whatsapp, instagram, behance, flickr, foursquare, vimeo, youtube, feed, rss, lockerz, addthis, sociable, share this, sharethis, shareaholic, icon, icons, vector, SVG, floating, floating buttons, wpml, wpmu, Add to Any
 Requires at least: 2.8
 Tested up to: 4.4
-Stable tag: 1.6.7
+Stable tag: 1.6.8
 
 Share buttons for WordPress including the AddToAny sharing button, Facebook, Twitter, Google+, Pinterest, WhatsApp, many more, and follow icons too.
 
@@ -68,7 +68,7 @@ AddToAny is the universal sharing platform, and AddToAny's plugin is the most po
 
 This plugin always strives to be the best WordPress plugin for sharing. Development is fueled by your praise and feedback.
 
-<a href="https://www.addtoany.com/share_save" title="Share">Share</a> this plugin
+<a href="https://www.addtoany.com/share" title="Share">Share</a> this plugin
 
 See also:
 
@@ -296,6 +296,14 @@ Upload (or move) the `add-to-any` plugin directory into the `/wp-content/mu-plug
 6. Color chooser for your share menus
 
 == Changelog ==
+
+= 1.6.8 =
+* Universal share counter is now available
+* Tweet counters have been removed because <a href="https://www.addtoany.com/blog/twitter-share-count/">Twitter no longer provides counts</a>
+* Official buttons (Facebook Like, etc.) have been moved to the bottom of the available services list
+* Support WP-CLI v0.21.0+ (thanks Compute and Daniel Bachhuber)
+* Support bootstrapped WordPress
+* Support for other script loading methods
 
 = 1.6.7 =
 * New Additional CSS box for AddToAny CSS customizations
@@ -752,7 +760,7 @@ Upload (or move) the `add-to-any` plugin directory into the `/wp-content/mu-plug
 * Asynchronous loading (faster, non-blocking, major new feature!)
  * Supports most themes and additionally works around buggy themes that improperly process content for excerpts, featured/related posts, etc.
  * Improperly-coded themes may prevent AddToAny from fully loading
- * If your theme is coded improperly, you can switch to the previous plugin version (<a href="">download version .9.9.8.3</a>) until you switch to a working theme or your theme author fixes the issue
+ * If your theme is coded improperly, you can switch to the previous plugin version until you switch to a working theme or your theme author fixes the issue
   * See the FAQ entry for "Why isn't the drop-down menu appearing?" for more information
 * Google +1 button
 * HTTPS support for Facebook Like & Twitter Tweet buttons (Google +1 button always uses HTTPS)

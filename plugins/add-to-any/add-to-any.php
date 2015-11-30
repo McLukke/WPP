@@ -3,13 +3,17 @@
 Plugin Name: AddToAny Share Buttons
 Plugin URI: https://www.addtoany.com/
 Description: Share buttons for your pages including AddToAny's universal sharing button, Facebook, Twitter, Google+, Pinterest, WhatsApp and many more.  [<a href="options-general.php?page=add-to-any.php">Settings</a>]
-Version: 1.6.7
+Version: 1.6.8
 Author: AddToAny
 Author URI: https://www.addtoany.com/
 Text Domain: add-to-any
 Domain Path: /languages
 */
-	
+
+// Explicitly globalize to support bootstrapped WordPress
+global $_addtoany_counter, $_addtoany_init, $_addtoany_targets, $A2A_locale, $A2A_FOLLOW_services, $A2A_SHARE_SAVE_auto_placement_ready,
+	$A2A_SHARE_SAVE_plugin_basename, $A2A_SHARE_SAVE_options, $A2A_SHARE_SAVE_plugin_dir, $A2A_SHARE_SAVE_plugin_url_path, $A2A_SHARE_SAVE_services;
+
 $A2A_SHARE_SAVE_plugin_basename = plugin_basename( dirname( __FILE__ ) );
 $A2A_SHARE_SAVE_plugin_dir = untrailingslashit( plugin_dir_path( __FILE__ ) );
 $A2A_SHARE_SAVE_plugin_url_path = untrailingslashit( plugin_dir_url( __FILE__ ) );
@@ -282,7 +286,7 @@ function ADDTOANY_SHARE_SAVE_ICONS( $args = array() ) {
 			// AddToAny counter enabled?
 			$counter_enabled = ( ! $is_follow // Disable counters on Follow Kits
 				&& ! isset( $is_floating ) // Disable counters on floating buttons for now
-				&& in_array( $active_service, array( 'facebook', 'twitter', 'pinterest', 'linkedin', 'reddit' ) )
+				&& in_array( $active_service, array( 'facebook', 'pinterest', 'linkedin', 'reddit' ) )
 				&& isset( $options['special_' . $active_service . '_options'] )
 				&& isset( $options['special_' . $active_service . '_options']['show_count'] ) 
 				&& $options['special_' . $active_service . '_options']['show_count'] == '1' 
@@ -414,6 +418,10 @@ function ADDTOANY_SHARE_SAVE_BUTTON( $args = array() ) {
 			$button	= '<img src="' . $button_src . '"' . $button_width . $button_height . ' alt="Share"/>';
 		}
 		
+		if ( isset( $options['button_show_count'] ) && $options['button_show_count'] == '1' ) {
+			$button_class .= ' a2a_counter';
+		}
+		
 		$button_html = $html_container_open . $html_wrap_open . '<a class="a2a_dd' . $button_class . ' addtoany_share_save" href="https://www.addtoany.com/share' .$button_href_querystring . '"' . $button_id
 			. $style . $button_target
 			. '>' . $button . '</a>';
@@ -469,7 +477,7 @@ function ADDTOANY_SHARE_SAVE_BUTTON( $args = array() ) {
 		
 		if ( ! $_addtoany_init ) {
 			$javascript_load_early = "\n<script type=\"text/javascript\"><!--\n"
-				. "wpa2a.script_load();"
+				. "if(wpa2a)wpa2a.script_load();"
 				. "\n//--></script>\n";
 		} else {
 			$javascript_load_early = "";
@@ -513,7 +521,6 @@ function ADDTOANY_SHARE_SAVE_SPECIAL( $special_service_code, $args = array() ) {
 	}
 	
 	elseif ( $special_service_code == 'twitter_tweet' ) {
-		$custom_attributes .= ( $options['special_twitter_tweet_options']['show_count'] == '1' ) ? ' data-count="horizontal"' : ' data-count="none"';
 		$custom_attributes .= ' data-url="' . $linkurl . '"';
 		$custom_attributes .= ' data-text="' . $linkname . '"';
 		$special_html = sprintf( $special_anchor_template, $special_service_code, $custom_attributes );
