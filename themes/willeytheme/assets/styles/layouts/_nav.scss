@@ -3,6 +3,14 @@ body.admin-bar #sidebar-wrapper {
     top: 46px;
 }
 
+
+.en-only,
+.zh-only{
+    display:none;
+}
+:lang(en) .en-only{ display:block !important; }
+:lang(zh) .zh-only{ display:block !important;}
+
 #wrapper {
     position: absolute;
     padding-left: 0;
@@ -389,8 +397,8 @@ body.admin-bar #sidebar-wrapper {
 
 
 // menu on mobile
-@media only screen and 
-(max-width: 767px) and 
+@media only screen and
+(max-width: 767px) and
 (orientation: portrait) {
     .sidebar-nav {
         top: 45%;
@@ -413,8 +421,8 @@ body.admin-bar #sidebar-wrapper {
     }
 }
 
-@media only screen and 
-(max-width: 767px) and 
+@media only screen and
+(max-width: 767px) and
 (orientation: landscape) {
     .sidebar-nav {
         top: 60%;

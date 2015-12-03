@@ -136,7 +136,14 @@ function display_post_details ($post_id, $class) {
 
         <div class="work-details-block">
           <img class="work-details-info-icon" src="<?php echo get_bloginfo('template_directory')?>/assets/images/icons/paper_bnw.png" />
-          <p class="title--work">PAPER</p>
+          <p class="title--work">
+            <span class="en-only">
+              PAPER
+            </span>
+            <span class="zh-only">
+              紙張類別
+            </span>
+          </p>
           <div class="link-not-active">
             <p>
               <?php the_terms( $post_id, 'paper');  ?>
@@ -146,7 +153,14 @@ function display_post_details ($post_id, $class) {
 
         <div class="work-details-block">
           <img class="work-details-info-icon" src="<?php echo get_bloginfo('template_directory')?>/assets/images/icons/printing_effect_bnw.png" />
-          <p class="title--work">PRINTING EFFECT</p>
+          <p class="title--work">
+            <span class="en-only">
+              PRINTING EFFECT
+            </span>
+            <span class="zh-only">
+              印刷效果
+            </span>
+          </p>
           <div class="link-not-active">
             <p>
               <?php the_terms( $post_id, 'printingeffect');  ?>
@@ -156,7 +170,14 @@ function display_post_details ($post_id, $class) {
 
          <div class="work-details-block">
           <img class="work-details-info-icon" src="<?php echo get_bloginfo('template_directory')?>/assets/images/icons/publish_bnw.png" />
-          <p class="title--work">PUBLISH TIME</p>
+          <p class="title--work">
+            <span class="en-only">
+              PUBLISH TIME
+            </span>
+            <span class="zh-only">
+              發佈時間
+            </span>
+          </p>
           <div class="link-not-active">
             <p>
               <?php echo esc_html(get_the_date('d / m / Y')); ?>

@@ -30,14 +30,28 @@
           <div class="hidden-xs hidden-sm col-md-6 col-lg-6 borderdiv">
              <div class="work-icon-assets">
               <img class="work-details-info-icon2" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/paper.png" />
-              <p class="link-not-active-journey">PAPER</p>
+              <p class="link-not-active-journey">
+                <span class="en-only">
+                  PAPER
+                </span>
+                <span class="zh-only">
+                  紙張類別
+                </span>
+              </p>
               <p class="link-not-active-journey clearfix"><?php the_terms( $post->ID, 'paper'); ?></p>
             </div>
               <!--end cat-->
 
             <div class="work-icon-assets">
               <img class="work-details-info-icon2" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/printing_effect.png" />
-              <p class="link-not-active-journey">PRINTING EFFECT</p>
+              <p class="link-not-active-journey">
+                <span class="en-only">
+                  PRINTING EFFECT
+                </span>
+                <span class="zh-only">
+                  印刷效果
+                </span>
+              </p>
               <p class="link-not-active-journey clearfix"><?php the_terms( $post->ID, 'printingeffect'); ?></p>
             </div>
               <!--end cat-->
@@ -45,7 +59,14 @@
 
             <div class="work-icon-assets">
               <img class="work-details-info-icon2" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/publish.png" />
-              <p class="link-not-active-journey">PUBLISH TIME</p>
+              <p class="link-not-active-journey">
+                <span class="en-only">
+                  PUBLISH TIME
+                </span>
+                <span class="zh-only">
+                  發佈時間
+                </span>
+              </p>
               <p class="link-not-active-journey clearfix"><?php echo esc_html(get_the_date()); ?></p>
             </div>
               <!--end cat-->
@@ -58,7 +79,7 @@
         <div class="row details-box">
             <div class="col-xs-6 col-sm-6 col-md-12 col-lg-12">
               <div class="social_share">
-              <p>Share by:</p><br />
+              <p><span class="en-only">Share by:</span><span class="zh-only">分享:</span></p><br />
               <?php if ( function_exists( 'ADDTOANY_SHARE_SAVE_KIT' ) ) {
                 ADDTOANY_SHARE_SAVE_KIT( array( 'linkname' => ( is_home() ? get_bloginfo( 'description' ) : wp_title( '', false ) ), 'linkurl' => ( is_ssl() ? 'https://' : 'http://' ) . $_SERVER["HTTP_HOST"] . $_SERVER['REQUEST_URI'] ) );
               } ?>
@@ -75,13 +96,27 @@
               <!--end cat-->
             <div class="work-icon-assets">
               <img class="work-details-info-icon2" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/printing_effect.png" />
-              <p class="link-not-active-journey">PRINTING EFFECT</p>
+              <p class="link-not-active-journey">
+                <span class="en-only">
+                  PRINTING EFFECT
+                </span>
+                <span class="zh-only">
+                  印刷效果
+                </span>
+              </p>
               <p class="link-not-active-journey clearfix"><?php the_terms( $post->ID, 'printingeffect'); ?></p>
             </div>
               <!--end cat-->
             <div class="work-icon-assets">
               <img class="work-details-info-icon2" src="<?php echo bloginfo('template_directory')?>/assets/images/icons/paper.png" />
-              <p class="link-not-active-journey">PAPER</p>
+              <p class="link-not-active-journey">
+                <span class="en-only">
+                  PAPER
+                </span>
+                <span class="zh-only">
+                  紙張類別
+                </span>
+              </p>
               <p class="link-not-active-journey clearfix"><?php the_terms( $post->ID, 'paper'); ?></p>
               <!--end cat-->
             </div>

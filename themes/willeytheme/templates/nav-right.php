@@ -17,7 +17,10 @@
         <?php foreach($posts as $post) : setup_postdata($post); ?>
           <li>
             <a href="#<?php echo get_the_ID() ?>" class="list1">
-              <p class="timeline-date"><?php echo get_the_date('d M'); ?></p>
+              <p class="timeline-date">
+                <span class="en-only"><?php echo get_the_date('d M'); ?></span>
+                <span class="zh-only"><?php echo get_the_date('M'); ?><?php echo get_the_date('d'); ?>日</span>
+              </p>
               <p class="timeline-event"><?php the_title(); ?></p>
             </a>
             <br />

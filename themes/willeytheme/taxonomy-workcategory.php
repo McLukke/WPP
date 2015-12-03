@@ -104,10 +104,7 @@
     }
   endwhile;
   if ( $how_many_posts === 0 ) { ?>
-    <div class="alert alert-warning">
-      <?php _e('Sorry, no results were found.', 'sage'); ?>
-    </div>
-    <?php get_search_form();
+
   } ?>
 </div>
 <?php include('templates/nav-right.php'); ?>

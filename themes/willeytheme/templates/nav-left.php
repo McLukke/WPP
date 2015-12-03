@@ -34,7 +34,12 @@
               <a class="language" href="#"><img src="<?php //echo bloginfo('template_directory')?>/assets/images/icons/chinese.png" class="language"></a> -->
               <br>
               <span class="credits">
-                Copyright &copy; Willey Printing <?php echo date("Y"); ?>.<br/> All rights reserved.
+                <span class="en-only">
+                  Copyright &copy; Willey Printing <?php echo date("Y"); ?>.<br/> All rights reserved.
+                </span>
+                <span class="zh-only">
+                  Copyright &copy; 偉利印藝 <?php echo date("Y"); ?>.<br/> 版權所有
+                </span>
               </span>
             </li>
           </ul>
@@ -44,7 +49,12 @@
             <a class="language" href="#"><img src="<?php //echo bloginfo('template_directory')?>/assets/images/icons/chinese.png" class="language"></a> -->
             <br>
             <span class="credits">
+              <span class="en-only">
                 Copyright &copy; Willey Printing <?php echo date("Y"); ?>.<br/> All rights reserved.
+              </span>
+              <span class="zh-only">
+                Copyright &copy; 偉利印藝 <?php echo date("Y"); ?>.<br/> 版權所有
+              </span>
             </span>
           </div>
       </div>
