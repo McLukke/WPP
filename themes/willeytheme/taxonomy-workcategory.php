@@ -24,10 +24,7 @@
 </div></div></div>
 
 <?php if (!have_posts()) : ?>
-  <div class="alert alert-warning">
-    <?php _e('Sorry, no results were found.', 'sage'); ?>
-  </div>
-  <?php get_search_form(); ?>
+
 <?php endif; ?>
 
 <div class="packery js-packery" data-packery-options='{ "gutter": 0, "itemSelector": ".item", "columnWidth": ".grid-sizer", "percentPosition": true }'>
@@ -103,7 +100,7 @@
       }
     }
   endwhile;
-  if ( $how_many_posts === 0 ) { ?>
+  if ( $how_many_posts === 0 ) {
 
   } ?>
 </div>
